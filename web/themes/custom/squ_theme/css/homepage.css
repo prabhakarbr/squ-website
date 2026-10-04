@@ -497,15 +497,21 @@ body.squ-site.path-frontpage {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.75) 100%);
 }
 
+.squ-tile {
+  position: relative; 
+}
+
 .squ-tile span {
   position: absolute;
-  left: 1rem;
+  left: 0;
+  right: 0; 
   bottom: 1rem;
   z-index: 1;
   color: #fff;
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   padding: 1.5rem;
+  text-align: center; 
 }
 
 @media (max-width: 700px) {
