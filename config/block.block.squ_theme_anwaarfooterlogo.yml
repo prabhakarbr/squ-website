@@ -1,0 +1,28 @@
+uuid: 10695499-064f-4bee-9396-41678653cfa9
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:1ac1e0a2-cf67-4ddb-8d8d-e434c820b3de'
+  module:
+    - block_content
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_anwaarfooterlogo
+theme: squ_theme
+region: footer_top
+weight: -16
+provider: null
+plugin: 'block_content:1ac1e0a2-cf67-4ddb-8d8d-e434c820b3de'
+settings:
+  id: 'block_content:1ac1e0a2-cf67-4ddb-8d8d-e434c820b3de'
+  label: 'Anwaar footer logo'
+  label_display: '0'
+  provider: block_content
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/anwaar\r\n/anwaar/*"

@@ -11,7 +11,7 @@ dependencies:
 id: squ_theme_footer
 theme: squ_theme
 region: footer_bottom
-weight: 0
+weight: -17
 provider: null
 plugin: 'system_menu_block:footer'
 settings:

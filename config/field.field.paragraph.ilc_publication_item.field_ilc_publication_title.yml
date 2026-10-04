@@ -1,0 +1,19 @@
+uuid: 2e5f7bd3-0390-40f3-bb3b-d03548e569ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ilc_publication_title
+    - paragraphs.paragraphs_type.ilc_publication_item
+id: paragraph.ilc_publication_item.field_ilc_publication_title
+field_name: field_ilc_publication_title
+entity_type: paragraph
+bundle: ilc_publication_item
+label: 'ILC Publication title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,54 @@
+uuid: 7592f95c-a5f2-4e8b-9b0f-1a1c82dd1284
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ilc_publication_item.field_ilc_documents
+    - field.field.paragraph.ilc_publication_item.field_ilc_publication_title
+    - field.field.paragraph.ilc_publication_item.field_link
+    - field.field.paragraph.ilc_publication_item.field_pub_thumbnail
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.ilc_publication_item
+  module:
+    - file
+    - image
+    - link
+id: paragraph.ilc_publication_item.default
+targetEntityType: paragraph
+bundle: ilc_publication_item
+mode: default
+content:
+  field_ilc_documents:
+    type: file_generic
+    weight: 2
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_ilc_publication_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_pub_thumbnail:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
