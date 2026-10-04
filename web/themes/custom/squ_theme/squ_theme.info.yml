@@ -14,6 +14,7 @@ libraries-override:
 regions:
   header_brand: 'Header Brand'
   header_tools: 'Header Tools'
+  header_lang: 'Header language'
   header_section: 'Header Section menu'
   header_drawer: 'Header Drawer menu'
   breadcrumb: Breadcrumb

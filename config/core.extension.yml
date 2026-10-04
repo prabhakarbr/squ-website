@@ -41,9 +41,15 @@ module:
   path: 0
   path_alias: 0
   pgsql: 0
+  paragraphs_jquery_ui_accordion: 0
+  search_api: 0
+  single_content_sync: 0
   system: 0
   taxonomy: 0
   text: 0
+  tmgmt: 0
+  tmgmt_content: 0
+  tmgmt_libretranslate: 0
   update: 0
   user: 0
   views_ui: 0

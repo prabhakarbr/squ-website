@@ -1,0 +1,22 @@
+display:
+  default:
+    display_title: الافتراضي
+    display_options:
+      fields:
+        type:
+          label: النوع
+        timestamp:
+          label: التاريخ
+        message:
+          label: الرسالة
+        link:
+          label: العمليات
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- الكل -'
+            offset_label: الإزاحة
+      filters:
+        type:
+          expose:
+            label: النوع

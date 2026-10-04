@@ -11,6 +11,6 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://Group_1.png'
+  path: 'public://Frame 126.svg'
   url: null
   use_default: false

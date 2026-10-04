@@ -1,12 +1,189 @@
-/** SQU Theme — homepage, hero, landing, open data (merged) */
-.squ-hero {
+/** SQU Theme — homepage, hero, landing, open data (merged, deduplicated) */
+
+:root {
+  --squ-navy: #1a2b30;
+  --squ-navy-dark: #12191c;
+  --squ-gold: #d9a441;
+  --squ-gold-dark: #b9852b;
+  --squ-blue: #1c6ea4;
+  --squ-text: #26332f;
+  --squ-text-muted: #6b7674;
+  --squ-border: #e2e6e4;
+  --squ-bg-alt: #f5f6f6;
+  --squ-radius: 6px;
+  --squ-container: 1200px;
+  --squ-font: "Metropolis", "Lora", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --sl-label-font: 1.25rem;
+
+  --ri-blue: #1f4ac2;
+  --ri-text: #111111;
+  --ri-bg: #ededed;
+  --ri-gold: #cfa02a;
+  --ri-radius: 12px;
+  --ri-card-w: 357px;
+}
+
+/* ==========================================================================
+   Base / landing page shell
+   ========================================================================== */
+.squ-landing-page {
+  font-family: var(--squ-font);
+  color: var(--squ-text);
+  background: #EDEDED;
+}
+
+.squ-landing-page section,
+.squ-landing-page > div {
+  box-sizing: border-box;
+}
+
+.squ-landing-page img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Drupal wraps every field in a div with a visible label - hide labels. */
+.field__label {
+  display: none;
+}
+
+/* Shared: positioned containers and full-bleed background images */
+.squ-hero,
+.squ-tile,
+.squ-research__card,
+.squ-we-are,
+.squ-gallery__tile {
   position: relative;
-  min-height: clamp(420px, 38.7vw, 620px);
-  /* Fallback banner; an uploaded Background Image overrides it (inline style). */
-  background: #4a4a4a url('../images/hero-default.jpg') center bottom / cover no-repeat;
+  overflow: hidden;
+}
+
+.squ-hero__bg,
+.squ-tile__bg,
+.squ-research__card-bg,
+.squ-we-are__bg,
+.squ-gallery__tile-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.squ-hero__bg img,
+.squ-tile__bg img,
+.squ-research__card-bg img,
+.squ-we-are__bg img,
+.squ-gallery__tile-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+.site-header:not(.squ-site-header) {
+  background: var(--squ-navy);
+}
+
+.site-header__inner {
+  padding: 0.75rem 1.5rem;
+}
+
+.site-header__inner__container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  max-width: var(--squ-container);
+  margin-inline: auto;
 }
+
+.squ-header__quicklinks .menu--level-1,
+#block-squ-theme-main-menu .menu--level-1 {
+  display: flex;
+  gap: 1.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu__link--level-1,
+.primary-nav__menu-link--level-1 {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.menu__link--level-1:hover,
+.primary-nav__menu-link--level-1:hover {
+  color: var(--squ-gold);
+}
+
+.secondary-nav__menu-link--level-1 {
+  color: #fff;
+  font-size: 0.9rem;
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+.mobile-nav-button {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  display: none;
+}
+
+.mobile-nav-button__icon {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+  position: relative;
+}
+.mobile-nav-button__icon::before,
+.mobile-nav-button__icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: #fff;
+}
+.mobile-nav-button__icon::before { top: -7px; }
+.mobile-nav-button__icon::after { top: 7px; }
+
+@media (max-width: 900px) {
+  .header-nav,
+  .squ-header__quicklinks {
+    display: none;
+  }
+  .mobile-nav-button {
+    display: inline-flex;
+  }
+}
+
+/* ==========================================================================
+   Hero
+   ========================================================================== */
+.squ-hero {
+  min-height: 620px;
+  margin-top: 0;
+  padding: 3rem 1.5rem 0;
+  display: flex;
+  align-items: flex-start;
+  /* Fallback banner; an uploaded Background Image overrides it (inline style). */
+  background: #4a4a4a url('../images/hero-default.jpg') center / cover no-repeat;
+}
+
+.squ-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 15, 17, 0.55) 0%, rgba(10, 15, 17, 0.15) 40%, rgba(10, 15, 17, 0.05) 100%);
+  pointer-events: none;
+}
+
 .squ-hero::after {
   content: '';
   position: absolute;
@@ -16,36 +193,21 @@
 }
 
 .squ-hero__card {
-    width: 434px;
-    padding: 20px;
-    left: 66px;
-    /* top: 204px; */
-    position: absolute;
-    background: rgba(255, 255, 255, 0.29);
-    border-radius: 30px;
-    backdrop-filter: blur(4px);
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    display: inline-flex;
+  position: absolute;
+  top: 140px;
+  left: max(24px, calc((100% - 1148px) / 2));
+  display: flex;
+  width: 434px;
+  min-height: 248px;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid rgb(255 255 255 / 18%);
+  border-radius: 30px;
+  background: rgb(255 255 255 / 29%);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }
-/* Frosted-glass card */
-/* .squ-hero__card {
-  position: relative;
-  z-index: 2;
-  margin-left: clamp(1rem, 4.6vw, 66px);
-  width: min(465px, calc(100% - 2rem));
-  box-sizing: border-box;
-  background: rgba(70, 66, 66, 0.42);
-  -webkit-backdrop-filter: blur(16px) saturate(120%);
-  backdrop-filter: blur(16px) saturate(120%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  border-radius: 18px;
-  padding: 40px 36px 28px;
-  color: #fff;
-} */
+
 .squ-hero__eyebrow {
   display: block;
   color: #d1a02b;
@@ -54,43 +216,41 @@
   line-height: 1.12;
   text-transform: uppercase;
 }
-/* .squ-hero__title {
-  margin: 0 0 2.75rem;
-  color: #fff;
-  font-size: 2.5rem;
-  line-height: 1.12;
+
+.squ-hero__title {
+  color: var(--squ-gold);
+  font-size: 30px;
+  font-family: IBM Plex Sans;
   font-weight: 700;
-  text-transform: uppercase;
-} */
+  word-wrap: break-word;
+}
 
-.squ-hero__title{
-    color: #CFA02A;
-    font-size: 43px;
-    font-family: IBM Plex Sans;
-    font-weight: 700;
-    word-wrap: break-word;
+.squ-hero__title1 {
+  color: white;
+  font-size: 30px;
+  margin-right: 22%;
+  font-family: IBM Plex Sans;
+  font-weight: 600;
+  word-wrap: break-word;
 }
-.squ-hero__title1  {
-    color: white;
-    font-size: 43px;
-    margin-right: 22%;
-    font-family: IBM Plex Sans;
-    font-weight: 700;
-    word-wrap: break-word;
-}
+
 .squ-hero__quote {
-    align-self: stretch;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    color: white;
-    font-size: 16px;
-    font-family: IBM Plex Sans Arabic;
-    font-weight: 600;
-    word-wrap: break-word;
-    padding-top: 8px;
-
+  align-self: stretch;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  font-size: 15px;
+  font-family: IBM Plex Sans;
+  font-weight: 600;
+  word-wrap: break-word;
+  padding-top: 8px;
 }
+
+.squ-hero__quote:empty {
+  display: none;
+}
+
 .squ-hero__quote p {
   margin: 0;
   font-weight: 400;
@@ -98,86 +258,96 @@
   line-height: 1.3;
   text-transform: uppercase;
 }
+
 .squ-hero__attribution {
   font-size: 12px;
   text-align: right;
+  font-family: IBM Plex Sans;
   text-transform: uppercase;
   opacity: 0.9;
-  margin-left: 50%;
+  margin-left: 45%;
   color: #111111;
+  padding-top: 20px;
+  font-weight: 900;
 }
 
-/* College / Major selector bar pinned to the bottom edge of the banner */
-/* .squ-college-major-bar {
-  position: relative;
-  z-index: 3;
-   margin: -2.5rem auto 0;
-  width: fit-content;
-  max-width: calc(100% - 3rem);
-  background: var(--squ-dark, #2b3138);
-  border-radius: 4px;
-  padding: 0.25rem 1.5rem;
-} */
-
+/* College / Major search bar — overlaps the hero bottom edge */
 .squ-college-major-bar {
   position: relative;
-  z-index: 3;
-  margin: -2.5rem auto 0;
-  width: min(1040px, calc(100% - 4rem));   /* was: width: fit-content */
-  background: #211F1F;
-  border-radius: 4px;
-  padding: 0.25rem 2rem;
+  z-index: 2;
+  max-width: 1060px;
+  margin: -35px auto 0;
+  padding: 0 1.5rem;
 }
 
 .squ-college-major-bar .field--name-field-filter-form {
   display: contents;
 }
+
 .squ-college-major-bar form {
+  background: #211F1F;
   display: flex;
-  align-items: center;
-  gap: 2rem;                                /* was: 1.5rem */
   flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1.25rem;
+  padding: 1rem 1.5rem;
+  border-radius: var(--squ-radius);
 }
+
 .squ-college-major-bar .form-type-select {
   display: flex;
   align-items: center;
   gap: 0.6rem;
-  flex: 1 1 260px;                          /* lets each field grow to fill the wider bar */
+  flex: 1 1 260px;
 }
+
 .squ-college-major-bar label {
   color: #c9922a;
   font-weight: 700;
   margin: 0;
   white-space: nowrap;
 }
-/* .squ-college-major-bar select {
-  background: #fff;
-  border: none;
-  border-radius: 3px;
-  padding: 0.5rem 0.75rem;
-  min-width: 220px;
-  flex: 1;                                  /* select itself stretches within its field group */
- /* } */
+
+.squ-college-major-bar .form-item__label {
+  color: var(--squ-gold);
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+
 .squ-college-major-bar select {
-    width: 237px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    padding-left: 12px;
-    padding-right: 8px;
-    overflow: hidden;
-    border-radius: 2px;
-    outline: 1px #CFA02A solid;
-    outline-offset: -0.50px;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    background: #211F1F;
+  width: 237px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 12px;
+  padding-right: 8px;
+  overflow: hidden;
+  border-radius: 2px;
+  outline: 1px #CFA02A solid;
+  outline-offset: -0.50px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  background: #211F1F;
   color: white;
 }
-.squ-college-major-bar .form-actions {
-  margin: 0;
-  flex: 0 0 auto;                           /* button keeps its own natural width */
+
+.squ-college-major-bar .form-select {
+  min-width: 220px;
+  border: 0;
+  border-radius: 4px;
+  padding: 0.6rem 0.75rem;
+  font-size: 0.9rem;
 }
+
+.squ-college-major-bar .form-actions {
+  margin: 0 0 0 auto;
+  flex: 0 0 auto;
+}
+
 .squ-college-major-bar input[type="submit"] {
   background: #c9922a;
   color: #2b2b2b;
@@ -190,23 +360,24 @@
   letter-spacing: 0.05em;
 }
 
-/* The banner starts below the solid header, never underneath it. */
-.squ-hero {
-    margin-top: 0;
-    position: relative;
-    overflow: hidden;
+.squ-college-major-bar .webform-button--submit {
+  background: var(--squ-gold);
+  color: var(--squ-navy-dark);
+  border: 0;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 0.75rem 1.75rem;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
+.squ-college-major-bar .webform-button--submit:hover {
+  background: var(--squ-gold-dark);
+}
 
 @media (max-width: 768px) {
-  .squ-college-major-bar {
-    margin: -1.5rem auto 0;
-    width: auto;
-    max-width: calc(100% - 2rem);
-  }
   .squ-college-major-bar form {
     flex-direction: column;
-    align-items: stretch;
   }
   .squ-college-major-bar .form-type-select {
     flex-direction: column;
@@ -214,12 +385,17 @@
   }
 }
 
+@media (max-width: 700px) {
+  .squ-hero { min-height: 460px; padding-top: 2rem; }
+  .squ-hero__card { margin-left: 0; max-width: 100%; }
+  .squ-college-major-bar { margin-top: -32px; }
+  .squ-college-major-bar form { flex-direction: column; align-items: stretch; }
+  .squ-college-major-bar .form-actions { margin-left: 0; }
+}
+
 /* ==========================================================================
-   Full-width banner on the landing page.
-   Olivero puts page content in a narrow, padded, centred column. On the
-   landing page we drop that so the hero runs edge to edge.
+   Full-width banner on the landing page
    ========================================================================== */
-/* Landing page: full-bleed sections (squ-page shell). */
 :is(body.path-frontpage, body.squ-landing-route) .squ-page--landing .squ-page__body--landing,
 :is(body.path-frontpage, body.squ-landing-route) .squ-page__body--landing {
   max-width: none;
@@ -271,34 +447,32 @@
   width: 100%;
   grid-column: 1 / -1;
 }
-/* Feature tiles: Postgraduate / Undergraduate / International
-   The prototype shows these contained in a centered column (not edge to
-   edge), with visibly rounded corners, a drop shadow for depth, and a
-   taller card than we had - matched here via max-width + aspect-ratio
-   instead of a fixed min-height so it stays proportional at any width. */
-   body.squ-site.path-frontpage {
+
+body.squ-site.path-frontpage {
   background-color: #fff;
   background-image: none;
 }
+
+/* ==========================================================================
+   Tiles (Postgraduate / Undergraduate / International)
+   ========================================================================== */
 .squ-tiles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
+  gap: 1.25rem;
+  max-width: var(--squ-container);
+  margin: 2.5rem auto 0;
+  padding: 0 1.5rem;
 }
+
 .squ-tile {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
+  display: block;
   aspect-ratio: 3 / 4;
   min-height: 280px;
+  border-radius: var(--squ-radius);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: flex-end;
   color: inherit;
   text-decoration: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -308,50 +482,85 @@
   transform: translateY(-3px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
 }
-.squ-tile::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.05) 55%);
+
+.squ-tile__bg img {
+  transition: transform 0.35s ease;
 }
-.squ-tile span {
-  position: relative;
-  z-index: 1;
-  color: #fff;
-  font-weight: 700;
-  font-size: 1.4rem;
-  padding: 1.5rem;
+.squ-tile:hover .squ-tile__bg img {
+  transform: scale(1.04);
 }
 
-/* Stat counter row */
+.squ-tile::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.75) 100%);
+}
+
+.squ-tile {
+  position: relative; 
+}
+
+.squ-tile span {
+  position: absolute;
+  left: 0;
+  right: 0; 
+  bottom: 1rem;
+  z-index: 1;
+  color: #fff;
+  font-weight: 800;
+  font-size: 1.5rem;
+  padding: 1.5rem;
+  text-align: center; 
+}
+
+@media (max-width: 700px) {
+  .squ-tiles { grid-template-columns: 1fr; }
+}
+
+/* ==========================================================================
+   Stats bar
+   ========================================================================== */
 .squ-stats {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
-  padding: 2rem 3rem 3rem;
-  text-align: left;
+  margin: 3rem auto 0;
+  padding: 2rem 1.5rem;
+  text-align: center;
   background-color: #f2f3f5;
-   background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Crect x='2.5' y='2.5' width='3' height='3' fill='rgba(0,0,0,0.09)'/%3E%3C/svg%3E"),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Crect x='2.5' y='2.5' width='3' height='3' fill='rgba(0,0,0,0.09)'/%3E%3C/svg%3E");
-  background-size: 28px 28px, 28px 28px;
-  background-position: 0 0, 14px 14px;
-  background-repeat: repeat, repeat;
+  background-image: url("../images/pattern.png");
+  background-repeat: repeat;
 }
+
 .squ-stat {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  padding: 0 1rem;
 }
+
+.squ-stat + .squ-stat::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10%;
+  bottom: 10%;
+  width: 1px;
+  background: var(--squ-border);
+}
+
 .squ-stat__number {
   position: relative;
   display: inline-block;
-  color: #1655c9;
-  font-size: 2.75rem;
+  color: #054BC7;
+  font-size: 2.25rem;
   font-weight: 800;
   line-height: 1;
   padding: 0.25rem 0.6rem;
   margin-bottom: 0.85rem;
+  margin-left: 15%;
 }
 .squ-stat__number::after {
   content: "";
@@ -364,46 +573,74 @@
   border: 2px solid var(--squ-gold, #c9922a);
   z-index: 0;
 }
+
 .squ-stat__label {
   color: #16181b;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 700;
+  margin-top: 0.5rem;
 }
 
-/* Research highlight */
+@media (max-width: 900px) {
+  .squ-stats { gap: 2rem 1.5rem; }
+}
+
+@media (max-width: 700px) {
+  .squ-stats { grid-template-columns: repeat(2, 1fr); row-gap: 1.5rem; }
+  .squ-stat:nth-child(3)::before { display: none; }
+}
+
+/* ==========================================================================
+   Research & Innovations
+   ========================================================================== */
 .squ-research {
   display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 2.5rem;
-  padding: 3rem;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  max-width: var(--squ-container);
+  margin: 3.5rem auto 0;
+  padding: 0 1.5rem;
   background: #f2f3f5;
   align-items: start;
 }
+
 .squ-research__intro-col {
   display: flex;
   flex-direction: column;
 }
+
 .squ-research__heading {
-  color: #1b3a63;
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  grid-column: 1 / -1;
+  color: var(--squ-blue);
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 0 0 0.5rem;
 }
+
 .squ-research__cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  gap: 1.5rem;
+  gap: 1rem;
 }
-.squ-research__card {
+
+.squ-research__card,
+a.squ-research__card {
+  display: block;
+  min-height: 260px;
   background: #fff;
-  border-radius: 6px;
-  overflow: hidden;
+  border-radius: var(--squ-radius);
   text-decoration: none;
   color: inherit;
-  display: flex;
-  flex-direction: column;
 }
+
+.squ-research__card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.8) 100%);
+}
+
 .squ-research__card-media {
   position: relative;
   width: 100%;
@@ -415,6 +652,7 @@
   object-fit: cover;
   display: block;
 }
+
 .squ-research__card-body {
   padding: 1rem 1.25rem;
 }
@@ -429,13 +667,27 @@
   font-size: 0.8rem;
   line-height: 1.5;
 }
+
+.squ-research__card-title {
+  position: absolute;
+  left: 1.25rem;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 1;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
 .squ-research__intro {
-  color: #444;
+  color: var(--squ-text-muted);
   font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  max-width: 32ch;
+  max-width: 46ch;
 }
+
 .squ-research__more a {
   display: inline-block;
   background: var(--squ-gold, #c9922a);
@@ -446,6 +698,7 @@
   padding: 0.6rem 1.5rem;
   border-radius: 3px;
 }
+
 .squ-research__cards > .field__items > .field__item:first-child,
 .squ-research__cards .squ-research__card--cover {
   grid-row: 1 / 3;
@@ -455,7 +708,20 @@
   min-height: 320px;
 }
 
-/* We Are SQU block */
+@media (max-width: 900px) {
+  .squ-research,
+  .squ-research__cards {
+    grid-template-columns: 1fr;
+  }
+  .squ-research__cards > .field__items > .field__item:first-child,
+  .squ-research__card--cover {
+    grid-row: auto;
+  }
+}
+
+/* ==========================================================================
+   We are SQU (about block)
+   ========================================================================== */
 .about-squ,
 .about-squ * { box-sizing: border-box; }
 
@@ -469,7 +735,6 @@
   background: #cfd6dc;
 }
 
-/* Background image */
 .about-squ__bg {
   position: absolute;
   inset: 0;
@@ -495,7 +760,6 @@
   pointer-events: none;
 }
 
-/* Dark card */
 .about-squ__card {
   position: relative;
   z-index: 2;
@@ -519,7 +783,7 @@
   z-index: -1;
 }
 
-/* Gold dots, top-right inside/over the square */
+/* Gold dots, top-right */
 .about-squ__card::after {
   content: "";
   position: absolute;
@@ -549,7 +813,6 @@
 }
 .about-squ__text p { margin: 0 0 .5rem; }
 
-/* Link rows */
 .about-squ__links {
   margin-top: 1.4rem;
   display: flex;
@@ -583,12 +846,10 @@
 .about-squ__link:hover { color: #d4a72c; }
 .about-squ__link:hover::after { transform: translateX(4px) rotate(45deg); }
 
-/* Tablet */
 @media (max-width: 991.98px) {
   .about-squ { min-height: 460px; padding: 3.5rem 0 2.5rem 1.5rem; }
 }
 
-/* Mobile */
 @media (max-width: 767.98px) {
   .about-squ {
     min-height: 0;
@@ -599,11 +860,78 @@
   .about-squ__heading { font-size: 1.25rem; }
   .about-squ::after { width: 180px; height: 90px; }
 }
-/* ===== News section ===== */
+
+/* Alternate "we are" markup */
+.squ-we-are {
+  margin-top: 3.5rem;
+  min-height: 460px;
+  display: flex;
+  align-items: center;
+}
+
+.squ-we-are__bg {
+  background: var(--squ-navy);
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.35) 1px, transparent 1.5px);
+  background-size: 14px 14px;
+  background-position: right bottom;
+  background-repeat: repeat;
+  -webkit-mask-image: linear-gradient(90deg, transparent 60%, black 100%);
+  mask-image: linear-gradient(90deg, transparent 60%, black 100%);
+  opacity: 0.5;
+}
+
+.squ-we-are__card {
+  position: relative;
+  z-index: 1;
+  background: var(--squ-navy-dark);
+  color: #fff;
+  max-width: 420px;
+  margin-left: max(1.5rem, calc((100vw - var(--squ-container)) / 2));
+  padding: 2.5rem;
+}
+
+.squ-we-are__heading {
+  color: var(--squ-gold);
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0 0 1rem;
+}
+
+.squ-we-are__card p,
+.squ-we-are__card .field--name-field-about-squ-text {
+  line-height: 1.7;
+  color: #e7eae9;
+}
+
+.squ-we-are__buttons {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.squ-we-are__buttons a {
+  color: var(--squ-gold);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.squ-we-are__buttons a::after {
+  content: " →";
+}
+
+@media (max-width: 700px) {
+  .squ-we-are__card { margin-inline: 1rem; max-width: none; }
+}
+
+/* ==========================================================================
+   News
+   ========================================================================== */
 .squ-news,
 .squ-news * { box-sizing: border-box; }
 
-/* Full width: upar 80px gray patti, phir white (Figma jaisa) */
+/* Gray strip on top (80px), then white */
 .squ-news {
   width: 100%;
   margin: 0;
@@ -614,27 +942,24 @@
 .squ-news__inner {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 3rem 4.5rem 3.5rem;
-  padding-left: 73px;
-  padding-right: 73px;
+  padding: 3rem 73px 3.5rem;
 }
 
 .squ-news__grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: 4rem;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2.5rem;
   align-items: start;
 }
 
-/* LEFT */
 .squ-news__list { max-width: 420px; }
 
 .squ-news__heading {
-  margin: 0 0 1.6rem;
-  font-size: 2.6rem;
+  margin: 0 0 1.25rem;
+  font-size: 1.75rem;
   font-weight: 800;
   line-height: 1;
-  color: #1a44c2;
+  color: var(--squ-blue);
 }
 
 /* Blue dot-grid icon */
@@ -651,29 +976,31 @@
 }
 
 .squ-news__item {
-  padding: 1rem 0 .9rem;
-  border-bottom: 1px solid #e3e3e3;
+  padding: 1rem 0 1.25rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 1px solid var(--squ-border);
 }
 .squ-news__item:first-of-type { padding-top: 0; }
 
 .squ-news__item-title {
-  margin: 0 0 .4rem;
-  font-size: 1.15rem;
-  font-weight: 700;
+  margin: 0 0 .35rem;
+  font-size: .95rem;
+  font-weight: 800;
   line-height: 1.5;
-  color: #d4a22a;
+  text-transform: uppercase;
+  color: var(--squ-gold-dark);
 }
 
 .squ-news__item-date {
-  margin: 0 0 .4rem;
-  font-size: .82rem;
-  color: #8a8a8a;
+  margin: 0 0 .5rem;
+  font-size: .8rem;
+  color: var(--squ-text-muted);
 }
 
 .squ-news__item-desc {
-  font-size: .88rem;
+  font-size: .92rem;
   line-height: 1.6;
-  color: #111;
+  color: var(--squ-text);
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -681,7 +1008,20 @@
 }
 .squ-news__item-desc p { margin: 0; }
 
-.squ-news__more { margin-top: 1.4rem; }
+.squ-news__more { margin-top: .5rem; }
+
+.squ-news__more a {
+  display: inline-block;
+  background: var(--squ-gold);
+  color: var(--squ-navy-dark);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.03em;
+  padding: 0.65rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
 .squ-news__more-btn {
   display: inline-flex;
   align-items: center;
@@ -705,7 +1045,6 @@
 }
 .squ-news__more-btn:hover { background: #b98a1c; }
 
-/* RIGHT: image + blue outline frame */
 .squ-news__media {
   position: relative;
   width: 100%;
@@ -713,17 +1052,6 @@
   height: 320px;
   margin-left: auto;
 }
-
-/* .squ-news__frame {
-  position: absolute;
-  top: 0;
-  left: 58px;
-  right: -38px;
-  height: 320px;
-  border: 1.5px solid #2a4fd6;
-  z-index: 0;
-  pointer-events: none;
-} */
 
 .squ-news__img {
   position: absolute;
@@ -735,130 +1063,45 @@
   max-width: 100%;
   height: 270px;
   margin: 0;
-  /* object-fit: cover;
-  border-radius: 32px; */
 }
 
-/* Tablet */
-@media (max-width: 991.98px) {
-  .squ-news__inner { padding: 2.5rem 2rem; }
-  .squ-news__grid { gap: 2.5rem; }
-  .squ-news__frame { right: 0; }
-}
-
-/* Mobile */
-@media (max-width: 767.98px) {
-  .squ-news { background: linear-gradient(#ededed 0, #ededed 50px, #fff 50px); }
-  .squ-news__inner { padding: 2rem 1rem; }
-  .squ-news__grid { grid-template-columns: 1fr; }
-  .squ-news__list { max-width: 100%; }
-  .squ-news__heading { font-size: 2rem; }
-  .squ-news__media { max-width: 100%; margin: 0; height: 260px; }
-  .squ-news__frame { left: 30px; right: 0; height: 230px; }
-  .squ-news__img { width: calc(100% - 24px); height: 220px; }
-}
-/* Student life gallery */
-.squ-gallery {
-  padding: 3rem;
-}
-.squ-gallery__heading {
-  color: #1b3a63;
-  font-size: 1.75rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-.squ-gallery__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-}
-.squ-gallery__tile {
-  position: relative;
-  border-radius: 4px;
-  overflow: hidden;
-  min-height: 180px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-end;
-  color: #fff;
-  font-weight: 700;
-  padding: 1rem;
-}
-.squ-gallery__tile.is-large {
-  grid-column: span 2;
-  grid-row: span 2;
-}
-.squ-gallery__tile::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(0deg, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 55%);
-}
-.squ-gallery__tile span {
-  position: relative;
-  z-index: 1;
-}
-
-@media (max-width: 900px) {
-  .squ-tiles, .squ-research__cards { grid-template-columns: 1fr; }
-  .squ-gallery__grid { grid-template-columns: repeat(2, 1fr); }
-   .squ-stats {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem 1.5rem;
-    padding: 2.5rem 1.5rem;
-  }
-  .squ-research {
-  grid-template-columns: 1fr;
-}
-.squ-research__cards > .field__items > .field__item:first-child,
-.squ-research__card--cover {
-  grid-row: auto;
-}
-}
-
-/* Drupal's default field renderer wraps every field in its own div with a
-   visible label - hide the labels and make any <img> fill its container,
-   since these templates print {{ content.field_x }} directly rather than
-   manually extracting file URLs (faster and less fragile to build). */
-.squ-hero__bg, .squ-tile__bg, .squ-research__card-bg,
-.squ-we-are__bg, .squ-gallery__tile-bg {
-  position: absolute;
-  inset: 0;
-}
-.squ-hero__bg img, .squ-tile__bg img, .squ-research__card-bg img,
-.squ-we-are__bg img, .squ-gallery__tile-bg img {
+.squ-news__image img {
+  border-radius: var(--squ-radius);
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
-}
-.squ-hero, .squ-tile, .squ-research__card, .squ-we-are, .squ-gallery__tile {
-  position: relative;
-  overflow: hidden;
-}
-.field__label {
-  display: none;
 }
 
-:root {
-  --sl-heading-color: #1a44c2;
-  --sl-radius: 12px;
-  --sl-gap: 14px;
-  --sl-label-font: 1.25rem;
+@media (max-width: 991.98px) {
+  .squ-news__inner { padding: 2.5rem 2rem; }
 }
 
+@media (max-width: 900px) {
+  .squ-news__grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 767.98px) {
+  .squ-news { background: linear-gradient(#ededed 0, #ededed 50px, #fff 50px); }
+  .squ-news__inner { padding: 2rem 1rem; }
+  .squ-news__list { max-width: 100%; }
+  .squ-news__media { max-width: 100%; margin: 0; height: 260px; }
+  .squ-news__img { width: calc(100% - 24px); height: 220px; }
+}
+
+/* ==========================================================================
+   Student life gallery
+   ========================================================================== */
 .squ-gallery {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: var(--squ-container);
+  margin: 3.5rem auto 0 13%;
   padding: 2rem 1.5rem;
 }
 
 .squ-gallery__heading {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--sl-heading-color);
-  margin-bottom: 1.2rem;
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--squ-blue);
+  margin: 0 0 1.25rem;
   letter-spacing: 0.02em;
 }
 
@@ -869,8 +1112,14 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: var(--sl-gap);
+  grid-auto-rows: 160px;
+  gap: 1rem;
   height: 520px;
+}
+
+/* first tile spans two rows to match the large "Student Life" tile in Figma */
+.squ-gallery__grid .field__item:first-child {
+  grid-row: span 2;
 }
 
 .squ-gallery__tile:nth-child(1) { grid-column: 1 / 2; grid-row: 1 / 3; } /* tall */
@@ -878,30 +1127,32 @@
 .squ-gallery__tile:nth-child(3) { grid-column: 3 / 4; grid-row: 1 / 2; }
 .squ-gallery__tile:nth-child(4) { grid-column: 2 / 4; grid-row: 2 / 3; } /* wide */
 
-/* Tile */
 .squ-gallery__tile {
-  position: relative;
-  overflow: hidden;
-  border-radius: var(--sl-radius);
+  height: 100%;
+  min-height: 180px;
+  border-radius: var(--squ-radius);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.squ-gallery__tile.is-large {
+  grid-column: span 2;
+  grid-row: span 2;
 }
 .squ-gallery__tile:hover {
   transform: scale(1.02);
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
 }
 
-/* Image fills the tile */
-.squ-gallery__tile-bg,
 .squ-gallery__tile-bg picture {
   position: absolute;
   inset: 0;
-  display: block;
-}
-.squ-gallery__tile-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
   display: block;
 }
 
@@ -911,12 +1162,20 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(to bottom,
-    rgba(0,0,0,0) 0%, rgba(0,0,0,0) 45%,
-    rgba(0,0,0,.40) 75%, rgba(0,0,0,.62) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.7) 100%);
   transition: opacity 0.4s ease;
 }
 .squ-gallery__tile:hover::after { opacity: 1.2; filter: brightness(.85); }
+
+.squ-gallery__tile span {
+  position: absolute;
+  left: 0.85rem;
+  bottom: 0.75rem;
+  z-index: 1;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
 
 /* Label sits above the overlay */
 .squ-gallery__label {
@@ -933,7 +1192,6 @@
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
 }
 
-/* Tablet */
 @media (max-width: 991.98px) {
   :root { --sl-label-font: 1rem; }
   .squ-gallery__grid {
@@ -947,13 +1205,10 @@
   .squ-gallery__tile:nth-child(4) { grid-column: 1 / 3; grid-row: 3; }
 }
 
-/* Mobile */
 @media (max-width: 767.98px) {
-  :root { --sl-label-font: 0.95rem; --sl-gap: 10px; }
+  :root { --sl-label-font: 0.95rem; }
   .squ-gallery { padding: 1.2rem 1rem; }
-  .squ-gallery__heading { font-size: 1.5rem; }
   .squ-gallery__grid {
-    grid-template-columns: 1fr;
     grid-template-rows: 260px 200px 200px 200px;
   }
   .squ-gallery__tile:nth-child(n) { grid-column: 1 / 2; grid-row: auto; }
@@ -961,18 +1216,16 @@
 
 @media (max-width: 400px) {
   .squ-gallery__grid { grid-template-rows: 220px 180px 180px 180px; }
-  .squ-gallery__heading { font-size: 1.3rem; }
 }
 
-:root {
-  --ri-blue: #1f4ac2;
-  --ri-text: #111111;
-  --ri-bg: #ededed;
-  --ri-gold: #cfa02a;
-  --ri-radius: 12px;
-  --ri-card-w: 357px;
+@media (max-width: 900px) {
+  .squ-gallery__grid { grid-template-columns: repeat(2, 1fr); }
+  .squ-gallery__grid .field__item:first-child { grid-row: span 1; }
 }
 
+/* ==========================================================================
+   Research Institutes (ri-*)
+   ========================================================================== */
 .ri-section,
 .ri-section * {
   box-sizing: border-box;
@@ -1011,6 +1264,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  font-size: 20px;
 }
 
 .ri-left__content {
@@ -1020,6 +1274,7 @@
   justify-content: flex-start;
   align-items: flex-start;
   gap: 32px;
+  font-family: "IBM Plex Sans Arabic", "Noto Kufi Arabic", "Manrope", sans-serif;
 }
 
 .ri-heading {
@@ -1234,663 +1489,4 @@
     min-height: 200px;
     max-height: 420px;
   }
-}
-/**
- * SQU public landing page — component CSS matched to the actual rendered
- * markup (squ-hero, squ-tiles, squ-stats, squ-research, squ-we-are,
- * squ-news, squ-gallery, squ-footer, site-header) against the Figma PDF.
- *
- * Drop this file at:
- *   web/themes/custom/squ_theme/css/components/landing-page.css
- * (same folder as your existing hero.css / header.css)
- *
- * Then attach it — add to squ_theme.libraries.yml:
- *
- * landing-page:
- *   css:
- *     component:
- *       css/components/landing-page.css: {}
- *
- * ...and make sure your page/node template does:
- *   {{ attach_library('squ_theme/landing-page') }}
- * (or add "squ_theme/landing-page" to the "dependencies" of whichever
- * library your page.html.twig already attaches).
- *
- * Nothing here touches your Twig — every selector below matches classes
- * already present in your rendered HTML, so no template changes needed
- * for this pass.
- */
-
-:root {
-  --squ-navy: #1a2b30;
-  --squ-navy-dark: #12191c;
-  --squ-gold: #d9a441;
-  --squ-gold-dark: #b9852b;
-  --squ-blue: #1c6ea4;
-  --squ-text: #26332f;
-  --squ-text-muted: #6b7674;
-  --squ-border: #e2e6e4;
-  --squ-bg-alt: #f5f6f6;
-  --squ-radius: 6px;
-  --squ-container: 1200px;
-  --squ-font: "Metropolis", "Lora", system-ui, -apple-system, "Segoe UI", sans-serif;
-}
-
-.squ-landing-page {
-  font-family: var(--squ-font);
-  color: var(--squ-text);
-}
-
-.squ-landing-page section,
-.squ-landing-page > div {
-  box-sizing: border-box;
-}
-
-.squ-landing-page img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* ---------------------------------------------------------------------
-   Header
---------------------------------------------------------------------- */
-.site-header:not(.squ-site-header) {
-  background: var(--squ-navy);
-}
-
-.site-header__inner {
-  padding: 0.75rem 1.5rem;
-}
-
-.site-header__inner__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: var(--squ-container);
-  margin-inline: auto;
-}
-
-/* Site branding sizing: see css/header.css (.squ-site-header .brand) */
-
-.squ-header__quicklinks .menu--level-1,
-#block-squ-theme-main-menu .menu--level-1 {
-  display: flex;
-  gap: 1.75rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu__link--level-1,
-.primary-nav__menu-link--level-1 {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-}
-
-.menu__link--level-1:hover,
-.primary-nav__menu-link--level-1:hover {
-  color: var(--squ-gold);
-}
-
-.secondary-nav__menu-link--level-1 {
-  color: #fff;
-  font-size: 0.9rem;
-  text-decoration: none;
-  opacity: 0.85;
-}
-
-.mobile-nav-button {
-  background: transparent;
-  border: 0;
-  color: #fff;
-  display: none;
-}
-
-.mobile-nav-button__icon {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: #fff;
-  position: relative;
-}
-.mobile-nav-button__icon::before,
-.mobile-nav-button__icon::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 22px;
-  height: 2px;
-  background: #fff;
-}
-.mobile-nav-button__icon::before { top: -7px; }
-.mobile-nav-button__icon::after { top: 7px; }
-
-@media (max-width: 900px) {
-  .header-nav,
-  .squ-header__quicklinks {
-    display: none;
-  }
-  .mobile-nav-button {
-    display: inline-flex;
-  }
-}
-
-/* ---------------------------------------------------------------------
-   Hero
---------------------------------------------------------------------- */
-.squ-hero {
-  position: relative;
-  min-height: 560px;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: flex-start;
-  padding: 3rem 1.5rem 0;
-}
-
-.squ-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(10, 15, 17, 0.55) 0%, rgba(10, 15, 17, 0.15) 40%, rgba(10, 15, 17, 0.05) 100%);
-  pointer-events: none;
-}
-
-.squ-hero__card {
-  position: relative;
-  z-index: 1;
-  max-width: 420px;
-  margin-left: 2rem;
-  padding: 1.75rem 2rem;
-  background: rgba(15, 22, 24, 0.72);
-  border-left: 4px solid var(--squ-gold);
-}
-
-.squ-hero__title {
-  color: var(--squ-gold);
-  font-size: 1.9rem;
-  font-weight: 800;
-  letter-spacing: 0.03em;
-  line-height: 1.2;
-  margin: 0 0 0.75rem;
-}
-
-.squ-hero__quote {
-  color: #f2f2f0;
-  font-style: italic;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-.squ-hero__quote:empty {
-  display: none;
-}
-
-.squ-hero__attribution {
-  color: #cfd6d4;
-  font-size: 0.8rem;
-  letter-spacing: 0.05em;
-  margin-top: 0.75rem;
-}
-
-/* College / Major search bar — overlaps the hero bottom edge */
-.squ-college-major-bar {
-  position: relative;
-  z-index: 2;
-  max-width: var(--squ-container);
-  margin: -48px auto 0;
-  padding: 0 1.5rem;
-}
-
-.squ-college-major-bar form {
-  background: var(--squ-navy-dark);
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 1.25rem;
-  padding: 1rem 1.5rem;
-  border-radius: var(--squ-radius);
-}
-
-.squ-college-major-bar .form-item__label {
-  color: var(--squ-gold);
-  font-weight: 700;
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  margin-bottom: 0.35rem;
-  display: block;
-}
-
-.squ-college-major-bar .form-select {
-  min-width: 220px;
-  background: #fff;
-  border: 0;
-  border-radius: 4px;
-  padding: 0.6rem 0.75rem;
-  font-size: 0.9rem;
-  color: var(--squ-text);
-}
-
-.squ-college-major-bar .form-actions {
-  margin-left: auto;
-}
-
-.squ-college-major-bar .webform-button--submit {
-  background: var(--squ-gold);
-  color: var(--squ-navy-dark);
-  border: 0;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  padding: 0.75rem 1.75rem;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.squ-college-major-bar .webform-button--submit:hover {
-  background: var(--squ-gold-dark);
-}
-
-@media (max-width: 700px) {
-  .squ-hero { min-height: 460px; padding-top: 2rem; }
-  .squ-hero__card { margin-left: 0; max-width: 100%; }
-  .squ-college-major-bar { margin-top: -32px; }
-  .squ-college-major-bar form { flex-direction: column; align-items: stretch; }
-  .squ-college-major-bar .form-actions { margin-left: 0; }
-}
-
-/* ---------------------------------------------------------------------
-   Tiles (Postgraduate / Undergraduate / International)
---------------------------------------------------------------------- */
-.squ-tiles {
-  max-width: var(--squ-container);
-  margin: 2.5rem auto 0;
-  padding: 0 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
-}
-
-.squ-tile {
-  position: relative;
-  display: block;
-  aspect-ratio: 3 / 4;
-  overflow: hidden;
-  border-radius: var(--squ-radius);
-  text-decoration: none;
-}
-
-.squ-tile__bg {
-  position: absolute;
-  inset: 0;
-}
-
-.squ-tile__bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.35s ease;
-}
-
-.squ-tile:hover .squ-tile__bg img {
-  transform: scale(1.04);
-}
-
-.squ-tile::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.75) 100%);
-}
-
-.squ-tile span {
-  position: absolute;
-  left: 1rem;
-  bottom: 1rem;
-  z-index: 1;
-  color: #fff;
-  font-weight: 800;
-  font-size: 1.1rem;
-}
-
-@media (max-width: 700px) {
-  .squ-tiles { grid-template-columns: 1fr; }
-}
-
-/* ---------------------------------------------------------------------
-   Stats bar
---------------------------------------------------------------------- */
-.squ-stats {
-  max-width: var(--squ-container);
-  margin: 3rem auto 0;
-  padding: 2rem 1.5rem;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  text-align: center;
-}
-
-.squ-stat {
-  position: relative;
-  padding: 0 1rem;
-}
-
-.squ-stat + .squ-stat::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 10%;
-  bottom: 10%;
-  width: 1px;
-  background: var(--squ-border);
-}
-
-.squ-stat__number {
-  color: var(--squ-blue);
-  font-size: 2.25rem;
-  font-weight: 800;
-  line-height: 1;
-}
-
-.squ-stat__label {
-  color: var(--squ-text-muted);
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-}
-
-@media (max-width: 700px) {
-  .squ-stats { grid-template-columns: repeat(2, 1fr); row-gap: 1.5rem; }
-  .squ-stat:nth-child(3)::before { display: none; }
-}
-
-/* ---------------------------------------------------------------------
-   Research & Innovations
---------------------------------------------------------------------- */
-.squ-research {
-  max-width: var(--squ-container);
-  margin: 3.5rem auto 0;
-  padding: 0 1.5rem;
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 2rem;
-  align-items: start;
-}
-
-.squ-research__heading {
-  grid-column: 1 / -1;
-  color: var(--squ-blue);
-  font-size: 1.75rem;
-  font-weight: 800;
-  margin: 0 0 0.5rem;
-}
-
-.squ-research__intro {
-  color: var(--squ-text-muted);
-  line-height: 1.6;
-  max-width: 46ch;
-}
-
-.squ-research__cards {
-  display: grid;
-  gap: 1rem;
-}
-
-.squ-research__card,
-a.squ-research__card {
-  position: relative;
-  display: block;
-  border-radius: var(--squ-radius);
-  overflow: hidden;
-  min-height: 260px;
-  text-decoration: none;
-}
-
-.squ-research__card-bg {
-  position: absolute;
-  inset: 0;
-}
-
-.squ-research__card-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.squ-research__card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.8) 100%);
-}
-
-.squ-research__card-title {
-  position: absolute;
-  left: 1.25rem;
-  right: 1.25rem;
-  bottom: 1.25rem;
-  z-index: 1;
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.95rem;
-  line-height: 1.4;
-}
-
-@media (max-width: 900px) {
-  .squ-research { grid-template-columns: 1fr; }
-}
-
-/* ---------------------------------------------------------------------
-   We are SQU
---------------------------------------------------------------------- */
-.squ-we-are {
-  position: relative;
-  margin-top: 3.5rem;
-  min-height: 460px;
-  display: flex;
-  align-items: center;
-}
-
-.squ-we-are__bg {
-  position: absolute;
-  inset: 0;
-  background: var(--squ-navy);
-  background-image:
-    radial-gradient(circle, rgba(255, 255, 255, 0.35) 1px, transparent 1.5px);
-  background-size: 14px 14px;
-  background-position: right bottom;
-  background-repeat: repeat;
-  -webkit-mask-image: linear-gradient(90deg, transparent 60%, black 100%);
-  mask-image: linear-gradient(90deg, transparent 60%, black 100%);
-  opacity: 0.5;
-}
-
-.squ-we-are__card {
-  position: relative;
-  z-index: 1;
-  background: var(--squ-navy-dark);
-  color: #fff;
-  max-width: 420px;
-  margin-left: max(1.5rem, calc((100vw - var(--squ-container)) / 2));
-  padding: 2.5rem;
-}
-
-.squ-we-are__heading {
-  color: var(--squ-gold);
-  font-size: 1.6rem;
-  font-weight: 800;
-  margin: 0 0 1rem;
-}
-
-.squ-we-are__card .field__label {
-  display: none;
-}
-
-.squ-we-are__card p,
-.squ-we-are__card .field--name-field-about-squ-text {
-  line-height: 1.7;
-  color: #e7eae9;
-}
-
-.squ-we-are__buttons {
-  display: flex;
-  gap: 1.5rem;
-  margin-top: 1.5rem;
-}
-
-.squ-we-are__buttons a {
-  color: var(--squ-gold);
-  font-weight: 700;
-  font-size: 0.85rem;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-}
-
-.squ-we-are__buttons a::after {
-  content: " →";
-}
-
-@media (max-width: 700px) {
-  .squ-we-are__card { margin-inline: 1rem; max-width: none; }
-}
-
-/* ---------------------------------------------------------------------
-   News
---------------------------------------------------------------------- */
-.squ-news {
-  max-width: var(--squ-container);
-  margin: 3.5rem auto 0;
-  padding: 0 1.5rem;
-}
-
-.squ-news__grid {
-  display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  gap: 2.5rem;
-  align-items: start;
-}
-
-.squ-news__heading {
-  color: var(--squ-blue);
-  font-size: 1.75rem;
-  font-weight: 800;
-  margin: 0 0 1.25rem;
-}
-
-.squ-news__item {
-  padding-bottom: 1.25rem;
-  margin-bottom: 1.25rem;
-  border-bottom: 1px solid var(--squ-border);
-}
-
-.squ-news__item-title {
-  color: var(--squ-gold-dark);
-  text-transform: uppercase;
-  font-size: 0.95rem;
-  font-weight: 800;
-  margin: 0 0 0.35rem;
-}
-
-.squ-news__item-date {
-  color: var(--squ-text-muted);
-  font-size: 0.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.squ-news__item-desc {
-  color: var(--squ-text);
-  line-height: 1.6;
-  font-size: 0.92rem;
-}
-
-.squ-news__more {
-  margin-top: 0.5rem;
-}
-
-.squ-news__more a {
-  display: inline-block;
-  background: var(--squ-gold);
-  color: var(--squ-navy-dark);
-  font-weight: 800;
-  font-size: 0.8rem;
-  letter-spacing: 0.03em;
-  padding: 0.65rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-}
-
-.squ-news__image img {
-  border-radius: var(--squ-radius);
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-@media (max-width: 900px) {
-  .squ-news__grid { grid-template-columns: 1fr; }
-}
-
-/* ---------------------------------------------------------------------
-   Students Life gallery
---------------------------------------------------------------------- */
-.squ-gallery {
-  max-width: var(--squ-container);
-  margin: 3.5rem auto 0;
-  padding: 0 1.5rem;
-}
-
-.squ-gallery__heading {
-  color: var(--squ-blue);
-  font-size: 1.75rem;
-  font-weight: 800;
-  margin: 0 0 1.25rem;
-}
-
-.squ-gallery__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 160px;
-  gap: 1rem;
-}
-
-/* first tile spans two rows to match the large "Student Life" tile in Figma */
-.squ-gallery__grid .field__item:first-child {
-  grid-row: span 2;
-}
-
-.squ-gallery__tile {
-  position: relative;
-  height: 100%;
-  border-radius: var(--squ-radius);
-  overflow: hidden;
-}
-
-.squ-gallery__tile-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.squ-gallery__tile::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.7) 100%);
-}
-
-.squ-gallery__tile span {
-  position: absolute;
-  left: 0.85rem;
-  bottom: 0.75rem;
-  z-index: 1;
-  color: #fff;
-  font-weight: 700;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 900px) {
-  .squ-gallery__grid { grid-template-columns: repeat(2, 1fr); }
-  .squ-gallery__grid .field__item:first-child { grid-row: span 1; }
 }

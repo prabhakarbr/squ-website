@@ -1,0 +1,27 @@
+uuid: 36994079-4068-4fa4-b167-6b58d5db2d77
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ilc_documents
+    - paragraphs.paragraphs_type.ilc_publication_item
+  module:
+    - file
+id: paragraph.ilc_publication_item.field_ilc_documents
+field_name: field_ilc_documents
+entity_type: paragraph
+bundle: ilc_publication_item
+label: Documents
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf doc'
+  max_filesize: ''
+  description_field: false
+field_type: file

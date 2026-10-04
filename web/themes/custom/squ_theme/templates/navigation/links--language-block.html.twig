@@ -1,0 +1,51 @@
+{#
+/**
+ * @file
+ * Language switcher: 2 langs = globe + code link; 3+ langs = dropdown.
+ */
+#}
+{% macro squ_lang_globe() %}
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="1.7"></circle>
+    <ellipse cx="12" cy="12" rx="3.4" ry="8" fill="none" stroke="currentColor" stroke-width="1.5"></ellipse>
+    <path d="M4.4 12h15.2M6.2 8.2h11.6M6.2 15.8h11.6" fill="none" stroke="currentColor" stroke-width="1.4"></path>
+  </svg>
+{% endmacro %}
+
+{% import _self as squ_lang %}
+
+{% if alternate_links %}
+  {% set current_code = current_language_id|split('-')|first|upper %}
+
+  {% if language_count <= 2 %}
+    <nav class="squ-lang-switcher" aria-label="{{ 'Language switcher'|t }}">
+      <ul class="squ-lang-switcher__list">
+        {%- for langcode, item in alternate_links -%}
+          {%- set code = langcode|split('-')|first|upper -%}
+          <li{{ item.attributes.addClass('squ-lang-switcher__item') }}>
+            <a href="{{ item.switch_href }}" class="lang-btn squ-lang-switcher__link" hreflang="{{ langcode }}" lang="{{ langcode }}">
+              {{ squ_lang.squ_lang_globe() }}
+              <span>{{ code }}</span>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+  {% else %}
+    <details class="squ-lang-switcher squ-lang-switcher--dropdown">
+      <summary class="lang-btn squ-lang-switcher__toggle" aria-label="{{ 'Language switcher'|t }}">
+        {{ squ_lang.squ_lang_globe() }}
+        <span>{{ current_code }}</span>
+      </summary>
+      <ul class="squ-lang-switcher__panel" role="list">
+        {%- for langcode, item in alternate_links -%}
+          <li class="squ-lang-switcher__panel-item">
+            <a href="{{ item.switch_href }}" class="squ-lang-switcher__panel-link" hreflang="{{ langcode }}" lang="{{ langcode }}">
+              {{ item.text }}
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </details>
+  {% endif %}
+{% endif %}

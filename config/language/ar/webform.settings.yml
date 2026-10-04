@@ -1,0 +1,8 @@
+settings:
+  default_submit_button_label: إرسال
+  default_delete_button_label: حذف
+  default_preview_next_button_label: معاينة
+  default_preview_label: معاينة
+  dialog_options:
+    normal:
+      title: طبيعي

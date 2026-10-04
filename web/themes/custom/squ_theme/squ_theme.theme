@@ -2,5 +2,32 @@
 
 /**
  * @file
- * SQU Theme — Twig, CSS, and libraries only (no preprocess hooks).
+ * SQU Theme hooks.
  */
+
+use Drupal\Component\Utility\NestedArray;
+
+/**
+ * Implements hook_preprocess_links__language_block().
+ */
+function squ_theme_preprocess_links__language_block(array &$variables): void {
+  $variables['current_language_id'] = \Drupal::languageManager()
+    ->getCurrentLanguage()
+    ->getId();
+  $variables['alternate_links'] = [];
+
+  foreach ($variables['links'] as $langcode => $item) {
+    if (empty($item['link']['#url'])) {
+      continue;
+    }
+    $url = clone $item['link']['#url'];
+    $options = NestedArray::mergeDeep($url->getOptions(), $item['link']['#options'] ?? []);
+    $variables['links'][$langcode]['switch_href'] = $url->setOptions($options)->toString();
+
+    if ($langcode !== $variables['current_language_id']) {
+      $variables['alternate_links'][$langcode] = $variables['links'][$langcode];
+    }
+  }
+
+  $variables['language_count'] = count($variables['links']);
+}

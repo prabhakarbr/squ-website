@@ -1,0 +1,273 @@
+<div class="news-events-page">
+
+    {# ============================================================
+    COLLECT NEWS EVENTS BY CATEGORY
+    ============================================================ #}
+    {% set latest_news = [] %}
+    {% set femtosecond = [] %}
+    {% set squ_events = [] %}
+    {% set videos = [] %}
+    {% set outreach = [] %}
+    {% for row in rows %}
+    {% set node = row.content['#row']._entity %}
+    {% if node.field_news_events_category.entity %}
+    {% set category = node.field_news_events_category.entity.name.value|lower|trim %}
+    {% if category == 'latest news' %}
+    {% set latest_news = latest_news|merge([node]) %}
+    {% elseif category == 'femtosecond' %}
+    {% set femtosecond = femtosecond|merge([node]) %}
+    {% elseif category == 'squ events' %}
+    {% set squ_events = squ_events|merge([node]) %}
+    {% elseif category == 'videos' %}
+    {% set videos = videos|merge([node]) %}
+    {% elseif category == 'outreach' %}
+    {% set outreach = outreach|merge([node]) %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+{# ============================================================
+   HERO SLIDESHOW
+   Uses Latest News taxonomy items
+   ============================================================ #}
+
+{% set hero_slides = [] %}
+
+{% for row in rows %}
+
+  {% set node = row.content['#row']._entity %}
+
+  {% if node.field_news_events_category.entity %}
+
+    {% set category = node.field_news_events_category.entity.name.value|lower|trim %}
+
+    {% if category == 'latest news' %}
+      {% set hero_slides = hero_slides|merge([node]) %}
+    {% endif %}
+
+  {% endif %}
+
+{% endfor %}
+
+
+{% if hero_slides|length %}
+
+<section class="hero-section">
+
+  <div class="container">
+
+    <div class="hero hero-slider">
+
+      <div class="hero-slides">
+
+        {% for node in hero_slides|slice(0, 5) %}
+
+          <div class="hero-slide {% if loop.first %}active{% endif %}">
+
+            {% if node.field_news_events_image.entity %}
+
+              <img
+                src="{{ file_url(node.field_news_events_image.entity.uri.value) }}"
+                alt="{{ node.label|e }}"
+              >
+
+            {% endif %}
+
+            <div class="hero-overlay"></div>
+
+            <div class="hero-content">
+
+              <h1>
+                {{ node.label }}
+              </h1>
+
+            </div>
+
+          </div>
+
+        {% endfor %}
+
+      </div>
+
+
+      {# Optional navigation dots #}
+      <div class="hero-dots">
+
+        {% for node in hero_slides|slice(0, 5) %}
+
+          <button
+            type="button"
+            class="hero-dot {% if loop.first %}active{% endif %}"
+            data-slide="{{ loop.index0 }}"
+            aria-label="Slide {{ loop.index }}"
+          ></button>
+
+        {% endfor %}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+{% endif %}
+    {# ============================================================
+    LATEST NEWS
+    ============================================================ #}
+    {% if latest_news|length %}
+    <section class="latest-news-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>LATEST <span>NEWS</span></h2>
+                <div class="line"></div>
+            </div>
+            <div class="latest-news-grid">
+                {% if latest_news[0] is defined %}
+                {% set node = latest_news[0] %}
+                <article class="latest-news-main">
+                    {% if node.field_news_events_image.entity %}
+                    <img src="{{ file_url(node.field_news_events_image.entity.uri.value) }}" alt="{{ node.label|e }}">
+                    {% endif %}
+                    <h3>{{ node.label }}</h3>
+                </article>
+                {% endif %}
+                <div class="latest-news-small">
+                    {% for node in latest_news|slice(1, 4) %}
+                    <article class="news-card">
+                        {% if node.field_news_events_image.entity %}
+                        <img src="{{ file_url(node.field_news_events_image.entity.uri.value) }}"
+                            alt="{{ node.label|e }}">
+                        {% endif %}
+                        <h3>{{ node.label }}</h3>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    {% endif %}
+    <section class="content-section">
+        <div class="container two-column">
+            {# ================= FEMTOSECOND ================= #}
+            {% if femtosecond|length %}
+            <div>
+                <div class="section-title">
+                    <h2>FEMTOSECOND</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="femtosecond-section">
+                    {# Featured FemtoSecond #}
+                    {% if femtosecond[0] is defined %}
+                    {% set node = femtosecond[0] %}
+                    <article class="femto-feature">
+                        {% if node.field_news_events_image.entity %}
+                        <img src="{{ file_url(node.field_news_events_image.entity.uri.value) }}"
+                            alt="{{ node.label|e }}">
+                        {% endif %}
+                        <h3>{{ node.label }}</h3>
+                        {% if node.field_body.value %}
+                        <p>
+                            {{ node.field_body.value|striptags|slice(0, 300) }}
+                        </p>
+                        {% endif %}
+                    </article>
+                    {% endif %}
+                    {# Four FemtoSecond items #}
+                    <div class="femto-list">
+                        {% for node in femtosecond|slice(1, 4) %}
+                        <article class="femto-item">
+                            {% if node.field_news_events_image.entity %}
+                            <img src="{{ file_url(node.field_news_events_image.entity.uri.value) }}"
+                                alt="{{ node.label|e }}">
+                            {% endif %}
+                            <h3>{{ node.label }}</h3>
+                        </article>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {# ================= SQU EVENTS ================= #}
+            {% if squ_events|length %}
+            <div>
+                <div class="section-title">
+                    <h2>SQU EVENTS</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="events-section">
+                    {% for node in squ_events|slice(0, 2) %}
+                    <article class="event-card">
+                        {% if node.field_news_events_image.entity %}
+                        <img src="{{ file_url(node.field_news_events_image.entity.uri.value) }}"
+                            alt="{{ node.label|e }}">
+                        {% endif %}
+                        <h3>{{ node.label }}</h3>
+                        {# Event date - use your actual date field here #}
+                        {% if node.field_event_date.value is defined %}
+                        <div class="event-date">
+                            {{ node.field_event_date.value }}
+                        </div>
+                        {% endif %}
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+    {# ============================================================
+    VIDEOS + OUTREACH
+    ============================================================ #}
+    <section class="content-section">
+        <div class="container two-column">
+            {# ================= VIDEOS ================= #}
+            {% if videos|length %}
+            <div>
+                <div class="section-title">
+                    <h2>VIDEOS</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="videos-section">
+                    {% for node in videos|slice(0, 2) %}
+                    <article class="video-card">
+                        {% if node.field_news_events_image.entity %}
+                        <img src="{{ file_url(node.field_news_events_image.entity.uri.value) }}"
+                            alt="{{ node.label|e }}">
+                        {% endif %}
+                        <div class="video-card-content">
+                            <h3>{{ node.label }}</h3>
+                            {% if node.field_body.value %}
+                            <p>
+                                {{ node.field_body.value|striptags|slice(0, 250) }}
+                            </p>
+                            {% endif %}
+                        </div>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+            {# ================= OUTREACH ================= #}
+            {% if outreach|length %}
+            <div>
+                <div class="section-title">
+                    <h2>OUTREACH</h2>
+                    <div class="line"></div>
+                </div>
+                <div class="outreach-list">
+                    {% for node in outreach|slice(0, 4) %}
+                    <article class="outreach-item">
+                        {% if node.field_news_events_image.entity %}
+                        <img src="{{ file_url(node.field_news_events_image.entity.uri.value) }}"
+                            alt="{{ node.label|e }}">
+                        {% endif %}
+                        <h3>{{ node.label }}</h3>
+                    </article>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endif %}
+        </div>
+    </section>
+</div>

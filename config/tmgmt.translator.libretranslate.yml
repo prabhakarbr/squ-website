@@ -1,0 +1,14 @@
+uuid: a802933a-7f9b-4c6d-8b70-15bc6bb27324
+langcode: en
+status: true
+dependencies:
+  module:
+    - tmgmt_libretranslate
+name: libretranslate
+label: LibreTranslate
+description: 'LibreTranslate Translator service.'
+auto_accept: null
+weight: null
+plugin: libretranslate
+settings: {  }
+remote_languages_mappings: {  }
