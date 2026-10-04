@@ -1,0 +1,10 @@
+uuid: 82564626-15c3-4d09-8223-7421280379f7
+langcode: en
+status: true
+dependencies: {  }
+id: single_image_section
+label: 'Single image section'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

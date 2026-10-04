@@ -1,0 +1,29 @@
+uuid: 4c938371-fb5d-4b98-82c4-a1793b8b8bc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.international-student-main-menus
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_internationalstudentmainmenus_2
+theme: squ_theme
+region: header_section
+weight: 0
+provider: null
+plugin: 'system_menu_block:international-student-main-menus'
+settings:
+  id: 'system_menu_block:international-student-main-menus'
+  label: 'International Student Main Menus'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /International-Students

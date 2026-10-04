@@ -1,0 +1,32 @@
+uuid: 07ad0806-be11-40ec-8caf-83850cc070de
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cpes_summary
+    - filter.format.basic_html
+    - filter.format.full_html
+    - filter.format.plain_text
+    - filter.format.restricted_html
+    - paragraphs.paragraphs_type.single_image_section
+  module:
+    - text
+id: paragraph.single_image_section.field_cpes_summary
+field_name: field_cpes_summary
+entity_type: paragraph
+bundle: single_image_section
+label: 'Cpes Summary'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - basic_html
+    - restricted_html
+    - full_html
+    - plain_text
+field_type: text_with_summary

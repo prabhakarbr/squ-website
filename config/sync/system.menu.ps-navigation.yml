@@ -1,0 +1,8 @@
+uuid: 16d17549-4815-4cb0-8a4e-6b3c537c6a8b
+langcode: en
+status: true
+dependencies: {  }
+id: ps-navigation
+label: 'ps navigation'
+description: 'Navigation menu'
+locked: false
