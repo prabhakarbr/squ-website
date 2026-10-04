@@ -24,11 +24,11 @@ services:
       - "8090:80"
     volumes:
       # Sync folders to your Windows drive so Git can see all modifications
-      - ./web/sites:/var/www/html/sites
-      - ./web/modules:/var/www/html/modules
-      - ./web/profiles:/var/www/html/profiles
-      - ./web/themes:/var/www/html/themes
-      - ./assets:/var/www/html/assets_import
+      - ./web/sites:/opt/drupal/web/sites
+      - ./web/modules:/opt/drupal/web/modules
+      - ./web/profiles:/opt/drupal/web/profiles
+      - ./web/themes:/opt/drupal/web/themes
+      - ./assets:/opt/drupal/web/assets_import
       - ./config:/opt/drupal/config
     environment:
       DRUPAL_DB_HOST: db

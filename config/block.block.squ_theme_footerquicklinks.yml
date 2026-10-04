@@ -11,7 +11,7 @@ dependencies:
 id: squ_theme_footerquicklinks
 theme: squ_theme
 region: footer_top
-weight: 0
+weight: -15
 provider: null
 plugin: 'system_menu_block:footer-quick-links'
 settings:

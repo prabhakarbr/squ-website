@@ -10,8 +10,8 @@ dependencies:
     - squ_theme
 id: squ_theme_newseventsfootermenu
 theme: squ_theme
-region: footer_bottom
-weight: 0
+region: footer_top
+weight: -14
 provider: null
 plugin: 'system_menu_block:news-events-footer-menu'
 settings:

@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Defines common functionality for lite_youtube_embed module.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function lite_youtube_embed_theme() {
+  return [
+    'lite_youtube_embed' => [
+      'variables' => [
+        'video_id' => '',
+        'label' => '',
+        'entity' => NULL,
+      ],
+    ],
+  ];
+}

@@ -1,0 +1,12 @@
+lite_youtube_embed:
+  remote: https://github.com/paulirish/lite-youtube-embed
+  version: VERSION
+  license:
+    name: 'Apache License 2.0'
+    url: https://github.com/paulirish/lite-youtube-embed/blob/master/LICENSE
+    gpl-compatible: true
+  js:
+    /libraries/lite-youtube-embed/src/lite-yt-embed.js: { }
+  css:
+    component:
+      /libraries/lite-youtube-embed/src/lite-yt-embed.css: { }
