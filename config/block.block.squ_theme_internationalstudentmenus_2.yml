@@ -1,6 +1,6 @@
 uuid: da94e032-5259-448e-8fd4-727020b0a93b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.international-student-menus
@@ -10,7 +10,7 @@ dependencies:
     - squ_theme
 id: squ_theme_internationalstudentmenus_2
 theme: squ_theme
-region: sidebar
+region: header_brand
 weight: 0
 provider: null
 plugin: 'system_menu_block:international-student-menus'

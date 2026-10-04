@@ -6,7 +6,7 @@ dependencies:
     - squ_theme
 id: squ_theme_c2026sultanqaboosuniversity.allrightsreserved
 theme: squ_theme
-region: header
+region: header_brand
 weight: -13
 provider: null
 plugin: 'block_content:1837b389-46ed-4cae-867c-18a55a853b44'
