@@ -7,6 +7,7 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
+RUN cd /opt/drupal && composer require drush/drush --no-interaction --no-progress
 WORKDIR /var/www/html
 
 # Ensure the Apache server has permission to read and write your files
