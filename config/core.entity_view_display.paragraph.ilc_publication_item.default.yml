@@ -1,0 +1,60 @@
+uuid: 63dbcb6b-685b-42f6-9571-484702cce7ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ilc_publication_item.field_ilc_documents
+    - field.field.paragraph.ilc_publication_item.field_ilc_publication_title
+    - field.field.paragraph.ilc_publication_item.field_link
+    - field.field.paragraph.ilc_publication_item.field_pub_thumbnail
+    - paragraphs.paragraphs_type.ilc_publication_item
+  module:
+    - file
+    - image
+    - link
+id: paragraph.ilc_publication_item.default
+targetEntityType: paragraph
+bundle: ilc_publication_item
+mode: default
+content:
+  field_ilc_documents:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ilc_publication_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_pub_thumbnail:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

@@ -1,0 +1,10 @@
+uuid: 9f172edf-cf96-4471-93d9-c48fbf8a9fec
+langcode: en
+status: true
+dependencies: {  }
+id: ilc_publication_item
+label: 'ILC Publication Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
