@@ -1,5 +1,6 @@
 display:
   default:
+    display_title: الافتراضي
     display_options:
       fields:
         media_bulk_form:
@@ -7,6 +8,7 @@ display:
         bundle:
           label: النوع
         status:
+          label: الحالة
           settings:
             format_custom_true: منشور
         operations:
@@ -15,6 +17,7 @@ display:
         options:
           expose:
             items_per_page_options_all_label: '- الكل -'
+            offset_label: الإزاحة
       filters:
         bundle:
           expose:

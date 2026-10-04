@@ -1,10 +1,14 @@
 label: المحتوى
 display:
   default:
+    display_title: الافتراضي
     display_options:
       title: المحتوى
       fields:
+        title:
+          label: Title
         status:
+          label: الحالة
           settings:
             format_custom_true: منشور
         langcode:
@@ -12,7 +16,12 @@ display:
         operations:
           label: العمليات
       filters:
+        title:
+          expose:
+            label: Title
         status:
+          expose:
+            label: الحالة
           group_info:
             group_items:
               1:

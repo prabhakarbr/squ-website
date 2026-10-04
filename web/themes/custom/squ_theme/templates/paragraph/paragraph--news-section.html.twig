@@ -42,12 +42,11 @@
                 <h3 class="squ-news__item-title">{{ n_title }}</h3>
               {% endif %}
 
-              {% if n_date %}
-                <div class="squ-news__item-date">{{ n_date|date('d F Y') }}</div>
-              {% endif %}
-
               {% if n_desc %}
                 <div class="squ-news__item-desc">{{ n_desc|raw }}</div>
+              {% endif %}
+                {% if n_date %}
+                <div class="squ-news__item-date">{{ n_date|date('d F Y') }}</div>
               {% endif %}
             </article>
           {% endif %}

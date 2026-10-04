@@ -1,5 +1,6 @@
 display:
   default:
+    display_title: الافتراضي
     display_options:
       fields:
         operations:
@@ -8,3 +9,4 @@ display:
         options:
           expose:
             items_per_page_options_all_label: '- الكل -'
+            offset_label: الإزاحة

@@ -6,7 +6,7 @@ features:
   favicon: true
   node_user_picture: true
 logo:
-  path: 'public://Frame 126_0.svg'
+  path: 'public://Group.png'
   use_default: false
 footer_logo:
   - 91

@@ -5,6 +5,9 @@ display:
         options:
           expose:
             items_per_page_options_all_label: '- الكل -'
+            offset_label: الإزاحة
       fields:
         created:
           label: 'تم الإنشاء'
+        name:
+          label: الاسم

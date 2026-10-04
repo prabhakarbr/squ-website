@@ -1,19 +1,27 @@
 display:
   default:
+    display_title: الافتراضي
     display_options:
       fields:
+        user_bulk_form:
+          label: 'تحديث شامل'
         status:
+          label: الحالة
           settings:
             format_custom_true: نشط
+        roles_target_id:
+          label: الأدوار
         operations:
           label: العمليات
       pager:
         options:
           expose:
             items_per_page_options_all_label: '- الكل -'
+            offset_label: الإزاحة
       filters:
         status:
           group_info:
+            label: الحالة
             group_items:
               1:
                 title: نشط
