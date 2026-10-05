@@ -1,0 +1,11 @@
+uuid: b42d4e23-dfba-4571-a758-26bea541b340
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.deanship_of_admission_and_regist
+id: node.deanship_of_admission_and_regist
+target_entity_type_id: node
+target_bundle: deanship_of_admission_and_regist
+default_langcode: site_default
+language_alterable: false
