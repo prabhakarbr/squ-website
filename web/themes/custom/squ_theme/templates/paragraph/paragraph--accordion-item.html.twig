@@ -1,0 +1,38 @@
+{% block paragraph %}
+
+  <div{{ attributes.addClass('squ-accordion__item') }}>
+
+    <button
+      type="button"
+      class="squ-accordion__button"
+      aria-expanded="false"
+    >
+      <span class="squ-accordion__title">
+        {{ content.field_accordion_title }}
+      </span>
+
+      <span
+        class="squ-accordion__icon"
+        aria-hidden="true"
+      >+</span>
+    </button>
+
+    <div class="squ-accordion__content" hidden>
+
+      {% if content.field_accordion_content %}
+        <div class="squ-accordion__text">
+          {{ content.field_accordion_content }}
+        </div>
+      {% endif %}
+
+      {% if content.field_accordion_content_with_lin %}
+        <div class="squ-accordion__links">
+          {{ content.field_accordion_content_with_lin }}
+        </div>
+      {% endif %}
+
+    </div>
+
+  </div>
+
+{% endblock paragraph %}

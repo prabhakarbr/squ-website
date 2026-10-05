@@ -24,9 +24,11 @@ global:
       css/footer.css: {}
       css/homepage.css: {}
       css/open-data.css: {}
+      css/ugpage.css: {}
   js:
     js/search-toggle.js: {}
     js/open-data.js: {}
+    js/accordian.js: {}
   dependencies:
     - squ_theme/bootstrap
     - core/drupal

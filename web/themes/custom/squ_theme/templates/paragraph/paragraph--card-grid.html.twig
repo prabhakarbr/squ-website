@@ -1,0 +1,19 @@
+{{ attach_library('squ_theme/ug') }}
+
+{% block paragraph %}
+  <div{{ attributes.addClass('card-grid') }}>
+
+    {% if content.field_grid_heading %}
+      <div class="card-grid__heading">
+        {{ content.field_grid_heading }}
+      </div>
+    {% endif %}
+
+    {% if content.field_grid_cards %}
+      <div class="card-grid__items">
+        {{ content.field_grid_cards }}
+      </div>
+    {% endif %}
+
+  </div>
+{% endblock paragraph %}
