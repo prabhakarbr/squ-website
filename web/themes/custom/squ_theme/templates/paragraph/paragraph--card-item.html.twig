@@ -1,0 +1,24 @@
+{% block paragraph %}
+  <div{{ attributes.addClass('card-item') }}>
+
+    {% if content.field_card_icon %}
+      <div class="card-item__icon">
+        {% if content.field_card_link %}
+          <a href="{{ content.field_card_link[0]['#url'] }}"
+             class="card-item__image-link">
+            {{ content.field_card_icon }}
+          </a>
+        {% else %}
+          {{ content.field_card_icon }}
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if content.field_card_title %}
+      <div class="card-item__title">
+        {{ content.field_card_title }}
+      </div>
+    {% endif %}
+
+  </div>
+{% endblock paragraph %}

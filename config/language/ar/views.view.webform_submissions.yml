@@ -1,0 +1,46 @@
+display:
+  default:
+    display_options:
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- الكل -'
+            offset_label: الإزاحة
+      fields:
+        created:
+          label: 'تم الإنشاء'
+        view_webform_submission:
+          label: العمليات
+  embed_administer:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: إجراء
+        created:
+          label: 'تم الإنشاء'
+        completed:
+          label: 'تم الإنهاء'
+        operations:
+          label: العمليات
+  embed_manage:
+    display_options:
+      fields:
+        webform_submission_bulk_form:
+          action_title: إجراء
+        created:
+          label: 'تم الإنشاء'
+        completed:
+          label: 'تم الإنهاء'
+        view_webform_submission:
+          label: العمليات
+        edit_webform_submission:
+          label: العمليات
+  embed_review:
+    display_options:
+      fields:
+        created:
+          label: 'تم الإنشاء'
+        completed:
+          label: 'تم الإنهاء'
+        view_webform_submission:
+          label: العمليات

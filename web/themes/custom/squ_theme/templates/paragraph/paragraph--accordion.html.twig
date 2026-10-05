@@ -1,0 +1,17 @@
+{% block paragraph %}
+
+  <div{{ attributes.addClass('squ-accordion') }}>
+
+    {% if content.field_accordian_main_title %}
+      <h2 class="squ-accordion__main-title">
+        {{ content.field_accordian_main_title }}
+      </h2>
+    {% endif %}
+
+    <div class="squ-accordion__items">
+      {{ content.field_accordion_item }}
+    </div>
+
+  </div>
+
+{% endblock paragraph %}

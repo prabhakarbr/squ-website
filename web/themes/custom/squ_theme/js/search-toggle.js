@@ -42,8 +42,13 @@
           var searchForm = header.querySelector("#squ-search-form");
           var searchInput = header.querySelector("#squ-search-input");
           var menuToggle = header.querySelector("#squ-menu-toggle");
-          var langToggle = header.querySelector("#squ-lang-toggle");
-          var langLabel = header.querySelector("#squ-lang-label");
+          var realLangSwitcher = header.querySelector(".squ-lang-switcher");
+          var langToggle = realLangSwitcher
+            ? null
+            : header.querySelector("#squ-lang-toggle");
+          var langLabel = realLangSwitcher
+            ? null
+            : header.querySelector("#squ-lang-label");
           var drawer = document.getElementById("squ-drawer");
           var drawerClose = document.getElementById("squ-drawer-close");
           var root = document.documentElement;
@@ -94,11 +99,13 @@
             window.addEventListener("resize", syncMenuOverlayMetrics);
           }
 
-          try {
-            lang =
-              window.localStorage.getItem(storageKey) === "ar" ? "ar" : "en";
-          } catch (e) {
-            // Storage can be blocked; fall back to English.
+          if (!realLangSwitcher) {
+            try {
+              lang =
+                window.localStorage.getItem(storageKey) === "ar" ? "ar" : "en";
+            } catch (e) {
+              // Storage can be blocked; fall back to English.
+            }
           }
 
           function applyLang() {
@@ -269,7 +276,7 @@
             }
           });
 
-          if (lang === "ar") {
+          if (!realLangSwitcher && lang === "ar") {
             applyLang();
           }
         },

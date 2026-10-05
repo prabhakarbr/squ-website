@@ -58,6 +58,7 @@
   background-repeat: repeat-x;
   background-position: center top;
   background-size: 318px 24px;
+  margin-top: 15px
 }
 
 /* --- Main area -------------------------------------------------------- */
@@ -134,11 +135,14 @@
   margin-top: 1.15rem;
   color: #fff;
 }
+.wide-content.field.field--name-field-footer-logo.field--type-image.field--label-hidden.field__item {
+	margin-left: 100%;
+}
 .squ-footer__name-ar {
   font-family: var(--squ-footer-ar);
-  font-size: clamp(1.35rem, 2.2vw, 1.85rem);
+  font-size: clamp(1.35rem, 2.2vw, 0.85rem);
   font-weight: 700;
-  line-height: 1.25;
+
 }
 .squ-footer__name-en {
   font-size: clamp(1rem, 1.6vw, 1.125rem);

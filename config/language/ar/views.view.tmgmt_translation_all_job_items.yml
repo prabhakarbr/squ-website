@@ -1,0 +1,26 @@
+display:
+  default:
+    display_options:
+      fields:
+        state:
+          label: الحالة
+        label:
+          label: التسمية
+        type:
+          label: النوع
+        changed:
+          label: 'تم التغير'
+        operations:
+          label: العمليات
+      pager:
+        options:
+          expose:
+            items_per_page_options_all_label: '- الكل -'
+            offset_label: الإزاحة
+      filters:
+        state:
+          group_info:
+            label: الحالة
+        source_language:
+          expose:
+            label: 'لغة المصدر'

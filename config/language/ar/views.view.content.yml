@@ -1,0 +1,37 @@
+label: المحتوى
+display:
+  default:
+    display_title: الافتراضي
+    display_options:
+      title: المحتوى
+      fields:
+        title:
+          label: Title
+        status:
+          label: الحالة
+          settings:
+            format_custom_true: منشور
+        langcode:
+          label: اللغة
+        operations:
+          label: العمليات
+      filters:
+        title:
+          expose:
+            label: Title
+        status:
+          expose:
+            label: الحالة
+          group_info:
+            group_items:
+              1:
+                title: منشور
+        langcode:
+          expose:
+            label: اللغة
+  page_1:
+    display_options:
+      menu:
+        title: المحتوى
+      tab_options:
+        title: المحتوى

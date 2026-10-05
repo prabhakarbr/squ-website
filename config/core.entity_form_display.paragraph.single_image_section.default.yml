@@ -1,0 +1,38 @@
+uuid: 11502011-dff8-40df-a0c0-1599f1b22857
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_image_section.field_ceps_images
+    - field.field.paragraph.single_image_section.field_cpes_summary
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.single_image_section
+  module:
+    - image
+    - text
+id: paragraph.single_image_section.default
+targetEntityType: paragraph
+bundle: single_image_section
+mode: default
+content:
+  field_ceps_images:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_cpes_summary:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
