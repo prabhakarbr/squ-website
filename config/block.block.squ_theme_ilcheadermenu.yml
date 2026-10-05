@@ -1,22 +1,22 @@
-uuid: 45723db2-565f-47bf-bbd9-2386badc3098
+uuid: d934ca0c-31e8-420a-b266-e94d1f558cc5
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.news-events
+    - system.menu.ilc-header-menu
   module:
     - system
   theme:
     - squ_theme
-id: squ_theme_newsevents
+id: squ_theme_ilcheadermenu
 theme: squ_theme
 region: header_section
 weight: 0
 provider: null
-plugin: 'system_menu_block:news-events'
+plugin: 'system_menu_block:ilc-header-menu'
 settings:
-  id: 'system_menu_block:news-events'
-  label: 'News&Events'
+  id: 'system_menu_block:ilc-header-menu'
+  label: 'ILC Header Menu'
   label_display: '0'
   provider: system
   level: 1
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/anwaar/\r\n/anwaar/*"
+    pages: "/ilc-1\r\n/ilc\r\n/ilc/*"

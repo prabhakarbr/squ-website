@@ -1,8 +1,5 @@
 <div class="news-events-page">
-
-    {# ============================================================
-    COLLECT NEWS EVENTS BY CATEGORY
-    ============================================================ #}
+    {# COLLECT NEWS EVENTS BY CATEGORY #}
     {% set latest_news = [] %}
     {% set femtosecond = [] %}
     {% set squ_events = [] %}
@@ -25,96 +22,56 @@
     {% endif %}
     {% endif %}
     {% endfor %}
-{# ============================================================
-   HERO SLIDESHOW
-   Uses Latest News taxonomy items
-   ============================================================ #}
-
+{# HERO SLIDES  #}
 {% set hero_slides = [] %}
-
 {% for row in rows %}
-
   {% set node = row.content['#row']._entity %}
-
   {% if node.field_news_events_category.entity %}
-
     {% set category = node.field_news_events_category.entity.name.value|lower|trim %}
-
     {% if category == 'latest news' %}
       {% set hero_slides = hero_slides|merge([node]) %}
     {% endif %}
-
   {% endif %}
-
 {% endfor %}
-
-
 {% if hero_slides|length %}
-
 <section class="hero-section">
-
   <div class="container">
-
     <div class="hero hero-slider">
-
       <div class="hero-slides">
-
         {% for node in hero_slides|slice(0, 5) %}
-
           <div class="hero-slide {% if loop.first %}active{% endif %}">
-
             {% if node.field_news_events_image.entity %}
-
               <img
                 src="{{ file_url(node.field_news_events_image.entity.uri.value) }}"
                 alt="{{ node.label|e }}"
               >
-
             {% endif %}
-
             <div class="hero-overlay"></div>
-
             <div class="hero-content">
-
               <h1>
                 {{ node.label }}
               </h1>
-
             </div>
-
           </div>
-
         {% endfor %}
-
       </div>
-
 
       {# Optional navigation dots #}
       <div class="hero-dots">
-
         {% for node in hero_slides|slice(0, 5) %}
-
           <button
             type="button"
             class="hero-dot {% if loop.first %}active{% endif %}"
             data-slide="{{ loop.index0 }}"
             aria-label="Slide {{ loop.index }}"
           ></button>
-
         {% endfor %}
-
       </div>
-
     </div>
-
   </div>
-
 </section>
-
 {% endif %}
-    {# ============================================================
-    LATEST NEWS
-    ============================================================ #}
+    {# LATEST NEWS #}
     {% if latest_news|length %}
     <section class="latest-news-section">
         <div class="container">
@@ -149,7 +106,7 @@
     {% endif %}
     <section class="content-section">
         <div class="container two-column">
-            {# ================= FEMTOSECOND ================= #}
+            {# FEMTOSECOND #}
             {% if femtosecond|length %}
             <div>
                 <div class="section-title">
@@ -188,7 +145,7 @@
                 </div>
             </div>
             {% endif %}
-            {# ================= SQU EVENTS ================= #}
+            {#  SQU EVENTS  #}
             {% if squ_events|length %}
             <div>
                 <div class="section-title">
@@ -216,12 +173,9 @@
             {% endif %}
         </div>
     </section>
-    {# ============================================================
-    VIDEOS + OUTREACH
-    ============================================================ #}
     <section class="content-section">
         <div class="container two-column">
-            {# ================= VIDEOS ================= #}
+            {# VIDEOS  #}
             {% if videos|length %}
             <div>
                 <div class="section-title">
@@ -248,7 +202,6 @@
                 </div>
             </div>
             {% endif %}
-            {# ================= OUTREACH ================= #}
             {% if outreach|length %}
             <div>
                 <div class="section-title">
