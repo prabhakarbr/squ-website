@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Language switcher slot inside the header tools pill (after Header Tools blocks).
+ */
+#}
+{% if content %}
+  <div{{ attributes.addClass('region', 'region--header-lang', 'squ-region', 'squ-region--header-lang') }}>
+    {{ content }}
+  </div>
+{% endif %}

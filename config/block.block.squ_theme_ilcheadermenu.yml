@@ -1,0 +1,25 @@
+uuid: d934ca0c-31e8-420a-b266-e94d1f558cc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.ilc-header-menu
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_ilcheadermenu
+theme: squ_theme
+region: header_section
+weight: 0
+provider: null
+plugin: 'system_menu_block:ilc-header-menu'
+settings:
+  id: 'system_menu_block:ilc-header-menu'
+  label: 'ILC Header Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility: {  }
