@@ -1,0 +1,11 @@
+uuid: da318a1a-0aa0-44cb-b135-a6cc32a129f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.independent_learning_centre_ilc
+id: node.independent_learning_centre_ilc
+target_entity_type_id: node
+target_bundle: independent_learning_centre_ilc
+default_langcode: site_default
+language_alterable: false
