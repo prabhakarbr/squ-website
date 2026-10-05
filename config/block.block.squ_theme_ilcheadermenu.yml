@@ -22,4 +22,8 @@ settings:
   level: 1
   depth: null
   expand_all_items: false
-visibility: {  }
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/ilc-1\r\n/ilc\r\n/ilc/*"
