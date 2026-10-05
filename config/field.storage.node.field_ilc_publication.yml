@@ -1,4 +1,4 @@
-uuid: 4fa2bc5f-802b-4e2d-a1f6-637a3e395d1f
+uuid: 1add5707-78e9-42e5-977c-e488ef887337
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
-id: node.field_banner
-field_name: field_banner
+id: node.field_ilc_publication
+field_name: field_ilc_publication
 entity_type: node
 type: entity_reference_revisions
 settings:

@@ -1,0 +1,106 @@
+uuid: 6619ca43-bf9e-424b-9370-046818153aa6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner
+    - node.type.independent_learning_centre_ilc
+    - paragraphs.paragraphs_type.hero_banner
+  module:
+    - entity_reference_revisions
+id: node.independent_learning_centre_ilc.field_banner
+field_name: field_banner
+entity_type: node
+bundle: independent_learning_centre_ilc
+label: Banner
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero_banner: hero_banner
+    negate: 0
+    target_bundles_drag_drop:
+      about_squ:
+        weight: 13
+        enabled: false
+      card_grid:
+        weight: 28
+        enabled: false
+      card_item:
+        weight: 29
+        enabled: false
+      college:
+        weight: 30
+        enabled: false
+      college_tab_item:
+        weight: 31
+        enabled: false
+      document_item:
+        weight: 32
+        enabled: false
+      document_list:
+        weight: 33
+        enabled: false
+      feature_card:
+        weight: 14
+        enabled: false
+      footer_icons:
+        weight: 15
+        enabled: false
+      hero_banner:
+        weight: 16
+        enabled: true
+      hero_carousel:
+        weight: 37
+        enabled: false
+      hero_slide:
+        weight: 38
+        enabled: false
+      ilc_publication_item:
+        weight: 39
+        enabled: false
+      map_contact:
+        weight: 40
+        enabled: false
+      news_item:
+        weight: 17
+        enabled: false
+      news_section:
+        weight: 18
+        enabled: false
+      page_intro:
+        weight: 43
+        enabled: false
+      program_tabs:
+        weight: 44
+        enabled: false
+      publication_grid:
+        weight: 45
+        enabled: false
+      publication_item:
+        weight: 46
+        enabled: false
+      research_card:
+        weight: 19
+        enabled: false
+      research_section:
+        weight: 20
+        enabled: false
+      search_widget:
+        weight: 21
+        enabled: false
+      statistics_counter:
+        weight: 22
+        enabled: false
+      student_life_gallery_item:
+        weight: 23
+        enabled: false
+      student_life_section:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions
