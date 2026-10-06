@@ -64,6 +64,7 @@
 /* --- Main area -------------------------------------------------------- */
 .squ-footer__main {
   padding: 4rem 0 4.75rem;
+  max-height: 327px;
 }
 
 .squ-footer__inner {
@@ -280,7 +281,7 @@
   flex-wrap: wrap;
   gap: 0.75rem 2rem;
   width: 100%;
-  min-height: 72px;
+  min-height: 60px;
   font-size: 0.875rem;
   color: var(--squ-footer-text-muted);
 }
