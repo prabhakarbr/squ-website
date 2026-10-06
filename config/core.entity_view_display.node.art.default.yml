@@ -1,0 +1,63 @@
+uuid: a792770a-8a7f-4927-babc-61d07d74c553
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.art.field_art_latest_news
+    - field.field.node.art.field_art_quick_links
+    - field.field.node.art.field_body
+    - field.field.node.art.field_hero_image
+    - node.type.art
+  module:
+    - entity_reference_revisions
+    - image
+    - text
+    - user
+id: node.art.default
+targetEntityType: node
+bundle: art
+mode: default
+content:
+  field_art_latest_news:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_art_quick_links:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_hero_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true

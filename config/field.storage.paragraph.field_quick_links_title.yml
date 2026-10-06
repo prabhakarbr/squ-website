@@ -1,15 +1,17 @@
-uuid: 8bb72136-ca1a-4681-8c48-3f622cd4d163
+uuid: d68018cc-b905-4b39-a870-bbef7ffaa856
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_accordion_content
-field_name: field_accordion_content
+id: paragraph.field_quick_links_title
+field_name: field_quick_links_title
 entity_type: paragraph
-type: string_long
+type: string
 settings:
+  max_length: 255
   case_sensitive: false
+  is_ascii: false
 module: core
 locked: false
 cardinality: 1

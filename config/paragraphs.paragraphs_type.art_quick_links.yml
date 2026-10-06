@@ -1,9 +1,9 @@
-uuid: d317807b-14c7-4c34-856b-a5d826549bc3
+uuid: fa4d0478-18e3-48b8-9487-a8137d02d920
 langcode: en
 status: true
 dependencies: {  }
-id: accordion
-label: Accordion
+id: art_quick_links
+label: 'Art Quick links'
 icon_uuid: null
 icon_default: null
 description: ''
