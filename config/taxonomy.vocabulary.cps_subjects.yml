@@ -1,0 +1,9 @@
+uuid: 7b77a45b-1ee6-48c1-90f3-cf5aeb9b63e7
+langcode: en
+status: true
+dependencies: {  }
+name: 'CPS subjects'
+vid: cps_subjects
+description: null
+weight: 0
+new_revision: false

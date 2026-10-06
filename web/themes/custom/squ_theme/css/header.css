@@ -110,9 +110,8 @@
 
 .squ-site-header .brand img,
 .squ-site-header .squ-brand-logo {
-  height: 58px;
   width: auto;
-  max-height: 64px;
+  max-height: 78px;
   flex: none;
   object-fit: contain;
 }
