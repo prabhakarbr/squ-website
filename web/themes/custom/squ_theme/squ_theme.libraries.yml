@@ -25,6 +25,7 @@ global:
       css/homepage.css: {}
       css/open-data.css: {}
       css/ugpage.css: {}
+      css/sidebar.css: {}
   js:
     js/search-toggle.js: {}
     js/open-data.js: {}

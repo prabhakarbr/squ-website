@@ -1,0 +1,28 @@
+uuid: 09b830aa-85eb-4258-a565-94dd5cca2fbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ic3_pages.field_body
+    - node.type.ic3_pages
+  module:
+    - text
+    - user
+id: node.ic3_pages.default
+targetEntityType: node
+bundle: ic3_pages
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }
