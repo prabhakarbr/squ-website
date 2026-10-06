@@ -1,0 +1,29 @@
+uuid: f5d8be16-0735-4957-b2c7-22e3b6397dd6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subject
+    - node.type.cps_course
+    - taxonomy.vocabulary.cps_subjects
+id: node.cps_course.field_subject
+field_name: field_subject
+entity_type: node
+bundle: cps_course
+label: Subject
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      cps_subjects: cps_subjects
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
