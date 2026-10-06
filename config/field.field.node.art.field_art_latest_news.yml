@@ -1,0 +1,109 @@
+uuid: e06dcf46-0180-49ec-a95a-3e96de66beb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_art_latest_news
+    - node.type.art
+    - paragraphs.paragraphs_type.art_latest_news
+  module:
+    - entity_reference_revisions
+id: node.art.field_art_latest_news
+field_name: field_art_latest_news
+entity_type: node
+bundle: art
+label: 'Art Latest News'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      art_latest_news: art_latest_news
+    negate: 0
+    target_bundles_drag_drop:
+      about_squ:
+        weight: 29
+        enabled: false
+      art_latest_news:
+        weight: 28
+        enabled: true
+      card_grid:
+        weight: 30
+        enabled: false
+      card_item:
+        weight: 31
+        enabled: false
+      college:
+        weight: 32
+        enabled: false
+      college_tab_item:
+        weight: 33
+        enabled: false
+      document_item:
+        weight: 34
+        enabled: false
+      document_list:
+        weight: 35
+        enabled: false
+      feature_card:
+        weight: 36
+        enabled: false
+      footer_icons:
+        weight: 37
+        enabled: false
+      hero_banner:
+        weight: 38
+        enabled: false
+      hero_carousel:
+        weight: 39
+        enabled: false
+      hero_slide:
+        weight: 40
+        enabled: false
+      ilc_publication_item:
+        weight: 41
+        enabled: false
+      map_contact:
+        weight: 42
+        enabled: false
+      news_item:
+        weight: 43
+        enabled: false
+      news_section:
+        weight: 44
+        enabled: false
+      page_intro:
+        weight: 45
+        enabled: false
+      program_tabs:
+        weight: 46
+        enabled: false
+      publication_grid:
+        weight: 47
+        enabled: false
+      publication_item:
+        weight: 48
+        enabled: false
+      research_card:
+        weight: 49
+        enabled: false
+      research_section:
+        weight: 50
+        enabled: false
+      search_widget:
+        weight: 51
+        enabled: false
+      statistics_counter:
+        weight: 52
+        enabled: false
+      student_life_gallery_item:
+        weight: 53
+        enabled: false
+      student_life_section:
+        weight: 54
+        enabled: false
+field_type: entity_reference_revisions

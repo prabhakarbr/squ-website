@@ -1,0 +1,45 @@
+uuid: 90fa1594-1ad3-47a1-927f-c0368bbd87a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.art_quick_links.field_card_icon
+    - field.field.paragraph.art_quick_links.field_link
+    - field.field.paragraph.art_quick_links.field_quick_links_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.art_quick_links
+  module:
+    - image
+    - link
+id: paragraph.art_quick_links.default
+targetEntityType: paragraph
+bundle: art_quick_links
+mode: default
+content:
+  field_card_icon:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_quick_links_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

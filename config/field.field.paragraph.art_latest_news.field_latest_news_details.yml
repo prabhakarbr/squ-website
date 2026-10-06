@@ -1,0 +1,26 @@
+uuid: 0049f531-2f03-48b9-b1f6-462e68fb9555
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_latest_news_details
+    - filter.format.full_html
+    - paragraphs.paragraphs_type.art_latest_news
+  module:
+    - text
+id: paragraph.art_latest_news.field_latest_news_details
+field_name: field_latest_news_details
+entity_type: paragraph
+bundle: art_latest_news
+label: 'Latest News Details'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats:
+    - full_html
+field_type: text_with_summary

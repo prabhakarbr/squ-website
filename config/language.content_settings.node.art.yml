@@ -1,0 +1,11 @@
+uuid: daec4292-f953-48ad-8965-95fc67775bc4
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.art
+id: node.art
+target_entity_type_id: node
+target_bundle: art
+default_langcode: site_default
+language_alterable: false

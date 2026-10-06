@@ -1,0 +1,29 @@
+uuid: b79c3cf5-89f7-4b19-af64-e055f09c612d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.art-main-navigation
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_artmainnavigation
+theme: squ_theme
+region: header_section
+weight: 0
+provider: null
+plugin: 'system_menu_block:art-main-navigation'
+settings:
+  id: 'system_menu_block:art-main-navigation'
+  label: 'Art Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/art\r\n/art/*"
