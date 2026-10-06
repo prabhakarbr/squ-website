@@ -1,0 +1,8 @@
+uuid: 02bc5cc7-976e-4961-b5d3-18c93a5c8876
+langcode: en
+status: true
+dependencies: {  }
+id: medicine-top-menu
+label: 'Medicine Top Menu'
+description: ''
+locked: false
