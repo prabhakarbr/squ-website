@@ -1,0 +1,29 @@
+uuid: b01de26a-864c-4f60-917a-b6b61829e6de
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.medicine-top-menu
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_medicinetopmenu
+theme: squ_theme
+region: header_section
+weight: 0
+provider: null
+plugin: 'system_menu_block:medicine-top-menu'
+settings:
+  id: 'system_menu_block:medicine-top-menu'
+  label: 'Medicine Top Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/medicine\r\n/medicine/*"
