@@ -1,9 +1,0 @@
-uuid: fbe3664c-4783-4ff4-9e48-09b81c9978e6
-langcode: en
-status: true
-dependencies: {  }
-name: 'CPS Course Tags'
-vid: cps_course_tags
-description: null
-weight: 0
-new_revision: false
