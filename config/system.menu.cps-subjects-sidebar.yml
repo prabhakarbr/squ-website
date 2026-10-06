@@ -1,8 +1,0 @@
-uuid: 07b792e0-ce8c-44d8-8b23-872426f439d6
-langcode: en
-status: true
-dependencies: {  }
-id: cps-subjects-sidebar
-label: 'CPS subjects sidebar'
-description: ''
-locked: false

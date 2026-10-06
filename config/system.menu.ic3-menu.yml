@@ -1,8 +1,0 @@
-uuid: b70bcece-fe61-4594-aaf4-b29093957d42
-langcode: en
-status: true
-dependencies: {  }
-id: ic3-menu
-label: 'IC3 menu'
-description: ''
-locked: false
