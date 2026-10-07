@@ -1,0 +1,8 @@
+uuid: db2f0fb6-155e-4876-bfc5-507dfed2fbb9
+langcode: en
+status: true
+dependencies: {  }
+id: art-main-navigation
+label: 'Art Main navigation'
+description: ''
+locked: false
