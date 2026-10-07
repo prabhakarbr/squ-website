@@ -1,0 +1,86 @@
+/* About Section sidebar: move to the left of the content */
+.sidebar-grid.grid-full {
+  display: flex !important;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--sp2, 2rem);
+}
+
+@media (min-width: 48rem) {
+  .sidebar-grid.grid-full {
+    flex-wrap: nowrap;
+  }
+}
+
+.sidebar-grid.grid-full > aside.region--sidebar {
+  order: -1;
+  flex: 0 0 280px;
+  width: 280px;
+  position: static !important;
+  top: auto !important;
+  margin: 0 !important;
+  align-self: flex-start;
+}
+
+.sidebar-grid.grid-full > main.site-main {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+.sidebar-grid.grid-full > main.site-main img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Boxed row styling for top-level sidebar links */
+.menu--sidebar.menu--level-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu--sidebar .menu__item {
+  list-style: none;
+}
+
+.menu--sidebar.menu--level-1 > .menu__item > .menu__link {
+  display: block;
+  background-color: #f2f2f2;
+  padding: 0.9rem 1rem;
+}
+
+.menu--sidebar .menu__link::after {
+  display: none !important;
+}
+
+/* Top-level: ANY item in the active trail (the exact current page,
+   OR a parent whose child page is currently being viewed) gets the
+   dark boxed highlight - matches the reference site's behavior */
+.menu--sidebar.menu--level-1 > .menu__item > .menu__link--active-trail {
+  background-color: #2b3138;
+}
+
+.menu--sidebar.menu--level-1 > .menu__item > .menu__link--active-trail,
+.menu--sidebar.menu--level-1 > .menu__item > .menu__link--active-trail .menu__link--link {
+  color: #ffffff !important;
+}
+
+/* Nested (level 2+) items: no box, just colored text for the exact
+   active child; siblings stay in their normal link color */
+.menu--sidebar.menu--level-2 {
+  margin: 0;
+  padding-inline-start: 0;
+}
+
+.menu--sidebar.menu--level-2 .menu__link {
+  background-color: transparent;
+  padding: 0.6rem 1rem 0.6rem 1.5rem;
+}
+
+.menu--sidebar.menu--level-2 .menu__link.is-active,
+.menu--sidebar.menu--level-2 .menu__link.is-active .menu__link--link {
+  color: var(--color-text-primary-medium, #0e6ba6) !important;
+  font-weight: 700;
+}
