@@ -1,0 +1,134 @@
+uuid: ccc67064-7165-468f-ad1f-a541cf6c5b4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_item_slider
+    - paragraphs.paragraphs_type.full_with_margin_slider
+    - paragraphs.paragraphs_type.list_item_slider
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.full_with_margin_slider.field_list_item_slider
+field_name: field_list_item_slider
+entity_type: paragraph
+bundle: full_with_margin_slider
+label: 'List Item slider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      list_item_slider: list_item_slider
+    negate: 0
+    target_bundles_drag_drop:
+      about_squ:
+        weight: 35
+        enabled: false
+      accordion:
+        weight: 36
+        enabled: false
+      accordion_item:
+        weight: 37
+        enabled: false
+      card_grid:
+        weight: 38
+        enabled: false
+      card_item:
+        weight: 39
+        enabled: false
+      college:
+        weight: 40
+        enabled: false
+      college_tab_item:
+        weight: 41
+        enabled: false
+      document_item:
+        weight: 42
+        enabled: false
+      document_list:
+        weight: 43
+        enabled: false
+      ept_slick_slider:
+        weight: 44
+        enabled: false
+      ept_slick_slider_item:
+        weight: 45
+        enabled: false
+      feature_card:
+        weight: 46
+        enabled: false
+      footer_icons:
+        weight: 47
+        enabled: false
+      full_with_margin_slider:
+        weight: 34
+        enabled: false
+      hero_banner:
+        weight: 48
+        enabled: false
+      hero_carousel:
+        weight: 49
+        enabled: false
+      hero_slide:
+        weight: 50
+        enabled: false
+      ilc_publication_item:
+        weight: 51
+        enabled: false
+      list_item_slider:
+        weight: 35
+        enabled: true
+      map_contact:
+        weight: 52
+        enabled: false
+      multiple_card:
+        weight: 53
+        enabled: false
+      news_item:
+        weight: 54
+        enabled: false
+      news_section:
+        weight: 55
+        enabled: false
+      page_intro:
+        weight: 56
+        enabled: false
+      program_tabs:
+        weight: 57
+        enabled: false
+      publication_grid:
+        weight: 58
+        enabled: false
+      publication_item:
+        weight: 59
+        enabled: false
+      research_card:
+        weight: 60
+        enabled: false
+      research_section:
+        weight: 61
+        enabled: false
+      search_widget:
+        weight: 62
+        enabled: false
+      single_image_section:
+        weight: 63
+        enabled: false
+      statistics_counter:
+        weight: 64
+        enabled: false
+      student_life_gallery_item:
+        weight: 65
+        enabled: false
+      student_life_section:
+        weight: 66
+        enabled: false
+field_type: entity_reference_revisions

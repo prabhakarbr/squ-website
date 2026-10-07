@@ -1,0 +1,25 @@
+{% block paragraph %}
+<div{{ attributes.addClass('deans-list-slider') }}>
+
+<div class="container">
+
+  {% if content.field_list_top_title %}
+    <div class="deans-list-slider__top-title">
+      {{ content.field_list_top_title }}
+    </div>
+  {% endif %}
+
+  <div class="deans-list-content">
+
+    {% if content.field_list_item_slider %}
+      <div class="deans-list-slider__track">
+        {{ content.field_list_item_slider }}
+      </div>
+    {% endif %}
+
+  </div>
+
+</div>
+
+  </div>
+{% endblock paragraph %}

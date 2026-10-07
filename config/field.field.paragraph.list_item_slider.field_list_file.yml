@@ -1,0 +1,31 @@
+uuid: 79f3c1a4-de67-438f-a04f-b41b22b17eae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_file
+    - paragraphs.paragraphs_type.list_item_slider
+  module:
+    - file
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.list_item_slider.field_list_file
+field_name: field_list_file
+entity_type: paragraph
+bundle: list_item_slider
+label: 'List file'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf'
+  max_filesize: ''
+  description_field: false
+field_type: file

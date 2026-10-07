@@ -1,0 +1,24 @@
+uuid: 129d6b77-14c7-44d4-a499-c87beb37455c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_slick_slider_text
+    - paragraphs.paragraphs_type.ept_slick_slider_item
+  module:
+    - text
+_core:
+  default_config_hash: dP7Z_3Sp9p8yprgyoPMwzTnDckg7oXVPKeGBpWi5yHs
+id: paragraph.ept_slick_slider_item.field_ept_slick_slider_text
+field_name: field_ept_slick_slider_text
+entity_type: paragraph
+bundle: ept_slick_slider_item
+label: 'Slide Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

@@ -1,0 +1,24 @@
+uuid: 836470f5-0107-4bdc-80b2-dadf2624fa80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image_top_title
+    - paragraphs.paragraphs_type.images_slider_with_full_width
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.images_slider_with_full_width.field_image_top_title
+field_name: field_image_top_title
+entity_type: paragraph
+bundle: images_slider_with_full_width
+label: 'Image Top Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

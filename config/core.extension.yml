@@ -18,6 +18,8 @@ module:
   easy_breadcrumb: 0
   editor: 0
   entity_reference_revisions: 0
+  ept_core: 0
+  ept_slick_slider: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -25,6 +27,8 @@ module:
   filter: 0
   help: 0
   image: 0
+  jquery_ui: 0
+  jquery_ui_accordion: 0
   language: 0
   layout_builder: 0
   layout_discovery: 0
@@ -32,18 +36,18 @@ module:
   lite_youtube_embed: 0
   locale: 0
   media: 0
+  media_library: 0
+  media_library_form_element: 0
   menu_link_content: 0
   menu_ui: 0
   navigation: 0
   node: 0
   options: 0
   page_cache: 0
+  paragraphs_jquery_ui_accordion: 0
   path: 0
   path_alias: 0
   pgsql: 0
-  jquery_ui: 0
-  jquery_ui_accordion: 0
-  paragraphs_jquery_ui_accordion: 0
   search_api: 0
   single_content_sync: 0
   system: 0

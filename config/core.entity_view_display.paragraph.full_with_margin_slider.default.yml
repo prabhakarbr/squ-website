@@ -1,0 +1,35 @@
+uuid: 1199aaac-a4e8-469b-960b-0ed7d80a39a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.full_with_margin_slider.field_list_item_slider
+    - field.field.paragraph.full_with_margin_slider.field_list_top_title
+    - paragraphs.paragraphs_type.full_with_margin_slider
+  module:
+    - entity_reference_revisions
+id: paragraph.full_with_margin_slider.default
+targetEntityType: paragraph
+bundle: full_with_margin_slider
+mode: default
+content:
+  field_list_item_slider:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_list_top_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

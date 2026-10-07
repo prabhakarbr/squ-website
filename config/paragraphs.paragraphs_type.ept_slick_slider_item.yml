@@ -1,0 +1,12 @@
+uuid: da5bd288-c03c-4190-8062-6129e66a5145
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: JzEHRSTeS_5k9aQaMIQiZssckNv0akkT0UHkl8qu8TE
+id: ept_slick_slider_item
+label: 'EPT Slick Slider Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

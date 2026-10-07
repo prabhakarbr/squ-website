@@ -1,0 +1,24 @@
+uuid: acd1e5bc-212c-450e-9c13-dcb3a6be2e6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_top_title
+    - paragraphs.paragraphs_type.full_with_margin_slider
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.full_with_margin_slider.field_list_top_title
+field_name: field_list_top_title
+entity_type: paragraph
+bundle: full_with_margin_slider
+label: 'List Top Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

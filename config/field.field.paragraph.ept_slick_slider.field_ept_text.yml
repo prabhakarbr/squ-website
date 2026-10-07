@@ -1,0 +1,24 @@
+uuid: a133a00f-262c-4450-952a-87d270c3e090
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_text
+    - paragraphs.paragraphs_type.ept_slick_slider
+  module:
+    - text
+_core:
+  default_config_hash: Qgc2mLoZ4HsNUAYaZCNUYpblK1Qy_Grwx-FiIrrd3fo
+id: paragraph.ept_slick_slider.field_ept_text
+field_name: field_ept_text
+entity_type: paragraph
+bundle: ept_slick_slider
+label: Text
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

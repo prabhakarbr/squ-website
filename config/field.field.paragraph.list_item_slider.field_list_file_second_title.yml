@@ -1,0 +1,24 @@
+uuid: 1fb160c1-5fbb-448e-84ab-817da0b1ac16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_list_file_second_title
+    - paragraphs.paragraphs_type.list_item_slider
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.list_item_slider.field_list_file_second_title
+field_name: field_list_file_second_title
+entity_type: paragraph
+bundle: list_item_slider
+label: 'List File Second Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
