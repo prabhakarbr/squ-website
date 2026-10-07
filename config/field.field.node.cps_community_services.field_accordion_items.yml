@@ -1,17 +1,17 @@
-uuid: cdf0f2a1-bbf5-4bef-a8de-c7a75b98c018
+uuid: 91e03868-b9a8-40a4-adaf-eb44df90103c
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_page_sections
-    - node.type.deanship_of_admission_and_regist
+    - field.storage.node.field_accordion_items
+    - node.type.cps_community_services
   module:
     - entity_reference_revisions
-id: node.deanship_of_admission_and_regist.field_page_sections
-field_name: field_page_sections
+id: node.cps_community_services.field_accordion_items
+field_name: field_accordion_items
 entity_type: node
-bundle: deanship_of_admission_and_regist
-label: 'Page Sections'
+bundle: cps_community_services
+label: 'Accordion items'
 description: ''
 required: false
 translatable: false
@@ -25,6 +25,9 @@ settings:
     target_bundles_drag_drop:
       about_squ:
         weight: 26
+        enabled: false
+      accordion_items:
+        weight: 28
         enabled: false
       card_grid:
         weight: 27
@@ -45,13 +48,13 @@ settings:
         weight: 32
         enabled: false
       feature_card:
-        weight: 5
+        weight: 33
         enabled: false
       footer_icons:
         weight: 34
         enabled: false
       hero_banner:
-        weight: 6
+        weight: 35
         enabled: false
       hero_carousel:
         weight: 36
@@ -87,13 +90,10 @@ settings:
         weight: 46
         enabled: false
       search_widget:
-        weight: 7
-        enabled: false
-      single_image_section:
-        weight: 49
+        weight: 47
         enabled: false
       statistics_counter:
-        weight: 8
+        weight: 48
         enabled: false
       student_life_gallery_item:
         weight: 49

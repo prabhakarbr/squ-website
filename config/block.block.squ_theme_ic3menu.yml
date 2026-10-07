@@ -1,23 +1,23 @@
-uuid: 416437bb-b051-46fa-be81-595e0b6efeb2
+uuid: d55fa2bb-1fab-4521-9d91-511dba1d6e47
 langcode: en
 status: true
 dependencies:
   config:
-    - system.menu.cps-top-menus
+    - system.menu.ic3-menu
   module:
     - system
   theme:
     - squ_theme
-id: squ_theme_cpstopmenus
+id: squ_theme_ic3menu
 theme: squ_theme
-region: header_section
+region: sidebar
 weight: 0
 provider: null
-plugin: 'system_menu_block:cps-top-menus'
+plugin: 'system_menu_block:ic3-menu'
 settings:
-  id: 'system_menu_block:cps-top-menus'
-  label: 'CPS Top Menus'
-  label_display: '0'
+  id: 'system_menu_block:ic3-menu'
+  label: 'IC3 menu'
+  label_display: visible
   provider: system
   level: 1
   depth: null
@@ -26,4 +26,4 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: /csp/Home
+    pages: '/cps/Certified-Certificates/*'

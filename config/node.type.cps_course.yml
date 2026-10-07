@@ -1,4 +1,4 @@
-uuid: 9f023a6c-46a2-4ea5-a1d7-8ec5287a87c0
+uuid: 25fe3393-519f-4fa6-b8d1-d1718ae56e6b
 langcode: en
 status: true
 dependencies:
@@ -9,8 +9,8 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: Ceps
-type: ceps
+name: 'CPS Course'
+type: cps_course
 description: null
 help: null
 new_revision: true

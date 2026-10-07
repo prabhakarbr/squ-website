@@ -1,9 +1,9 @@
-uuid: d317807b-14c7-4c34-856b-a5d826549bc3
+uuid: d5b1bd2c-19ec-4ea1-abae-5b96e03d2e4b
 langcode: en
 status: true
 dependencies: {  }
-id: accordion
-label: Accordion
+id: art_latest_news
+label: 'Art Latest News'
 icon_uuid: null
 icon_default: null
 description: ''

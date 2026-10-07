@@ -1,14 +1,14 @@
-uuid: 30dadeec-c637-42e9-a55f-898a3d5b53cb
+uuid: 6b0e863a-35bb-454a-9dca-30ddc18df87d
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
     - text
-id: paragraph.field_cpes_summary
-field_name: field_cpes_summary
+id: paragraph.field_content
+field_name: field_content
 entity_type: paragraph
-type: text_with_summary
+type: text_long
 settings: {  }
 module: text
 locked: false

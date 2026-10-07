@@ -1,18 +1,17 @@
-uuid: 991cde5e-921f-4fb2-a438-f9cca238b5c2
+uuid: 991160d9-b969-4693-b2f1-096bef62c123
 langcode: en
 status: true
 dependencies:
   module:
+    - datetime
     - paragraphs
-id: paragraph.field_accordian_main_title
-field_name: field_accordian_main_title
+id: paragraph.field_latest_news_date
+field_name: field_latest_news_date
 entity_type: paragraph
-type: string
+type: datetime
 settings:
-  max_length: 255
-  case_sensitive: false
-  is_ascii: false
-module: core
+  datetime_type: date
+module: datetime
 locked: false
 cardinality: 1
 translatable: true
