@@ -1,0 +1,50 @@
+uuid: 7b24aa51-d7fd-44b6-a513-0b79b74b6a6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.art_quick_links.field_card_icon
+    - field.field.paragraph.art_quick_links.field_link
+    - field.field.paragraph.art_quick_links.field_quick_links_title
+    - paragraphs.paragraphs_type.art_quick_links
+  module:
+    - image
+    - link
+id: paragraph.art_quick_links.default
+targetEntityType: paragraph
+bundle: art_quick_links
+mode: default
+content:
+  field_card_icon:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_quick_links_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

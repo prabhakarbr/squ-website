@@ -1,17 +1,18 @@
-uuid: cdf0f2a1-bbf5-4bef-a8de-c7a75b98c018
+uuid: e06dcf46-0180-49ec-a95a-3e96de66beb6
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_page_sections
-    - node.type.deanship_of_admission_and_regist
+    - field.storage.node.field_art_latest_news
+    - node.type.art
+    - paragraphs.paragraphs_type.art_latest_news
   module:
     - entity_reference_revisions
-id: node.deanship_of_admission_and_regist.field_page_sections
-field_name: field_page_sections
+id: node.art.field_art_latest_news
+field_name: field_art_latest_news
 entity_type: node
-bundle: deanship_of_admission_and_regist
-label: 'Page Sections'
+bundle: art
+label: 'Art Latest News'
 description: ''
 required: false
 translatable: false
@@ -20,85 +21,89 @@ default_value_callback: ''
 settings:
   handler: 'default:paragraph'
   handler_settings:
-    target_bundles: null
+    target_bundles:
+      art_latest_news: art_latest_news
     negate: 0
     target_bundles_drag_drop:
       about_squ:
-        weight: 26
-        enabled: false
-      card_grid:
-        weight: 27
-        enabled: false
-      card_item:
-        weight: 28
-        enabled: false
-      college:
         weight: 29
         enabled: false
-      college_tab_item:
+      art_latest_news:
+        weight: 28
+        enabled: true
+      card_grid:
         weight: 30
         enabled: false
-      document_item:
+      card_item:
         weight: 31
         enabled: false
-      document_list:
+      college:
         weight: 32
         enabled: false
-      feature_card:
-        weight: 5
+      college_tab_item:
+        weight: 33
         enabled: false
-      footer_icons:
+      document_item:
         weight: 34
         enabled: false
-      hero_banner:
-        weight: 6
+      document_list:
+        weight: 35
         enabled: false
-      hero_carousel:
+      feature_card:
         weight: 36
         enabled: false
-      hero_slide:
+      footer_icons:
         weight: 37
         enabled: false
-      map_contact:
+      hero_banner:
         weight: 38
         enabled: false
-      news_item:
+      hero_carousel:
         weight: 39
         enabled: false
-      news_section:
+      hero_slide:
         weight: 40
         enabled: false
-      page_intro:
+      ilc_publication_item:
         weight: 41
         enabled: false
-      program_tabs:
+      map_contact:
         weight: 42
         enabled: false
-      publication_grid:
+      news_item:
         weight: 43
         enabled: false
-      publication_item:
+      news_section:
         weight: 44
         enabled: false
-      research_card:
+      page_intro:
         weight: 45
         enabled: false
-      research_section:
+      program_tabs:
         weight: 46
         enabled: false
-      search_widget:
-        weight: 7
+      publication_grid:
+        weight: 47
         enabled: false
-      single_image_section:
+      publication_item:
+        weight: 48
+        enabled: false
+      research_card:
         weight: 49
+        enabled: false
+      research_section:
+        weight: 50
+        enabled: false
+      search_widget:
+        weight: 51
         enabled: false
       statistics_counter:
-        weight: 8
+        weight: 52
         enabled: false
       student_life_gallery_item:
-        weight: 49
+        weight: 53
         enabled: false
       student_life_section:
-        weight: 50
+        weight: 54
         enabled: false
 field_type: entity_reference_revisions

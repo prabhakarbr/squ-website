@@ -1,4 +1,4 @@
-uuid: 9f023a6c-46a2-4ea5-a1d7-8ec5287a87c0
+uuid: bc4e1133-8da4-41aa-9341-153a9af99c6b
 langcode: en
 status: true
 dependencies:
@@ -6,13 +6,12 @@ dependencies:
     - menu_ui
 third_party_settings:
   menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
-name: Ceps
-type: ceps
+    available_menus: {  }
+    parent: ''
+name: Art
+type: art
 description: null
 help: null
 new_revision: true
 preview_mode: 1
-display_submitted: true
+display_submitted: false

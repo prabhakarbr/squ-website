@@ -1,11 +1,11 @@
-uuid: 991cde5e-921f-4fb2-a438-f9cca238b5c2
+uuid: d68018cc-b905-4b39-a870-bbef7ffaa856
 langcode: en
 status: true
 dependencies:
   module:
     - paragraphs
-id: paragraph.field_accordian_main_title
-field_name: field_accordian_main_title
+id: paragraph.field_quick_links_title
+field_name: field_quick_links_title
 entity_type: paragraph
 type: string
 settings:

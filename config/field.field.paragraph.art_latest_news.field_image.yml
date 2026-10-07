@@ -1,17 +1,17 @@
-uuid: b28c76ca-2eae-4812-acb5-d67c733c35c7
+uuid: a0c612fa-292b-4139-9bbc-60c0abb89190
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.paragraph.field_ceps_images
-    - paragraphs.paragraphs_type.single_image_section
+    - field.storage.paragraph.field_image
+    - paragraphs.paragraphs_type.art_latest_news
   module:
     - image
-id: paragraph.single_image_section.field_ceps_images
-field_name: field_ceps_images
+id: paragraph.art_latest_news.field_image
+field_name: field_image
 entity_type: paragraph
-bundle: single_image_section
-label: 'Ceps images'
+bundle: art_latest_news
+label: Image
 description: ''
 required: false
 translatable: false

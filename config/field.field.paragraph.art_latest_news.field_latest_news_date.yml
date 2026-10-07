@@ -1,0 +1,21 @@
+uuid: 2a70a0f4-8c9d-49e2-b7da-d538ce229751
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_latest_news_date
+    - paragraphs.paragraphs_type.art_latest_news
+  module:
+    - datetime
+id: paragraph.art_latest_news.field_latest_news_date
+field_name: field_latest_news_date
+entity_type: paragraph
+bundle: art_latest_news
+label: 'Latest News Date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

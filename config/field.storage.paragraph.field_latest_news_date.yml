@@ -1,16 +1,17 @@
-uuid: 30dadeec-c637-42e9-a55f-898a3d5b53cb
+uuid: 991160d9-b969-4693-b2f1-096bef62c123
 langcode: en
 status: true
 dependencies:
   module:
+    - datetime
     - paragraphs
-    - text
-id: paragraph.field_cpes_summary
-field_name: field_cpes_summary
+id: paragraph.field_latest_news_date
+field_name: field_latest_news_date
 entity_type: paragraph
-type: text_with_summary
-settings: {  }
-module: text
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
 locked: false
 cardinality: 1
 translatable: true

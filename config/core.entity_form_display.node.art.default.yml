@@ -1,16 +1,22 @@
-uuid: 09a76afc-4666-4dca-99e7-f8434ba2ab3a
+uuid: e7b95a8e-7da9-4619-91b7-e664566a9a69
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.deanship_of_admission_and_regist.field_page_sections
-    - node.type.deanship_of_admission_and_regist
+    - field.field.node.art.field_art_latest_news
+    - field.field.node.art.field_art_quick_links
+    - field.field.node.art.field_body
+    - field.field.node.art.field_hero_image
+    - image.style.thumbnail
+    - node.type.art
   module:
+    - image
     - paragraphs
     - path
-id: node.deanship_of_admission_and_regist.default
+    - text
+id: node.art.default
 targetEntityType: node
-bundle: deanship_of_admission_and_regist
+bundle: art
 mode: default
 content:
   created:
@@ -19,9 +25,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_page_sections:
+  field_art_latest_news:
     type: paragraphs
-    weight: 3
+    weight: 123
     region: content
     settings:
       title: Paragraph
@@ -36,6 +42,40 @@ content:
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
+    third_party_settings: {  }
+  field_art_quick_links:
+    type: paragraphs
+    weight: 124
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+      features:
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_body:
+    type: text_textarea
+    weight: 122
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_hero_image:
+    type: image_image
+    weight: 121
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
     third_party_settings: {  }
   langcode:
     type: language_select

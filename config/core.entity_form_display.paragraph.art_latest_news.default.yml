@@ -1,0 +1,55 @@
+uuid: a45fa39e-a279-485d-887c-ba3033e7635a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.art_latest_news.field_image
+    - field.field.paragraph.art_latest_news.field_latest_news_date
+    - field.field.paragraph.art_latest_news.field_latest_news_details
+    - field.field.paragraph.art_latest_news.field_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.art_latest_news
+  module:
+    - datetime
+    - image
+    - text
+id: paragraph.art_latest_news.default
+targetEntityType: paragraph
+bundle: art_latest_news
+mode: default
+content:
+  field_image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_latest_news_date:
+    type: datetime_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_latest_news_details:
+    type: text_textarea_with_summary
+    weight: 3
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
