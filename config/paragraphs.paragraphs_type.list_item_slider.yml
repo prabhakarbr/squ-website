@@ -1,0 +1,10 @@
+uuid: 9de4f09a-7428-477e-921e-6cdacd1a0ee3
+langcode: en
+status: true
+dependencies: {  }
+id: list_item_slider
+label: 'List Item slider'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

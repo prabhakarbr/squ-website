@@ -1,0 +1,12 @@
+uuid: 54d96c90-f492-4711-9e12-1bfaf13e3d5b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: kF1ktW9usSGMpm4KK6xObCSXk1ZU-mWLNc7N1B5IN3A
+id: ept_slick_slider
+label: 'EPT Slick Slider'
+icon_uuid: null
+icon_default: null
+description: 'Extra Paragraph Type (EPT): Slick Slider'
+behavior_plugins: {  }

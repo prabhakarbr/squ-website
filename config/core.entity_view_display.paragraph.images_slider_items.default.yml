@@ -1,0 +1,35 @@
+uuid: 3a867f62-2293-4164-a453-e411818b23d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.images_slider_items.field_overlay_title
+    - field.field.paragraph.images_slider_items.field_slider_images
+    - paragraphs.paragraphs_type.images_slider_items
+  module:
+    - image
+id: paragraph.images_slider_items.default
+targetEntityType: paragraph
+bundle: images_slider_items
+mode: default
+content:
+  field_overlay_title:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_slider_images:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

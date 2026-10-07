@@ -1,0 +1,25 @@
+uuid: 531096fd-8543-4dfd-b974-b6feb5c4141d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_settings_field
+    - paragraphs.paragraphs_type.images_slider_with_full_width
+  module:
+    - ept_core
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.images_slider_with_full_width.field_ept_settings_field
+field_name: field_ept_settings_field
+entity_type: paragraph
+bundle: images_slider_with_full_width
+label: 'EPT Settings Field'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: ept_settings

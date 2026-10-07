@@ -1,0 +1,10 @@
+uuid: 81bc9b72-b437-4b4d-902a-2ccbec917645
+langcode: en
+status: true
+dependencies: {  }
+id: images_slider_with_full_width
+label: 'Images slider with full width '
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

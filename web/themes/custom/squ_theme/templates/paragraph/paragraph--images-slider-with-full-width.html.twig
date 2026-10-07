@@ -1,0 +1,21 @@
+{% block paragraph %}
+  <section{{ attributes.addClass('achievement-slider') }}>
+
+    <div class="container">
+
+      {% if content.field_image_top_title %}
+        <div class="achievement-slider__title">
+          {{ content.field_image_top_title }}
+        </div>
+      {% endif %}
+
+      {% if content.field_image_slider_items %}
+        <div class="achievement-slider__items">
+          {{ content.field_image_slider_items }}
+        </div>
+      {% endif %}
+
+    </div>
+
+  </section>
+{% endblock paragraph %}

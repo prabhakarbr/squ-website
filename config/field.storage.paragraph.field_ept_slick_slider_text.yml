@@ -1,0 +1,21 @@
+uuid: d390fd35-cdb4-446c-810d-2cdc08709d0c
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - text
+_core:
+  default_config_hash: 9lgsbO7ntDggj0S64_Kj04ysNSAJqsLLVWCg1sASI7o
+id: paragraph.field_ept_slick_slider_text
+field_name: field_ept_slick_slider_text
+entity_type: paragraph
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

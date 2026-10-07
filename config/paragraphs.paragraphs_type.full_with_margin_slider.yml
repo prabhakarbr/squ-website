@@ -1,0 +1,10 @@
+uuid: 4f4c3528-2839-46c2-8e8a-cc992c90b70e
+langcode: en
+status: true
+dependencies: {  }
+id: full_with_margin_slider
+label: 'Full with margin slider'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

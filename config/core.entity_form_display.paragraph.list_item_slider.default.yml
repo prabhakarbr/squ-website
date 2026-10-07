@@ -1,0 +1,80 @@
+uuid: 77663c7f-fb3e-4c89-a017-11531e4a8675
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.list_item_slider.field_image_link
+    - field.field.paragraph.list_item_slider.field_list_file
+    - field.field.paragraph.list_item_slider.field_list_file_second
+    - field.field.paragraph.list_item_slider.field_list_file_second_title
+    - field.field.paragraph.list_item_slider.field_list_file_title
+    - field.field.paragraph.list_item_slider.field_list_image
+    - field.field.paragraph.list_item_slider.field_list_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.list_item_slider
+  module:
+    - file
+    - image
+    - link
+id: paragraph.list_item_slider.default
+targetEntityType: paragraph
+bundle: list_item_slider
+mode: default
+content:
+  field_image_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_list_file:
+    type: file_generic
+    weight: 4
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_list_file_second:
+    type: file_generic
+    weight: 6
+    region: content
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+  field_list_file_second_title:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_list_file_title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_list_image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_list_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

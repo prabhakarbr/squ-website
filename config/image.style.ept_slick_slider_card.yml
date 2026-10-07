@@ -1,0 +1,17 @@
+uuid: 49be1790-3704-4acf-a032-b4f595d733b9
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: TLssjGEnnOFSTHjAehxDElobDdWsdzT8XjjY2Ru_ZTQ
+name: ept_slick_slider_card
+label: 'EPT Slick Slider card'
+effects:
+  55a5d05a-911b-44f6-8154-26bf4d5f89a2:
+    uuid: 55a5d05a-911b-44f6-8154-26bf4d5f89a2
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 300
+      anchor: center-center

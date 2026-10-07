@@ -1,0 +1,17 @@
+{% block paragraph %}
+  <div{{ attributes.addClass('achievement-slide') }}>
+
+    {% if content.field_slider_images %}
+      <div class="achievement-slide__image">
+        {{ content.field_slider_images }}
+      </div>
+    {% endif %}
+
+    {% if content.field_overlay_title %}
+      <div class="achievement-slide__overlay">
+        {{ content.field_overlay_title }}
+      </div>
+    {% endif %}
+
+  </div>
+{% endblock paragraph %}

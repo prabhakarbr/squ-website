@@ -1,0 +1,45 @@
+{% block paragraph %}
+  <div{{ attributes.addClass('deans-list-slide') }}>
+
+    {% if content.field_list_image %}
+      <div class="deans-list-slide__image">
+        {% if content.field_image_link %}
+          <a href="{{ content.field_image_link[0]['#url'] }}"
+             target="_blank"
+             rel="noopener noreferrer">
+            {{ content.field_list_image }}
+          </a>
+        {% else %}
+          {{ content.field_list_image }}
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if content.field_list_title %}
+      <div class="deans-list-slide__title">
+        {{ content.field_list_title }}
+      </div>
+    {% endif %}
+
+    <div class="deans-list-slide__links">
+
+      {% if content.field_list_file and content.field_list_file_title %}
+        <a href="{{ file_url(content.field_list_file['#items'].entity.uri.value) }}"
+           target="_blank"
+           rel="noopener noreferrer">
+          {{ content.field_list_file_title }}
+        </a>
+      {% endif %}
+
+      {% if content.field_list_file_second and content.field_list_file_second_title %}
+        <a href="{{ file_url(content.field_list_file_second['#items'].entity.uri.value) }}"
+           target="_blank"
+           rel="noopener noreferrer">
+          {{ content.field_list_file_second_title }}
+        </a>
+      {% endif %}
+
+    </div>
+
+  </div>
+{% endblock paragraph %}

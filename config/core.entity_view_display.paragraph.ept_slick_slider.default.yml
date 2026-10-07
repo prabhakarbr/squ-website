@@ -1,0 +1,53 @@
+uuid: 221b9165-0708-42e6-8149-b33423d84494
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_slick_slider.field_ept_settings
+    - field.field.paragraph.ept_slick_slider.field_ept_slick_slider
+    - field.field.paragraph.ept_slick_slider.field_ept_text
+    - field.field.paragraph.ept_slick_slider.field_ept_title
+    - paragraphs.paragraphs_type.ept_slick_slider
+  module:
+    - entity_reference_revisions
+    - ept_core
+    - text
+_core:
+  default_config_hash: D6f-Fc2NAzWU9GdDBRkUKUZ-OufpE3B1nGAAJQhgO04
+id: paragraph.ept_slick_slider.default
+targetEntityType: paragraph
+bundle: ept_slick_slider
+mode: default
+content:
+  field_ept_settings:
+    type: ept_settings_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ept_slick_slider:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ept_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_ept_title:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

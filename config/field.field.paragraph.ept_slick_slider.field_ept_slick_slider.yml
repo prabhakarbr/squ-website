@@ -1,0 +1,33 @@
+uuid: ca7a8327-33e9-46f0-a091-acfd924b7802
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ept_slick_slider
+    - paragraphs.paragraphs_type.ept_slick_slider
+    - paragraphs.paragraphs_type.ept_slick_slider_item
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: VMJlv4iCLXipe6DB9Nw7mRcvCegf6AlaUe9pD4sFZw4
+id: paragraph.ept_slick_slider.field_ept_slick_slider
+field_name: field_ept_slick_slider
+entity_type: paragraph
+bundle: ept_slick_slider
+label: 'Slick Slider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ept_slick_slider_item: ept_slick_slider_item
+    negate: 0
+    target_bundles_drag_drop:
+      ept_slick_slider_item:
+        weight: 51
+        enabled: true
+field_type: entity_reference_revisions

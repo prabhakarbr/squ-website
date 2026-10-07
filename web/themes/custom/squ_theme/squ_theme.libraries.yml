@@ -24,16 +24,18 @@ global:
       css/footer.css: {}
       css/homepage.css: {}
       css/open-data.css: {}
-      css/ugpage.css: {}
+      css/list-slider.css:{}
       css/sidebar.css: {}
   js:
     js/search-toggle.js: {}
     js/open-data.js: {}
     js/accordian.js: {}
+    js/list-slider.js: {}
   dependencies:
     - squ_theme/bootstrap
     - core/drupal
     - core/once
+    - ept_slick_slider/slick_slider
 
 squ_libraries:
   css:
@@ -44,3 +46,4 @@ squ_libraries:
       css/squ-libraries.css: {}
   dependencies:
     - core/drupal
+

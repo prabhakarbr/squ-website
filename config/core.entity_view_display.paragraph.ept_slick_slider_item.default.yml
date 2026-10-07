@@ -1,0 +1,53 @@
+uuid: 59dcf599-e0bd-4366-8d36-5cbe77128735
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ept_slick_slider_item.field_ept_slick_slider_image
+    - field.field.paragraph.ept_slick_slider_item.field_ept_slick_slider_link
+    - field.field.paragraph.ept_slick_slider_item.field_ept_slick_slider_text
+    - image.style.ept_slick_slider_card
+    - paragraphs.paragraphs_type.ept_slick_slider_item
+  module:
+    - link
+    - media
+    - text
+_core:
+  default_config_hash: Yb25ejThf9Zw1K_1U4jgPEu6CXiu0AbCJlD9g9Lcjm0
+id: paragraph.ept_slick_slider_item.default
+targetEntityType: paragraph
+bundle: ept_slick_slider_item
+mode: default
+content:
+  field_ept_slick_slider_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ept_slick_slider_card
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ept_slick_slider_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 800
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_ept_slick_slider_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

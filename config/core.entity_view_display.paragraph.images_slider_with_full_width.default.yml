@@ -1,0 +1,44 @@
+uuid: dd307876-c3fb-4bcc-84ac-a265cec94c6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.images_slider_with_full_width.field_ept_settings_field
+    - field.field.paragraph.images_slider_with_full_width.field_image_slider_items
+    - field.field.paragraph.images_slider_with_full_width.field_image_top_title
+    - paragraphs.paragraphs_type.images_slider_with_full_width
+  module:
+    - entity_reference_revisions
+    - ept_core
+id: paragraph.images_slider_with_full_width.default
+targetEntityType: paragraph
+bundle: images_slider_with_full_width
+mode: default
+content:
+  field_ept_settings_field:
+    type: ept_settings_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image_slider_items:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_image_top_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

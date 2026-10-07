@@ -1,0 +1,24 @@
+uuid: c0471f51-97a8-442a-860c-5930566c57e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_overlay_title
+    - paragraphs.paragraphs_type.images_slider_items
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.images_slider_items.field_overlay_title
+field_name: field_overlay_title
+entity_type: paragraph
+bundle: images_slider_items
+label: 'Overlay Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
