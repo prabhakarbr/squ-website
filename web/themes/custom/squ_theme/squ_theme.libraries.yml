@@ -26,6 +26,7 @@ global:
       css/open-data.css: {}
       css/list-slider.css:{}
       css/sidebar.css: {}
+      css/anwaar-art.css: {}
   js:
     js/search-toggle.js: {}
     js/open-data.js: {}
