@@ -1,0 +1,18 @@
+uuid: 5596357f-3ad2-45f8-a3d1-30f5e1b73a72
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'IC3 pages'
+type: ic3_pages
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

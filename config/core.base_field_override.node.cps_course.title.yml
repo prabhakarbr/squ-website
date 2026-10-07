@@ -1,0 +1,18 @@
+uuid: 96c94065-ff72-4804-81bb-f96cdb4d9e1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.cps_course
+id: node.cps_course.title
+field_name: title
+entity_type: node
+bundle: cps_course
+label: 'Course Code'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
