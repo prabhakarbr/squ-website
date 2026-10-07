@@ -1,0 +1,8 @@
+uuid: 6edaaa45-3ba5-4a99-929b-98bf793c68a6
+langcode: en
+status: true
+dependencies: {  }
+id: cps-sidebar
+label: 'CPS sidebar'
+description: ''
+locked: false
