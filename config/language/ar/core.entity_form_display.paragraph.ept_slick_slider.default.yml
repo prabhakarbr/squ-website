@@ -1,0 +1,6 @@
+third_party_settings:
+  field_group:
+    group_content:
+      label: المحتوى
+    group_settings:
+      label: الإعدادات

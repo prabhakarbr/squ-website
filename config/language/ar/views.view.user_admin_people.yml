@@ -5,6 +5,8 @@ display:
       fields:
         user_bulk_form:
           label: 'تحديث شامل'
+        name:
+          label: 'اسم المستخدم'
         status:
           label: الحالة
           settings:
