@@ -1,0 +1,1481 @@
+uuid: 41ee4af1-57f5-4e71-b0dc-36a7250f039e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.block_content.body
+    - field.storage.block_content.field_footer_icon
+    - field.storage.block_content.field_quote
+    - field.storage.block_content.field_university_name_ar
+    - field.storage.node.field_about_section
+    - field.storage.node.field_acadamic_awareness_email
+    - field.storage.node.field_accordion_items
+    - field.storage.node.field_administration_email
+    - field.storage.node.field_administration_phone
+    - field.storage.node.field_admission_and_transfer_ema
+    - field.storage.node.field_art_latest_news
+    - field.storage.node.field_banner
+    - field.storage.node.field_banner_image
+    - field.storage.node.field_body
+    - field.storage.node.field_body_text
+    - field.storage.node.field_cards
+    - field.storage.node.field_category
+    - field.storage.node.field_college
+    - field.storage.node.field_course_tags
+    - field.storage.node.field_csp_image
+    - field.storage.node.field_data_description
+    - field.storage.node.field_data_frequency
+    - field.storage.node.field_data_source
+    - field.storage.node.field_data_year
+    - field.storage.node.field_e_resources
+    - field.storage.node.field_form_category
+    - field.storage.node.field_graduation_email
+    - field.storage.node.field_graduation_phone
+    - field.storage.node.field_hero_image
+    - field.storage.node.field_icon
+    - field.storage.node.field_ilc_publication
+    - field.storage.node.field_library_services
+    - field.storage.node.field_news_events_category
+    - field.storage.node.field_news_events_image
+    - field.storage.node.field_open_data_category
+    - field.storage.node.field_order
+    - field.storage.node.field_page_sections
+    - field.storage.node.field_pdf
+    - field.storage.node.field_pg_program_description
+    - field.storage.node.field_program_college
+    - field.storage.node.field_program_level
+    - field.storage.node.field_program_title
+    - field.storage.node.field_registration_phone
+    - field.storage.node.field_research_summary
+    - field.storage.node.field_stay_in_touch
+    - field.storage.node.field_subject
+    - field.storage.paragraph.field_about_squ_heading
+    - field.storage.paragraph.field_about_squ_link1
+    - field.storage.paragraph.field_about_squ_text
+    - field.storage.paragraph.field_accordian_main_title
+    - field.storage.paragraph.field_accordion_content
+    - field.storage.paragraph.field_accordion_item
+    - field.storage.paragraph.field_accordion_title
+    - field.storage.paragraph.field_background_image
+    - field.storage.paragraph.field_card_icon
+    - field.storage.paragraph.field_card_title
+    - field.storage.paragraph.field_carousel_slides
+    - field.storage.paragraph.field_ceps_images
+    - field.storage.paragraph.field_college_hero_image
+    - field.storage.paragraph.field_college_icon
+    - field.storage.paragraph.field_college_link
+    - field.storage.paragraph.field_college_name
+    - field.storage.paragraph.field_contact_email
+    - field.storage.paragraph.field_contact_phone
+    - field.storage.paragraph.field_contact_webform
+    - field.storage.paragraph.field_content
+    - field.storage.paragraph.field_cpes_summary
+    - field.storage.paragraph.field_doc_title
+    - field.storage.paragraph.field_ept_slick_slider_text
+    - field.storage.paragraph.field_ept_text
+    - field.storage.paragraph.field_ept_title
+    - field.storage.paragraph.field_grid_cards
+    - field.storage.paragraph.field_grid_heading
+    - field.storage.paragraph.field_heading
+    - field.storage.paragraph.field_heading1
+    - field.storage.paragraph.field_ilc_documents
+    - field.storage.paragraph.field_image_top_title
+    - field.storage.paragraph.field_intro_heading
+    - field.storage.paragraph.field_latest_news_date
+    - field.storage.paragraph.field_latest_news_details
+    - field.storage.paragraph.field_list_file_second_title
+    - field.storage.paragraph.field_list_file_title
+    - field.storage.paragraph.field_list_title
+    - field.storage.paragraph.field_list_top_title
+    - field.storage.paragraph.field_news_date
+    - field.storage.paragraph.field_news_description
+    - field.storage.paragraph.field_news_heading
+    - field.storage.paragraph.field_news_items
+    - field.storage.paragraph.field_news_title
+    - field.storage.paragraph.field_overlay_title
+    - field.storage.paragraph.field_program_colleges
+    - field.storage.paragraph.field_programs_heading
+    - field.storage.paragraph.field_quick_links_title
+    - field.storage.paragraph.field_quote_text
+    - field.storage.paragraph.field_research_card
+    - field.storage.paragraph.field_research_card_description
+    - field.storage.paragraph.field_research_card_title
+    - field.storage.paragraph.field_research_description
+    - field.storage.paragraph.field_research_heading
+    - field.storage.paragraph.field_statistics_label
+    - field.storage.paragraph.field_statistics_number
+    - field.storage.paragraph.field_student_life_title
+    - field.storage.paragraph.field_tiles
+    - field.storage.paragraph.field_title
+    - search_api.server.search_servers
+  module:
+    - block_content
+    - content_translation
+    - menu_link_content
+    - node
+    - paragraphs
+    - search_api_opensearch
+    - taxonomy
+    - user
+id: dataset_index
+name: 'Dataset index'
+description: ''
+read_only: false
+field_settings:
+  access:
+    label: 'Last access'
+    datasource_id: 'entity:user'
+    property_path: access
+    type: date
+    dependencies:
+      module:
+        - user
+  behavior_settings:
+    label: 'Behavior settings'
+    datasource_id: 'entity:paragraph'
+    property_path: behavior_settings
+    type: text
+    dependencies:
+      module:
+        - paragraphs
+  body:
+    label: Body
+    datasource_id: 'entity:block_content'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.block_content.body
+  content_translation_created:
+    label: 'Translation created time'
+    datasource_id: 'entity:user'
+    property_path: content_translation_created
+    type: date
+    dependencies:
+      module:
+        - content_translation
+  content_translation_outdated:
+    label: 'Translation outdated'
+    datasource_id: 'entity:user'
+    property_path: content_translation_outdated
+    type: boolean
+    dependencies:
+      module:
+        - content_translation
+  content_translation_source:
+    label: 'Translation source'
+    datasource_id: 'entity:block_content'
+    property_path: content_translation_source
+    type: string
+    dependencies:
+      module:
+        - content_translation
+  content_translation_status:
+    label: 'Translation status'
+    datasource_id: 'entity:user'
+    property_path: content_translation_status
+    type: boolean
+    dependencies:
+      module:
+        - content_translation
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:paragraph'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - paragraphs
+  custom_value_1:
+    label: 'Custom value'
+    property_path: custom_value
+    type: string
+    configuration:
+      value: ''
+  custom_value_2:
+    label: 'Custom value (Paragraph)'
+    datasource_id: 'entity:paragraph'
+    property_path: search_api_custom_value
+    type: string
+    configuration:
+      value: ''
+  description:
+    label: Description
+    datasource_id: 'entity:menu_link_content'
+    property_path: description
+    type: string
+    dependencies:
+      module:
+        - menu_link_content
+  description_3:
+    label: Description
+    datasource_id: 'entity:taxonomy_term'
+    property_path: description
+    type: text
+    dependencies:
+      module:
+        - taxonomy
+  enabled:
+    label: Enabled
+    datasource_id: 'entity:menu_link_content'
+    property_path: enabled
+    type: boolean
+    dependencies:
+      module:
+        - menu_link_content
+  entity_type:
+    label: 'Entity type'
+    property_path: search_api_entity_type
+    type: string
+  field_about_section:
+    label: 'About Section'
+    datasource_id: 'entity:node'
+    property_path: field_about_section
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_about_section
+  field_about_squ_heading:
+    label: 'About SQU Heading'
+    datasource_id: 'entity:paragraph'
+    property_path: field_about_squ_heading
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_about_squ_heading
+  field_about_squ_link1:
+    label: 'About SQU Link1'
+    datasource_id: 'entity:paragraph'
+    property_path: field_about_squ_link1
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_about_squ_link1
+  field_about_squ_text:
+    label: 'About SQU Text'
+    datasource_id: 'entity:paragraph'
+    property_path: field_about_squ_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_about_squ_text
+  field_acadamic_awareness_email:
+    label: 'Acadamic Awareness Email'
+    datasource_id: 'entity:node'
+    property_path: field_acadamic_awareness_email
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_acadamic_awareness_email
+  field_accordian_main_title_1:
+    label: 'Accordian Main Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_accordian_main_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_accordian_main_title
+  field_accordion_content:
+    label: 'Accordion Content'
+    datasource_id: 'entity:paragraph'
+    property_path: field_accordion_content
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_accordion_content
+  field_accordion_item:
+    label: 'Accordion Item'
+    datasource_id: 'entity:paragraph'
+    property_path: field_accordion_item
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_accordion_item
+  field_accordion_items:
+    label: 'Accordion items'
+    datasource_id: 'entity:node'
+    property_path: field_accordion_items
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_accordion_items
+  field_accordion_title:
+    label: 'Accordion Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_accordion_title
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_accordion_title
+  field_accordion_title_2:
+    label: 'Accordion Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_accordion_title
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_accordion_title
+  field_administration_email:
+    label: 'Administration Email'
+    datasource_id: 'entity:node'
+    property_path: field_administration_email
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_administration_email
+  field_administration_phone:
+    label: 'Administration Phone'
+    datasource_id: 'entity:node'
+    property_path: field_administration_phone
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_administration_phone
+  field_admission_and_transfer_ema:
+    label: 'Admission and Transfer Email'
+    datasource_id: 'entity:node'
+    property_path: field_admission_and_transfer_ema
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_admission_and_transfer_ema
+  field_art_latest_news:
+    label: 'Art Latest News'
+    datasource_id: 'entity:node'
+    property_path: field_art_latest_news
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_art_latest_news
+  field_background_image:
+    label: 'Background image'
+    datasource_id: 'entity:paragraph'
+    property_path: field_background_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_background_image
+  field_banner:
+    label: Banner
+    datasource_id: 'entity:node'
+    property_path: field_banner
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_banner
+  field_banner_image:
+    label: 'Banner Image'
+    datasource_id: 'entity:node'
+    property_path: field_banner_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_banner_image
+  field_body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: field_body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_body
+  field_body_text:
+    label: 'Body Text'
+    datasource_id: 'entity:node'
+    property_path: field_body_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_body_text
+  field_card_icon:
+    label: 'Card Icon'
+    datasource_id: 'entity:paragraph'
+    property_path: field_card_icon
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_card_icon
+  field_card_title:
+    label: 'Card Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_card_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_card_title
+  field_card_title_1:
+    label: 'Card Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_card_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_card_title
+  field_cards:
+    label: Cards
+    datasource_id: 'entity:node'
+    property_path: field_cards
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_cards
+  field_carousel_slides:
+    label: 'Carousel Slides'
+    datasource_id: 'entity:paragraph'
+    property_path: field_carousel_slides
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_carousel_slides
+  field_category:
+    label: Category
+    datasource_id: 'entity:node'
+    property_path: field_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_category
+  field_ceps_images:
+    label: 'Ceps images'
+    datasource_id: 'entity:paragraph'
+    property_path: field_ceps_images
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_ceps_images
+  field_college:
+    label: College
+    datasource_id: 'entity:node'
+    property_path: field_college
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_college
+  field_college_hero_image:
+    label: 'College Hero Image'
+    datasource_id: 'entity:paragraph'
+    property_path: field_college_hero_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_college_hero_image
+  field_college_icon:
+    label: 'College Icon'
+    datasource_id: 'entity:paragraph'
+    property_path: field_college_icon
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_college_icon
+  field_college_link:
+    label: 'College Link'
+    datasource_id: 'entity:paragraph'
+    property_path: field_college_link
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_college_link
+  field_college_name:
+    label: 'College Name'
+    datasource_id: 'entity:paragraph'
+    property_path: field_college_name
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_college_name
+  field_college_name_2:
+    label: 'College Name'
+    datasource_id: 'entity:paragraph'
+    property_path: field_college_name
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_college_name
+  field_contact_email_1:
+    label: 'Contact Email'
+    datasource_id: 'entity:paragraph'
+    property_path: field_contact_email
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_contact_email
+  field_contact_phone:
+    label: 'Contact Phone'
+    datasource_id: 'entity:paragraph'
+    property_path: field_contact_phone
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_contact_phone
+  field_contact_phone_2:
+    label: 'Contact Phone'
+    datasource_id: 'entity:paragraph'
+    property_path: field_contact_phone
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_contact_phone
+  field_contact_webform:
+    label: 'Contact Webform'
+    datasource_id: 'entity:paragraph'
+    property_path: field_contact_webform
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_contact_webform
+  field_content:
+    label: Content
+    datasource_id: 'entity:paragraph'
+    property_path: field_content
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_content
+  field_course_tags:
+    label: 'Course tags'
+    datasource_id: 'entity:node'
+    property_path: field_course_tags
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_course_tags
+  field_cpes_summary_1:
+    label: 'Cpes Summary'
+    datasource_id: 'entity:paragraph'
+    property_path: field_cpes_summary
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_cpes_summary
+  field_csp_image:
+    label: 'CSP Image'
+    datasource_id: 'entity:node'
+    property_path: field_csp_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_csp_image
+  field_data_description:
+    label: Description
+    datasource_id: 'entity:node'
+    property_path: field_data_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_data_description
+  field_data_frequency:
+    label: 'Update frequency'
+    datasource_id: 'entity:node'
+    property_path: field_data_frequency
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_data_frequency
+  field_data_source:
+    label: Source
+    datasource_id: 'entity:node'
+    property_path: field_data_source
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_data_source
+  field_data_year:
+    label: Year
+    datasource_id: 'entity:node'
+    property_path: field_data_year
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_data_year
+  field_doc_title:
+    label: 'Doc Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_doc_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_doc_title
+  field_e_resources:
+    label: E-Resources
+    datasource_id: 'entity:node'
+    property_path: field_e_resources
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_e_resources
+  field_ept_slick_slider_text:
+    label: 'Slide Text'
+    datasource_id: 'entity:paragraph'
+    property_path: field_ept_slick_slider_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_ept_slick_slider_text
+  field_ept_text:
+    label: Text
+    datasource_id: 'entity:paragraph'
+    property_path: field_ept_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_ept_text
+  field_ept_title:
+    label: Title
+    datasource_id: 'entity:paragraph'
+    property_path: field_ept_title
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_ept_title
+  field_footer_icon:
+    label: 'Footer Icon'
+    datasource_id: 'entity:block_content'
+    property_path: field_footer_icon
+    type: integer
+    dependencies:
+      config:
+        - field.storage.block_content.field_footer_icon
+  field_form_category:
+    label: 'Form Category'
+    datasource_id: 'entity:node'
+    property_path: field_form_category
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_form_category
+  field_graduation_email:
+    label: 'Graduation Email'
+    datasource_id: 'entity:node'
+    property_path: field_graduation_email
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_graduation_email
+  field_graduation_phone:
+    label: 'Graduation Phone'
+    datasource_id: 'entity:node'
+    property_path: field_graduation_phone
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_graduation_phone
+  field_grid_cards:
+    label: 'Grid Cards'
+    datasource_id: 'entity:paragraph'
+    property_path: field_grid_cards
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_grid_cards
+  field_grid_heading:
+    label: 'Grid Heading'
+    datasource_id: 'entity:paragraph'
+    property_path: field_grid_heading
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_grid_heading
+  field_heading:
+    label: Heading
+    datasource_id: 'entity:paragraph'
+    property_path: field_heading
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_heading
+  field_heading1:
+    label: Heading1
+    datasource_id: 'entity:paragraph'
+    property_path: field_heading1
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_heading1
+  field_hero_image:
+    label: 'Hero Image'
+    datasource_id: 'entity:node'
+    property_path: field_hero_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_hero_image
+  field_icon:
+    label: Icon
+    datasource_id: 'entity:node'
+    property_path: field_icon
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_icon
+  field_ilc_documents:
+    label: Documents
+    datasource_id: 'entity:paragraph'
+    property_path: field_ilc_documents
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_ilc_documents
+  field_ilc_publication:
+    label: 'ILC Publication'
+    datasource_id: 'entity:node'
+    property_path: field_ilc_publication
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_ilc_publication
+  field_image_top_title:
+    label: 'Image Top Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_image_top_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_image_top_title
+  field_intro_heading:
+    label: 'Intro Heading'
+    datasource_id: 'entity:paragraph'
+    property_path: field_intro_heading
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_intro_heading
+  field_latest_news_date:
+    label: 'Latest News Date'
+    datasource_id: 'entity:paragraph'
+    property_path: field_latest_news_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.paragraph.field_latest_news_date
+  field_latest_news_details:
+    label: 'Latest News Details'
+    datasource_id: 'entity:paragraph'
+    property_path: field_latest_news_details
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_latest_news_details
+  field_library_services:
+    label: 'Library Services'
+    datasource_id: 'entity:node'
+    property_path: field_library_services
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_library_services
+  field_list_file_second_title:
+    label: 'List File Second Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_list_file_second_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_list_file_second_title
+  field_list_file_title:
+    label: 'List File Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_list_file_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_list_file_title
+  field_list_title:
+    label: 'List Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_list_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_list_title
+  field_list_top_title:
+    label: 'List Top Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_list_top_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_list_top_title
+  field_news_date:
+    label: 'News Date'
+    datasource_id: 'entity:paragraph'
+    property_path: field_news_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.paragraph.field_news_date
+  field_news_description:
+    label: 'News Description'
+    datasource_id: 'entity:paragraph'
+    property_path: field_news_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_news_description
+  field_news_events_category:
+    label: ' News&Events Category'
+    datasource_id: 'entity:node'
+    property_path: field_news_events_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_news_events_category
+  field_news_events_image:
+    label: 'News&Events Image'
+    datasource_id: 'entity:node'
+    property_path: field_news_events_image
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_news_events_image
+  field_news_heading:
+    label: 'News Heading'
+    datasource_id: 'entity:paragraph'
+    property_path: field_news_heading
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_news_heading
+  field_news_items:
+    label: 'News Items'
+    datasource_id: 'entity:paragraph'
+    property_path: field_news_items
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_news_items
+  field_news_title:
+    label: 'News title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_news_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_news_title
+  field_open_data_category:
+    label: Category
+    datasource_id: 'entity:node'
+    property_path: field_open_data_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_open_data_category
+  field_open_data_category_1:
+    label: Category
+    datasource_id: 'entity:node'
+    property_path: field_open_data_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_open_data_category
+  field_order:
+    label: Order
+    datasource_id: 'entity:node'
+    property_path: field_order
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_order
+  field_overlay_title:
+    label: 'Overlay Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_overlay_title
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_overlay_title
+  field_page_sections:
+    label: 'Page Sections'
+    datasource_id: 'entity:node'
+    property_path: field_page_sections
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_page_sections
+  field_pdf:
+    label: PDF
+    datasource_id: 'entity:node'
+    property_path: field_pdf
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_pdf
+  field_pg_program_description:
+    label: 'Program Description'
+    datasource_id: 'entity:node'
+    property_path: field_pg_program_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_pg_program_description
+  field_program_college:
+    label: College
+    datasource_id: 'entity:node'
+    property_path: field_program_college
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_program_college
+  field_program_colleges:
+    label: 'Program Colleges'
+    datasource_id: 'entity:paragraph'
+    property_path: field_program_colleges
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_program_colleges
+  field_program_level:
+    label: 'Program Level'
+    datasource_id: 'entity:node'
+    property_path: field_program_level
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_program_level
+  field_program_title:
+    label: 'Program Title'
+    datasource_id: 'entity:node'
+    property_path: field_program_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_program_title
+  field_programs_heading:
+    label: 'Programs Heading'
+    datasource_id: 'entity:paragraph'
+    property_path: field_programs_heading
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_programs_heading
+  field_quick_links_title:
+    label: 'Quick links Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_quick_links_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_quick_links_title
+  field_quote:
+    label: Quote
+    datasource_id: 'entity:block_content'
+    property_path: field_quote
+    type: text
+    dependencies:
+      config:
+        - field.storage.block_content.field_quote
+  field_quote_text:
+    label: 'Quote text'
+    datasource_id: 'entity:paragraph'
+    property_path: field_quote_text
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_quote_text
+  field_registration_phone:
+    label: 'Registration Phone'
+    datasource_id: 'entity:node'
+    property_path: field_registration_phone
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_registration_phone
+  field_research_card:
+    label: 'Research Card'
+    datasource_id: 'entity:paragraph'
+    property_path: field_research_card
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_research_card
+  field_research_card_description:
+    label: 'Research Card Description'
+    datasource_id: 'entity:paragraph'
+    property_path: field_research_card_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_research_card_description
+  field_research_card_title:
+    label: 'Research Card Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_research_card_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_research_card_title
+  field_research_description:
+    label: 'Research Description'
+    datasource_id: 'entity:paragraph'
+    property_path: field_research_description
+    type: text
+    dependencies:
+      config:
+        - field.storage.paragraph.field_research_description
+  field_research_heading:
+    label: 'Research Heading'
+    datasource_id: 'entity:paragraph'
+    property_path: field_research_heading
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_research_heading
+  field_research_summary:
+    label: 'Research Summary'
+    datasource_id: 'entity:node'
+    property_path: field_research_summary
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_research_summary
+  field_statistics_label:
+    label: 'Statistics Label'
+    datasource_id: 'entity:paragraph'
+    property_path: field_statistics_label
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_statistics_label
+  field_statistics_number:
+    label: 'Statistics Number'
+    datasource_id: 'entity:paragraph'
+    property_path: field_statistics_number
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_statistics_number
+  field_stay_in_touch:
+    label: 'Stay in Touch'
+    datasource_id: 'entity:node'
+    property_path: field_stay_in_touch
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_stay_in_touch
+  field_student_life_title:
+    label: 'Student Life Title'
+    datasource_id: 'entity:paragraph'
+    property_path: field_student_life_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_student_life_title
+  field_subject:
+    label: Subject
+    datasource_id: 'entity:node'
+    property_path: field_subject
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_subject
+  field_tiles:
+    label: Tiles
+    datasource_id: 'entity:paragraph'
+    property_path: field_tiles
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_tiles
+  field_title:
+    label: Title
+    datasource_id: 'entity:paragraph'
+    property_path: field_title
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_title
+  field_university_name_ar:
+    label: 'University Name Ar'
+    datasource_id: 'entity:block_content'
+    property_path: field_university_name_ar
+    type: string
+    dependencies:
+      config:
+        - field.storage.block_content.field_university_name_ar
+  id:
+    label: 'Entity ID'
+    datasource_id: 'entity:menu_link_content'
+    property_path: id
+    type: integer
+    dependencies:
+      module:
+        - menu_link_content
+  info:
+    label: 'Block description'
+    datasource_id: 'entity:block_content'
+    property_path: info
+    type: string
+    dependencies:
+      module:
+        - block_content
+  init:
+    label: 'Initial email'
+    datasource_id: 'entity:user'
+    property_path: init
+    type: string
+    dependencies:
+      module:
+        - user
+  language_with_fallback:
+    label: 'Language (with fallback)'
+    property_path: language_with_fallback
+    type: string
+  mail:
+    label: Email
+    datasource_id: 'entity:user'
+    property_path: mail
+    type: string
+    dependencies:
+      module:
+        - user
+  menu_name:
+    label: 'Menu name'
+    datasource_id: 'entity:menu_link_content'
+    property_path: menu_name
+    type: string
+    dependencies:
+      module:
+        - menu_link_content
+  name:
+    label: Name
+    datasource_id: 'entity:user'
+    property_path: name
+    type: string
+    dependencies:
+      module:
+        - user
+  name_1:
+    label: Name
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: string
+    dependencies:
+      module:
+        - taxonomy
+  parent_field_name:
+    label: 'Parent field name'
+    datasource_id: 'entity:paragraph'
+    property_path: parent_field_name
+    type: string
+    dependencies:
+      module:
+        - paragraphs
+  pass:
+    label: Password
+    datasource_id: 'entity:user'
+    property_path: pass
+    type: string
+    dependencies:
+      module:
+        - user
+  rendered_item:
+    label: 'Rendered HTML output'
+    property_path: rendered_item
+    type: text
+    configuration:
+      roles:
+        - anonymous
+      view_mode:
+        'entity:block_content':
+          ':default': ''
+          basic: ':default'
+          footer_brand: ':default'
+          hero_banner: ':default'
+        'entity:menu_link_content':
+          ':default': ''
+          menu_link_content: ':default'
+        'entity:node':
+          ':default': ''
+          about_squ_pages: ':default'
+          admission: ':default'
+          art: ':default'
+          basic_page: ':default'
+          ceps: ':default'
+          colleges_page: ':default'
+          contact_directory: ':default'
+          cps_community_services: ':default'
+          cps_course: ':default'
+          cps_highlights: ':default'
+          cps_pages: ':default'
+          deanship: ':default'
+          deanship_of_admission_and_regist: ':default'
+          home_page: ':default'
+          ic3_pages: ':default'
+          independent_learning_centre_ilc: ':default'
+          info_card: ':default'
+          news_events: ':default'
+          open_data_item: ':default'
+          postgraduate_program: ':default'
+          program: ':default'
+          ps_about: ':default'
+          research_innovation: ':default'
+          service_item: ':default'
+          squ_forms: ':default'
+          squ_libraries: ':default'
+          squh_page: ':default'
+          student_department: ':default'
+          students: ':default'
+          transfer_squ: ':default'
+        'entity:paragraph':
+          ':default': ''
+          about_squ: ':default'
+          accordion: ':default'
+          accordion_item: ':default'
+          accordion_items: ':default'
+          art_latest_news: ':default'
+          art_quick_links: ':default'
+          card_grid: ':default'
+          card_item: ':default'
+          college: ':default'
+          college_tab_item: ':default'
+          document_item: ':default'
+          document_list: ':default'
+          ept_slick_slider: ':default'
+          ept_slick_slider_item: ':default'
+          feature_card: ':default'
+          footer_icons: ':default'
+          full_with_margin_slider: ':default'
+          hero_banner: ':default'
+          hero_carousel: ':default'
+          hero_slide: ':default'
+          ilc_publication_item: ':default'
+          images_slider_items: ':default'
+          images_slider_with_full_width: ':default'
+          list_item_slider: ':default'
+          map_contact: ':default'
+          news_item: ':default'
+          news_section: ':default'
+          page_intro: ':default'
+          program_tabs: ':default'
+          publication_grid: ':default'
+          publication_item: ':default'
+          research_card: ':default'
+          research_section: ':default'
+          search_widget: ':default'
+          single_image_section: ':default'
+          statistics_counter: ':default'
+          student_life_gallery_item: ':default'
+          student_life_section: ':default'
+        'entity:taxonomy_term':
+          ':default': ''
+          about_squ_terms: ':default'
+          cps_course_tags: ':default'
+          cps_subjects: ':default'
+          news_events_category: ':default'
+          open_data_category: ':default'
+          postgraduate_colleges: ':default'
+          service_category: ':default'
+          tags: ':default'
+        'entity:user':
+          ':default': ''
+          user: ':default'
+  reusable:
+    label: Reusable
+    datasource_id: 'entity:block_content'
+    property_path: reusable
+    type: boolean
+    dependencies:
+      module:
+        - block_content
+  roles:
+    label: Roles
+    datasource_id: 'entity:user'
+    property_path: roles
+    type: string
+    dependencies:
+      module:
+        - user
+  title:
+    label: 'Menu link title'
+    datasource_id: 'entity:menu_link_content'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - menu_link_content
+  title_2:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: string
+    dependencies:
+      module:
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  type_1:
+    label: 'Block type'
+    datasource_id: 'entity:block_content'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - block_content
+  type_4:
+    label: 'Paragraph type'
+    datasource_id: 'entity:paragraph'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - paragraphs
+  url:
+    label: URI
+    property_path: search_api_url
+    type: string
+    configuration:
+      absolute: false
+datasource_settings:
+  'entity:block_content':
+    bundles:
+      default: false
+      selected:
+        - basic
+        - footer_brand
+        - hero_banner
+    languages:
+      default: false
+      selected:
+        - ar
+        - en
+  'entity:menu_link_content':
+    bundles:
+      default: false
+      selected:
+        - menu_link_content
+    languages:
+      default: false
+      selected:
+        - ar
+        - en
+  'entity:node':
+    bundles:
+      default: false
+      selected:
+        - about_squ_pages
+        - admission
+        - art
+        - basic_page
+        - ceps
+        - colleges_page
+        - contact_directory
+        - cps_community_services
+        - cps_course
+        - cps_highlights
+        - cps_pages
+        - deanship
+        - deanship_of_admission_and_regist
+        - home_page
+        - ic3_pages
+        - independent_learning_centre_ilc
+        - info_card
+        - news_events
+        - open_data_item
+        - postgraduate_program
+        - program
+        - ps_about
+        - research_innovation
+        - service_item
+        - squ_forms
+        - squ_libraries
+        - squh_page
+        - student_department
+        - students
+        - transfer_squ
+    languages:
+      default: false
+      selected:
+        - ar
+        - en
+  'entity:paragraph':
+    bundles:
+      default: false
+      selected:
+        - about_squ
+        - accordion
+        - accordion_item
+        - accordion_items
+        - art_latest_news
+        - art_quick_links
+        - card_grid
+        - card_item
+        - college
+        - college_tab_item
+        - document_item
+        - document_list
+        - ept_slick_slider
+        - ept_slick_slider_item
+        - feature_card
+        - footer_icons
+        - full_with_margin_slider
+        - hero_banner
+        - hero_carousel
+        - hero_slide
+        - ilc_publication_item
+        - images_slider_items
+        - images_slider_with_full_width
+        - list_item_slider
+        - map_contact
+        - news_item
+        - news_section
+        - page_intro
+        - program_tabs
+        - publication_grid
+        - publication_item
+        - research_card
+        - research_section
+        - search_widget
+        - single_image_section
+        - statistics_counter
+        - student_life_gallery_item
+        - student_life_section
+    languages:
+      default: false
+      selected:
+        - ar
+        - en
+  'entity:taxonomy_term':
+    bundles:
+      default: false
+      selected:
+        - about_squ_terms
+        - cps_course_tags
+        - cps_subjects
+        - news_events_category
+        - open_data_category
+        - postgraduate_colleges
+        - service_category
+        - tags
+    languages:
+      default: false
+      selected:
+        - ar
+        - en
+  'entity:user':
+    languages:
+      default: false
+      selected:
+        - ar
+        - en
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  custom_value: {  }
+  entity_type: {  }
+  language_with_fallback: {  }
+  rendered_item: {  }
+  search_api_opensearch_date_range: {  }
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  cron_limit: 50
+  delete_on_fail: true
+  index_directly: true
+  track_changes_in_references: true
+server: search_servers

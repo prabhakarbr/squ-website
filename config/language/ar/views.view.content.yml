@@ -7,6 +7,8 @@ display:
       fields:
         title:
           label: Title
+        type:
+          label: 'Content type'
         status:
           label: الحالة
           settings:
@@ -19,6 +21,9 @@ display:
         title:
           expose:
             label: Title
+        type:
+          expose:
+            label: 'Content type'
         status:
           expose:
             label: الحالة

@@ -1,0 +1,21 @@
+uuid: ec03b388-2148-4348-863f-9813130db49a
+langcode: en
+status: true
+dependencies:
+  module:
+    - search_api_opensearch
+id: search_servers
+name: 'Search Servers'
+description: ''
+backend: opensearch
+backend_config:
+  connector: standard
+  connector_config:
+    url: 'http://127.0.0.1:9200'
+    ssl_verification: false
+  advanced:
+    fuzziness: auto
+    prefix: ''
+    synonyms:
+      - ''
+    max_ngram_diff: 1
