@@ -1,0 +1,31 @@
+uuid: 52e6d001-a6c2-45ce-9bea-ecd3960c4bd3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.pdf_file_import.field_pdf_file
+    - node.type.pdf_file_import
+  module:
+    - file
+    - user
+id: node.pdf_file_import.default
+targetEntityType: node
+bundle: pdf_file_import
+mode: default
+content:
+  field_pdf_file:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,6 +1,6 @@
 uuid: 6b265604-6131-4bf0-acc1-c9e4346be22c
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.cps-subjects-sidebar
@@ -10,7 +10,7 @@ dependencies:
     - squ_theme
 id: squ_theme_cpssubjectssidebar
 theme: squ_theme
-region: sidebar
+region: header_brand
 weight: 0
 provider: null
 plugin: 'system_menu_block:cps-subjects-sidebar'

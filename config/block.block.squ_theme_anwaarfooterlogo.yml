@@ -2,10 +2,7 @@ uuid: 10695499-064f-4bee-9396-41678653cfa9
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:1ac1e0a2-cf67-4ddb-8d8d-e434c820b3de'
   module:
-    - block_content
     - system
   theme:
     - squ_theme

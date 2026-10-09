@@ -1,0 +1,11 @@
+uuid: c1cb905f-a474-4f2f-8b6c-8e8f389a293a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.medicine
+id: node.medicine
+target_entity_type_id: node
+target_bundle: medicine
+default_langcode: site_default
+language_alterable: false

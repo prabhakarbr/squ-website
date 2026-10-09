@@ -1,0 +1,11 @@
+uuid: ee2cdffa-0f2b-4415-8d9e-5c03b33e7c07
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.pdf_file_import
+id: node.pdf_file_import
+target_entity_type_id: node
+target_bundle: pdf_file_import
+default_langcode: site_default
+language_alterable: false
