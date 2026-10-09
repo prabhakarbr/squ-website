@@ -1,6 +1,6 @@
 uuid: d55fa2bb-1fab-4521-9d91-511dba1d6e47
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.ic3-menu
@@ -10,7 +10,7 @@ dependencies:
     - squ_theme
 id: squ_theme_ic3menu
 theme: squ_theme
-region: sidebar
+region: header_brand
 weight: 0
 provider: null
 plugin: 'system_menu_block:ic3-menu'

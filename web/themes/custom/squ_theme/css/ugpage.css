@@ -176,3 +176,58 @@
 .card-grid .card-item:not(:has(.card-item__icon img)) {
   display: none;
 }
+
+/* =========================================
+  Undergraduate page internal page
+========================================= */
+
+.field.field--name-field-intro-heading.field--type-string.field--label-above {
+    text-align: center;
+    margin: 30px 0 20px;
+    text-transform: uppercase;
+    color: #2e8edb;
+    font-family: 'Tajawal', Arial, Helvetica, sans-serif;
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 500;
+    letter-spacing: normal;
+}
+h2.squ-accordion__main-title {
+    text-align: center;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #666666;
+    white-space: normal;
+    vertical-align: middle;
+    font-weight: 500;
+    padding: 0px;
+    margin-bottom: 37px;
+}
+button.squ-accordion__button {
+    color: #777;
+    background-color: #eeeeee;
+    border-color: #dddddd;
+    margin-top: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 8px 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    text-align: left;
+}
+.squ-accordion__item.is-open {
+    color: #777;
+    background-color: #eeeeee;
+    border-color: #dddddd;
+}
+.squ-accordion__links .field__items {
+    padding: 8px 18px;
+}
+.squ-accordion__links .field__item a {
+    font-size: 16px;
+    font-weight: 600;
+    list-style: none;
+    text-decoration: none;
+}

@@ -2,10 +2,7 @@ uuid: 3bdd9b8d-09fe-4449-9b6e-ecade730f6ba
 langcode: en
 status: true
 dependencies:
-  content:
-    - 'block_content:basic:4eaa4742-a2c9-4ab0-a88e-b132d09bdeba'
   module:
-    - block_content
     - system
   theme:
     - squ_theme

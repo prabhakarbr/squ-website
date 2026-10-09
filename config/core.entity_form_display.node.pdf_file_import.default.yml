@@ -1,18 +1,16 @@
-uuid: e2b80127-90a5-4de1-969b-ffc45432161b
+uuid: e33dc8a6-891e-4959-a47c-dc9fa7fff7a0
 langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.cps_community_services.field_accordion_items
-    - field.field.node.cps_community_services.field_body
-    - node.type.cps_community_services
+    - field.field.node.pdf_file_import.field_pdf_file
+    - node.type.pdf_file_import
   module:
-    - paragraphs
+    - file
     - path
-    - text
-id: node.cps_community_services.default
+id: node.pdf_file_import.default
 targetEntityType: node
-bundle: cps_community_services
+bundle: pdf_file_import
 mode: default
 content:
   created:
@@ -21,31 +19,12 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_accordion_items:
-    type: paragraphs
-    weight: 125
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
-  field_body:
-    type: text_textarea
+  field_pdf_file:
+    type: file_generic
     weight: 122
     region: content
     settings:
-      rows: 5
-      placeholder: ''
+      progress_indicator: throbber
     third_party_settings: {  }
   langcode:
     type: language_select

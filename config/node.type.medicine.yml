@@ -1,4 +1,4 @@
-uuid: c36c19ea-6a19-418b-aa3f-2b731ce00cc2
+uuid: 7bb4945d-9ffd-4bc9-9d26-140463d38f59
 langcode: en
 status: true
 dependencies:
@@ -9,10 +9,10 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: 'Deanship of Admission and Registration'
-type: deanship_of_admission_and_regist
+name: Medicine
+type: medicine
 description: null
 help: null
 new_revision: true
 preview_mode: 1
-display_submitted: false
+display_submitted: true

@@ -8,6 +8,11 @@ dependencies:
     - paragraphs.paragraphs_type.full_with_margin_slider
   module:
     - entity_reference_revisions
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
 id: paragraph.full_with_margin_slider.default
 targetEntityType: paragraph
 bundle: full_with_margin_slider
@@ -20,7 +25,7 @@ content:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 0
+    weight: 1
     region: content
   field_list_top_title:
     type: string
@@ -29,7 +34,8 @@ content:
       link_to_entity: false
       link_rel: canonical
     third_party_settings: {  }
-    weight: 1
+    weight: 0
     region: content
 hidden:
+  layout_builder__layout: true
   search_api_excerpt: true
