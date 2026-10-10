@@ -1,0 +1,11 @@
+uuid: d39e312e-9182-4d5c-97f3-abd6669f7bf6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.engineering_program
+id: node.engineering_program
+target_entity_type_id: node
+target_bundle: engineering_program
+default_langcode: site_default
+language_alterable: false

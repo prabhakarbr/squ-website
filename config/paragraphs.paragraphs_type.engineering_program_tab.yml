@@ -1,0 +1,10 @@
+uuid: 990f8892-9df2-4641-9d88-be09272f5d6e
+langcode: en
+status: true
+dependencies: {  }
+id: engineering_program_tab
+label: 'Engineering Program Tab'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

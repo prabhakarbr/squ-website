@@ -1,0 +1,28 @@
+uuid: 9ef2ec8a-3cda-4d51-8ddd-807562b1b392
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_content
+    - paragraphs.paragraphs_type.engineering_program_tab
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.engineering_program_tab.field_tab_content
+field_name: field_tab_content
+entity_type: paragraph
+bundle: engineering_program_tab
+label: 'Tab Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

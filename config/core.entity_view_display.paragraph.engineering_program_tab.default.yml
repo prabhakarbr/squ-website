@@ -1,0 +1,33 @@
+uuid: 0df7881b-7cb0-42dc-a93d-1e36cbbd8749
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.engineering_program_tab.field_tab_content
+    - field.field.paragraph.engineering_program_tab.field_tab_title
+    - paragraphs.paragraphs_type.engineering_program_tab
+  module:
+    - text
+id: paragraph.engineering_program_tab.default
+targetEntityType: paragraph
+bundle: engineering_program_tab
+mode: default
+content:
+  field_tab_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_tab_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

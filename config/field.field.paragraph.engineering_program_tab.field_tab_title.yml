@@ -1,0 +1,24 @@
+uuid: aa8cb83b-2599-42db-b53e-361a7bd3009e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_tab_title
+    - paragraphs.paragraphs_type.engineering_program_tab
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.engineering_program_tab.field_tab_title
+field_name: field_tab_title
+entity_type: paragraph
+bundle: engineering_program_tab
+label: 'Tab Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

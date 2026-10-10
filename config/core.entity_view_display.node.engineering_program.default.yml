@@ -1,0 +1,41 @@
+uuid: 7ef4a6c0-9201-4372-936d-8804fb337061
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.engineering_program.field_engineering_program_tab
+    - field.field.node.engineering_program.field_ug_body
+    - node.type.engineering_program
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.engineering_program.default
+targetEntityType: node
+bundle: engineering_program
+mode: default
+content:
+  field_engineering_program_tab:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_ug_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

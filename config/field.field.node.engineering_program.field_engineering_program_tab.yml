@@ -1,0 +1,149 @@
+uuid: 31b21466-fa88-495e-91e8-294a000f48ad
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_engineering_program_tab
+    - node.type.engineering_program
+    - paragraphs.paragraphs_type.engineering_program_tab
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.engineering_program.field_engineering_program_tab
+field_name: field_engineering_program_tab
+entity_type: node
+bundle: engineering_program
+label: 'Engineering Program Tab'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      engineering_program_tab: engineering_program_tab
+    negate: 0
+    target_bundles_drag_drop:
+      about_squ:
+        weight: 41
+        enabled: false
+      accordion:
+        weight: 42
+        enabled: false
+      accordion_item:
+        weight: 43
+        enabled: false
+      accordion_items:
+        weight: 44
+        enabled: false
+      art_latest_news:
+        weight: 45
+        enabled: false
+      art_quick_links:
+        weight: 46
+        enabled: false
+      card_grid:
+        weight: 47
+        enabled: false
+      card_item:
+        weight: 48
+        enabled: false
+      college:
+        weight: 49
+        enabled: false
+      college_tab_item:
+        weight: 50
+        enabled: false
+      document_item:
+        weight: 51
+        enabled: false
+      document_list:
+        weight: 52
+        enabled: false
+      engineering_program_tab:
+        weight: 40
+        enabled: true
+      ept_slick_slider:
+        weight: 53
+        enabled: false
+      ept_slick_slider_item:
+        weight: 54
+        enabled: false
+      feature_card:
+        weight: 55
+        enabled: false
+      footer_icons:
+        weight: 56
+        enabled: false
+      full_with_margin_slider:
+        weight: 57
+        enabled: false
+      hero_banner:
+        weight: 58
+        enabled: false
+      hero_carousel:
+        weight: 59
+        enabled: false
+      hero_slide:
+        weight: 60
+        enabled: false
+      ilc_publication_item:
+        weight: 61
+        enabled: false
+      images_slider_items:
+        weight: 62
+        enabled: false
+      images_slider_with_full_width:
+        weight: 63
+        enabled: false
+      list_item_slider:
+        weight: 64
+        enabled: false
+      map_contact:
+        weight: 65
+        enabled: false
+      news_item:
+        weight: 66
+        enabled: false
+      news_section:
+        weight: 67
+        enabled: false
+      page_intro:
+        weight: 68
+        enabled: false
+      program_tabs:
+        weight: 69
+        enabled: false
+      publication_grid:
+        weight: 70
+        enabled: false
+      publication_item:
+        weight: 71
+        enabled: false
+      research_card:
+        weight: 72
+        enabled: false
+      research_section:
+        weight: 73
+        enabled: false
+      search_widget:
+        weight: 74
+        enabled: false
+      single_image_section:
+        weight: 75
+        enabled: false
+      statistics_counter:
+        weight: 76
+        enabled: false
+      student_life_gallery_item:
+        weight: 77
+        enabled: false
+      student_life_section:
+        weight: 78
+        enabled: false
+field_type: entity_reference_revisions
