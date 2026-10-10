@@ -1,0 +1,21 @@
+  <footer class="squ-footer squ-chrome-footer">
+    <div class="squ-footer__pattern" aria-hidden="true"></div>
+
+
+{% if page.footer_top %}
+  <div class="squ-footer__main">
+    <div class="squ-footer__inner squ-region squ-region--footer-top">
+      {{ page.footer_top }}
+    </div>
+  </div>
+{% endif %}
+
+{% if page.footer_bottom %}
+  <div class="squ-footer__bar">
+    <div class="squ-footer__bar-inner squ-region squ-region--footer-bottom">
+      {{ page.footer_bottom }}
+    </div>
+  </div>
+{% endif %}
+
+  </footer>

@@ -24,51 +24,8 @@
 
 <div class="squ-page layout-container{{ has_left_sidebar ? ' squ-page--with-sidebar' : '' }}{{ has_breadcrumb ? ' squ-page--has-breadcrumb' : '' }}{{ squ_landing_layout ? ' squ-page--landing' : '' }}">
 
-{# 1. Header: logo, tools, section menu #}
-
-  <header class="site-header squ-site-header{{ page.header_section ? ' squ-site-header--section' : '' }}" data-squ-header>
-    <div class="header-inner">
-      <div class="squ-region squ-region--header-brand">
-        {{ page.header_brand }}
-      </div>
-
-  <div class="squ-region squ-region--header-tools">
-    <div class="header-tools">
-      <div class="search-wrap">
-        <div class="search-panel" id="squ-search-panel" hidden>
-          <form id="squ-search-form" role="search" method="get" data-squ-search-form>
-            <input id="squ-search-input" type="search" name="keys" placeholder="{{ 'Search'|t }}" aria-label="{{ 'Search'|t }}" data-i18n-placeholder="searchPlaceholder">
-          </form>
-        </div>
-
-        <button class="icon-btn" id="squ-search-toggle" type="button" aria-expanded="false" aria-controls="squ-search-panel" aria-label="{{ 'Search'|t }}">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="11" cy="11" r="6.25" fill="none" stroke="currentColor" stroke-width="1.8"></circle>
-            <path d="M16 16.5 L20 20.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
-          </svg>
-        </button>
-      </div>
-
-      {{ page.header_tools }}
-      {{ page.header_lang }}
-
-      <button class="icon-btn" id="squ-menu-toggle" type="button" aria-expanded="false" aria-controls="squ-drawer" aria-label="{{ 'Open menu'|t }}">
-        <span class="burger" aria-hidden="true"><span></span><span></span><span></span></span>
-      </button>
-    </div>
-  </div>
-</div>
-
-{% if page.header_section %}
-  <div class="primary-bar squ-region squ-region--header-section">
-    <div class="container-fluid px-3 px-lg-4">
-      {{ page.header_section }}
-    </div>
-  </div>
-{% endif %}
-
-  </header>
-
+{# Header #}
+{% include '@squ_theme/layout/header.html.twig' %}
 {# Hamburger navigation drawer #}
 
   <div class="squ-menu-shell">
@@ -127,31 +84,7 @@
     </div>
   </div>
 {% endif %}
-
-
   </main>
-
-{# 4. Footer #}
-
-  <footer class="squ-footer squ-chrome-footer">
-    <div class="squ-footer__pattern" aria-hidden="true"></div>
-
-
-{% if page.footer_top %}
-  <div class="squ-footer__main">
-    <div class="squ-footer__inner squ-region squ-region--footer-top">
-      {{ page.footer_top }}
-    </div>
-  </div>
-{% endif %}
-
-{% if page.footer_bottom %}
-  <div class="squ-footer__bar">
-    <div class="squ-footer__bar-inner squ-region squ-region--footer-bottom">
-      {{ page.footer_bottom }}
-    </div>
-  </div>
-{% endif %}
-
-  </footer>
+{# Footer #}
+{% include '@squ_theme/layout/footer.html.twig' %}
 </div>

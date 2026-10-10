@@ -18,7 +18,6 @@ dependencies:
     - field.storage.node.field_banner_image
     - field.storage.node.field_body
     - field.storage.node.field_body_text
-    - field.storage.node.field_cards
     - field.storage.node.field_category
     - field.storage.node.field_college
     - field.storage.node.field_course_tags
@@ -27,14 +26,12 @@ dependencies:
     - field.storage.node.field_data_frequency
     - field.storage.node.field_data_source
     - field.storage.node.field_data_year
-    - field.storage.node.field_e_resources
     - field.storage.node.field_form_category
     - field.storage.node.field_graduation_email
     - field.storage.node.field_graduation_phone
     - field.storage.node.field_hero_image
     - field.storage.node.field_icon
     - field.storage.node.field_ilc_publication
-    - field.storage.node.field_library_services
     - field.storage.node.field_news_events_category
     - field.storage.node.field_news_events_image
     - field.storage.node.field_open_data_category
@@ -47,7 +44,6 @@ dependencies:
     - field.storage.node.field_program_title
     - field.storage.node.field_registration_phone
     - field.storage.node.field_research_summary
-    - field.storage.node.field_stay_in_touch
     - field.storage.node.field_subject
     - field.storage.paragraph.field_about_squ_heading
     - field.storage.paragraph.field_about_squ_link1
@@ -411,14 +407,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.paragraph.field_card_title
-  field_cards:
-    label: Cards
-    datasource_id: 'entity:node'
-    property_path: field_cards
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_cards
   field_carousel_slides:
     label: 'Carousel Slides'
     datasource_id: 'entity:paragraph'
@@ -595,14 +583,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.paragraph.field_doc_title
-  field_e_resources:
-    label: E-Resources
-    datasource_id: 'entity:node'
-    property_path: field_e_resources
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_e_resources
   field_ept_slick_slider_text:
     label: 'Slide Text'
     datasource_id: 'entity:paragraph'
@@ -755,14 +735,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.paragraph.field_latest_news_details
-  field_library_services:
-    label: 'Library Services'
-    datasource_id: 'entity:node'
-    property_path: field_library_services
-    type: integer
-    dependencies:
-      config:
-        - field.storage.node.field_library_services
   field_list_file_second_title:
     label: 'List File Second Title'
     datasource_id: 'entity:paragraph'
@@ -1043,14 +1015,6 @@ field_settings:
     dependencies:
       config:
         - field.storage.paragraph.field_statistics_number
-  field_stay_in_touch:
-    label: 'Stay in Touch'
-    datasource_id: 'entity:node'
-    property_path: field_stay_in_touch
-    type: text
-    dependencies:
-      config:
-        - field.storage.node.field_stay_in_touch
   field_student_life_title:
     label: 'Student Life Title'
     datasource_id: 'entity:paragraph'

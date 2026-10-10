@@ -1,56 +1,22 @@
 {#
   research_card — home research section or squ_libraries cards.
 #}
-{% set parent = paragraph.getParentEntity() %}
-{% set is_libraries = parent and parent.bundle == 'squ_libraries' %}
 
-{% if is_libraries %}
-  {% set libraries_card_type = 'service' %}
-  {% for item in parent.field_cards %}
-    {% if item.target_id == paragraph.id %}
-      {% set libraries_card_type = 'quick' %}
-    {% endif %}
-  {% endfor %}
-  {% for item in parent.field_e_resources %}
-    {% if item.target_id == paragraph.id %}
-      {% set libraries_card_type = 'resource' %}
-    {% endif %}
-  {% endfor %}
-  {% for item in parent.field_library_services %}
-    {% if item.target_id == paragraph.id %}
-      {% set libraries_card_type = 'service' %}
-    {% endif %}
-  {% endfor %}
-  {% set url = paragraph.field_research_card_link.0.url %}
-  {% set label = paragraph.field_research_card_description.processed|striptags|trim %}
-  {% if libraries_card_type == 'resource' %}
-    <div class="resource-card">
-      <a{% if url %} href="{{ url }}"{% endif %}>
-        {{ content.field_research_image }}
-      </a>
-    </div>
-  {% else %}
-    <{{ url ? 'a' : 'div' }} class="{{ libraries_card_type == 'quick' ? 'quick-card' : 'service-card' }}"{% if url %} href="{{ url }}"{% endif %}>
-      {{ content.field_research_image }}
-      {% if label %}
-        <span class="visually-hidden">{{ label }}</span>
+{% set url = paragraph.field_research_card_link.0.url %}
+{% set has_caption = paragraph.field_research_card_title.value or paragraph.field_research_card_description.value %}
+
+<{{ url ? 'a' : 'div' }} class="squ-research__card{{ has_caption ? '' : ' squ-research__card--cover' }}"{% if url %} href="{{ url }}"{% endif %}>
+  <div class="squ-research__card-media">{{ content.field_research_image }}</div>
+
+  {% if has_caption %}
+    <div class="squ-research__card-body">
+      {% if content.field_research_card_title %}
+        <h3 class="squ-research__card-heading">{{ content.field_research_card_title }}</h3>
       {% endif %}
-    </{{ url ? 'a' : 'div' }}>
+
+      {% if content.field_research_card_description %}
+        <div class="squ-research__card-desc">{{ content.field_research_card_description }}</div>
+      {% endif %}
+    </div>
   {% endif %}
-{% else %}
-  {% set url = paragraph.field_research_card_link.0.url %}
-  {% set has_caption = paragraph.field_research_card_title.value or paragraph.field_research_card_description.value %}
-  <{{ url ? 'a' : 'div' }} class="squ-research__card{{ has_caption ? '' : ' squ-research__card--cover' }}"{% if url %} href="{{ url }}"{% endif %}>
-    <div class="squ-research__card-media">{{ content.field_research_image }}</div>
-    {% if has_caption %}
-      <div class="squ-research__card-body">
-        {% if content.field_research_card_title %}
-          <h3 class="squ-research__card-heading">{{ content.field_research_card_title }}</h3>
-        {% endif %}
-        {% if content.field_research_card_description %}
-          <div class="squ-research__card-desc">{{ content.field_research_card_description }}</div>
-        {% endif %}
-      </div>
-    {% endif %}
-  </{{ url ? 'a' : 'div' }}>
-{% endif %}
+</{{ url ? 'a' : 'div' }}>
