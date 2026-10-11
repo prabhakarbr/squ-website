@@ -1,0 +1,19 @@
+uuid: 4700f281-0cd2-4dd1-a5b4-dca894a5a3d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.latest_news
+id: paragraph.latest_news.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: latest_news
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
