@@ -1,14 +1,11 @@
 {#
   Paragraph bundle: research_section
-
-  Layout: intro column + card grid (tall cover | featured, then two cards).
 #}
 {% macro research_card(card, variant) %}
   {% set image_file = card.field_research_image.entity %}
   {% set card_title = card.field_research_card_title.value %}
   {% set card_desc = variant == 'cover' ? '' : card.field_research_card_description.value %}
   {% set card_link = card.field_research_card_link.0.url %}
-
   <article class="ri-card ri-card--{{ variant }}">
     {% if image_file %}
       <div class="ri-card__media">
@@ -18,21 +15,14 @@
              loading="lazy">
       </div>
     {% endif %}
-
     {% if variant != 'cover' and (card_title or card_desc) %}
       <div class="ri-card__body">
         {% if card_title %}
           <h3 class="ri-card__title">
-            {% if card_link %}
-              <a href="{{ card_link }}">{{ card_title }}</a>
-            {% else %}
-              {{ card_title }}
-            {% endif %}
+            {% if card_link %}<a href="{{ card_link }}">{{ card_title }}</a>{% else %}{{ card_title }}{% endif %}
           </h3>
         {% endif %}
-        {% if card_desc %}
-          <div class="ri-card__text">{{ card_desc|raw }}</div>
-        {% endif %}
+        {% if card_desc %}<div class="ri-card__text">{{ card_desc|raw }}</div>{% endif %}
       </div>
     {% endif %}
   </article>
@@ -44,32 +34,55 @@
 {% set description = paragraph.field_research_description.value %}
 {% set more_url = paragraph.field_discover_more.0.url %}
 {% set more_title = paragraph.field_discover_more.0.title %}
+{% set is_quick_grid = (paragraph.field_flagclass.0.value ?? '')|trim|lower == 'horizantal5grid' %}
+
+{% if is_quick_grid %}
+
+{{ attach_library('squ_theme/squ_libraries') }}
+<div class="squ-libraries-standalone">
+  <section class="quick-links" aria-label="{{ 'Quick access'|t }}">
+    <div class="container">
+      <div class="card-grid libraries-field-grid">
+        <div class="field__items">
+          {% for item in paragraph.field_research_card %}
+            {% set card = item.entity %}
+            {% if card and card.status.value %}
+              {% set title = card.field_research_card_title.value %}
+              {% set link = card.field_research_card_link.0.url %}
+              {% set image = card.field_research_image.entity %}
+              {% set tag = link ? 'a' : 'div' %}
+              <{{ tag }} class="quick-card"{% if link %} href="{{ link }}"{% endif %}>
+                {% if image %}
+                  <img src="{{ file_url(image.uri.value) }}" alt="{{ card.field_research_image.alt ?: title }}" loading="lazy">
+                {% endif %}
+                {% if title %}<span>{{ title }}</span>{% endif %}
+              </{{ tag }}>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% else %}
 
 <section class="ri-section">
   <div class="ri-section__inner">
     <div class="ri-grid">
-
       <div class="ri-left">
         <div class="ri-left__content">
-          {% if heading %}
-            <h2 class="ri-heading">{{ heading }}</h2>
-          {% endif %}
-          {% if description %}
-            <div class="ri-desc">{{ description|raw }}</div>
-          {% endif %}
-          {% if more_url %}
-            <a href="{{ more_url }}" class="ri-btn">{{ more_title ?: 'Find Out More'|t }}</a>
-          {% endif %}
+          {% if heading %}<h2 class="ri-heading">{{ heading }}</h2>{% endif %}
+          {% if description %}<div class="ri-desc">{{ description|raw }}</div>{% endif %}
+          {% if more_url %}<a href="{{ more_url }}" class="ri-btn">{{ more_title ?: 'Find Out More'|t }}</a>{% endif %}
         </div>
       </div>
-
       <div class="ri-cards">
         <div class="ri-cards__row ri-cards__row--primary">
           {% for item in paragraph.field_research_card %}
             {% set card = item.entity %}
             {% if card and card.status.value and loop.index0 < 2 %}
-              {% set variant = loop.first ? 'cover' : 'featured' %}
-              {{ research.research_card(card, variant) }}
+              {{ research.research_card(card, loop.first ? 'cover' : 'featured') }}
             {% endif %}
           {% endfor %}
         </div>
@@ -82,7 +95,8 @@
           {% endfor %}
         </div>
       </div>
-
     </div>
   </div>
 </section>
+
+{% endif %}

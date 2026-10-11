@@ -1,0 +1,25 @@
+uuid: 37dea532-284b-4c72-937d-94747927032f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_flagclass
+    - paragraphs.paragraphs_type.research_section
+  module:
+    - options
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.research_section.field_flagclass
+field_name: field_flagclass
+entity_type: paragraph
+bundle: research_section
+label: FlagClass
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

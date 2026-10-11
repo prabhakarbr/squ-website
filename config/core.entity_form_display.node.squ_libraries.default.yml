@@ -3,18 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.squ_libraries.field_banner
-    - field.field.node.squ_libraries.field_cards
-    - field.field.node.squ_libraries.field_e_resources
-    - field.field.node.squ_libraries.field_library_services
-    - field.field.node.squ_libraries.field_simpleblock
-    - field.field.node.squ_libraries.field_stay_in_touch
-    - field.field.node.squ_libraries.field_upcoming_events
+    - field.field.node.squ_libraries.field_page_sections
     - node.type.squ_libraries
   module:
     - paragraphs
     - path
-    - text
 id: node.squ_libraries.default
 targetEntityType: node
 bundle: squ_libraries
@@ -26,9 +19,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_banner:
+  field_page_sections:
     type: paragraphs
-    weight: 121
+    weight: 3
     region: content
     settings:
       title: Paragraph
@@ -43,90 +36,6 @@ content:
       features:
         collapse_edit_all: collapse_edit_all
         duplicate: duplicate
-    third_party_settings: {  }
-  field_cards:
-    type: paragraphs
-    weight: 123
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
-  field_e_resources:
-    type: paragraphs
-    weight: 125
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
-  field_library_services:
-    type: paragraphs
-    weight: 124
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
-  field_simpleblock:
-    type: text_textarea_with_summary
-    weight: 122
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-  field_stay_in_touch:
-    type: text_textarea_with_summary
-    weight: 127
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-  field_upcoming_events:
-    type: text_textarea_with_summary
-    weight: 126
-    region: content
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
     third_party_settings: {  }
   langcode:
     type: language_select

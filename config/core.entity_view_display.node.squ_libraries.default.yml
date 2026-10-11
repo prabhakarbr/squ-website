@@ -3,24 +3,17 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.squ_libraries.field_banner
-    - field.field.node.squ_libraries.field_cards
-    - field.field.node.squ_libraries.field_e_resources
-    - field.field.node.squ_libraries.field_library_services
-    - field.field.node.squ_libraries.field_simpleblock
-    - field.field.node.squ_libraries.field_stay_in_touch
-    - field.field.node.squ_libraries.field_upcoming_events
+    - field.field.node.squ_libraries.field_page_sections
     - node.type.squ_libraries
   module:
     - entity_reference_revisions
-    - text
     - user
 id: node.squ_libraries.default
 targetEntityType: node
 bundle: squ_libraries
 mode: default
 content:
-  field_banner:
+  field_page_sections:
     type: entity_reference_revisions_entity_view
     label: above
     settings:
@@ -29,54 +22,6 @@ content:
     third_party_settings: {  }
     weight: 101
     region: content
-  field_cards:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 103
-    region: content
-  field_e_resources:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 105
-    region: content
-  field_library_services:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 104
-    region: content
-  field_simpleblock:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 102
-    region: content
-  field_stay_in_touch:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 107
-    region: content
-  field_upcoming_events:
-    type: text_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 106
-    region: content
   links:
     settings: {  }
     third_party_settings: {  }
@@ -84,3 +29,4 @@ content:
     region: content
 hidden:
   langcode: true
+  search_api_excerpt: true
