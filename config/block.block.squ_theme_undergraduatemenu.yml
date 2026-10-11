@@ -21,9 +21,9 @@ settings:
   provider: system
   level: 1
   depth: null
-  expand_all_items: false
+  expand_all_items: true
 visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/ug\r\n/ug/*"
+    pages: "/ug\r\n/ug/*\r\n/academic/college/engineering/*"

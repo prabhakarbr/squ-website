@@ -1,0 +1,29 @@
+uuid: 893ff5fb-d5fa-486d-8550-61a8c80a2aba
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.engineering-programmes
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_engineeringprogrammes
+theme: squ_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:engineering-programmes'
+settings:
+  id: 'system_menu_block:engineering-programmes'
+  label: 'Engineering Programmes'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/academic/college/engineering/undergraduate-programs/civil-engineering\r\n/academic/college/engineering/undergraduate-programs/architectural-engineering"

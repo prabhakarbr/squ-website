@@ -1,0 +1,36 @@
+uuid: 8faa748c-5c18-40be-ac80-fca1396303bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.engineering_program_tab.field_tab_content
+    - field.field.paragraph.engineering_program_tab.field_tab_title
+    - paragraphs.paragraphs_type.engineering_program_tab
+  module:
+    - text
+id: paragraph.engineering_program_tab.default
+targetEntityType: paragraph
+bundle: engineering_program_tab
+mode: default
+content:
+  field_tab_content:
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_tab_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

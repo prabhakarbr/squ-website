@@ -1,0 +1,30 @@
+{{ title_prefix }}
+{{ title_suffix }}
+<h1 id="PortalName"><a href="/">College of Engineering</a></h1>
+
+<h1 class="engineering-program-title">{{ label }}</h1>
+
+{{ content.field_ug_body }}
+
+<div class="engineering-program-tabs">
+  {% for key, item in content.field_engineering_program_tab %}
+    {% if key|first != '#' and item['#paragraph'] is defined %}
+      {% set paragraph = item['#paragraph'] %}
+      <button type="button" 
+              class="engineering-tab-button"
+              data-tab="tab-{{ paragraph.id() }}">
+        {{ paragraph.field_tab_title.value }}
+      </button>
+    {% endif %}
+  {% endfor %}
+
+  {% for key, item in content.field_engineering_program_tab %}
+    {% if key|first != '#' and item['#paragraph'] is defined %}
+      {% set paragraph = item['#paragraph'] %}
+      <div class="engineering-tab-panel"
+           id="tab-{{ paragraph.id() }}">
+        {{ paragraph.field_tab_content.value|raw }}
+      </div>
+    {% endif %}
+  {% endfor %}
+</div>
