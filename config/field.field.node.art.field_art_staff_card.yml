@@ -1,0 +1,118 @@
+uuid: 5ee2aa72-4d93-462c-b9b9-0fa2a265ee4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_art_staff_card
+    - node.type.art
+    - paragraphs.paragraphs_type.art_staff_card
+  module:
+    - entity_reference_revisions
+id: node.art.field_art_staff_card
+field_name: field_art_staff_card
+entity_type: node
+bundle: art
+label: 'Art staff card'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      art_staff_card: art_staff_card
+    negate: 0
+    target_bundles_drag_drop:
+      about_squ:
+        weight: 32
+        enabled: false
+      accordion_items:
+        weight: 33
+        enabled: false
+      art_latest_news:
+        weight: 34
+        enabled: false
+      art_quick_links:
+        weight: 35
+        enabled: false
+      art_staff_card:
+        weight: 31
+        enabled: true
+      card_grid:
+        weight: 36
+        enabled: false
+      card_item:
+        weight: 37
+        enabled: false
+      college:
+        weight: 38
+        enabled: false
+      college_tab_item:
+        weight: 39
+        enabled: false
+      document_item:
+        weight: 40
+        enabled: false
+      document_list:
+        weight: 41
+        enabled: false
+      feature_card:
+        weight: 42
+        enabled: false
+      footer_icons:
+        weight: 43
+        enabled: false
+      hero_banner:
+        weight: 44
+        enabled: false
+      hero_carousel:
+        weight: 45
+        enabled: false
+      hero_slide:
+        weight: 46
+        enabled: false
+      ilc_publication_item:
+        weight: 47
+        enabled: false
+      map_contact:
+        weight: 48
+        enabled: false
+      news_item:
+        weight: 49
+        enabled: false
+      news_section:
+        weight: 50
+        enabled: false
+      page_intro:
+        weight: 51
+        enabled: false
+      program_tabs:
+        weight: 52
+        enabled: false
+      publication_grid:
+        weight: 53
+        enabled: false
+      publication_item:
+        weight: 54
+        enabled: false
+      research_card:
+        weight: 55
+        enabled: false
+      research_section:
+        weight: 56
+        enabled: false
+      search_widget:
+        weight: 57
+        enabled: false
+      statistics_counter:
+        weight: 58
+        enabled: false
+      student_life_gallery_item:
+        weight: 59
+        enabled: false
+      student_life_section:
+        weight: 60
+        enabled: false
+field_type: entity_reference_revisions

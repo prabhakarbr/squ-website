@@ -1,0 +1,19 @@
+uuid: 473b157a-a78b-4118-b5aa-c52be9e5ee73
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_name
+    - paragraphs.paragraphs_type.art_staff_card
+id: paragraph.art_staff_card.field_name
+field_name: field_name
+entity_type: paragraph
+bundle: art_staff_card
+label: Name
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

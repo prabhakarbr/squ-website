@@ -1,0 +1,11 @@
+uuid: e35929b7-5449-4a80-bb71-1756c9a16dd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.education_quick_link
+id: taxonomy_term.education_quick_link
+target_entity_type_id: taxonomy_term
+target_bundle: education_quick_link
+default_langcode: site_default
+language_alterable: false
