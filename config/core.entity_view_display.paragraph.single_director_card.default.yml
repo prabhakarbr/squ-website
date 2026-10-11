@@ -1,0 +1,54 @@
+uuid: fb1992a5-12ad-4352-981c-9a41089ed4b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_director_card.field_description
+    - field.field.paragraph.single_director_card.field_director_image
+    - field.field.paragraph.single_director_card.field_director_intro
+    - field.field.paragraph.single_director_card.field_director_title
+    - paragraphs.paragraphs_type.single_director_card
+  module:
+    - image
+    - text
+id: paragraph.single_director_card.default
+targetEntityType: paragraph
+bundle: single_director_card
+mode: default
+content:
+  field_description:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_director_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_director_intro:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_director_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden:
+  search_api_excerpt: true

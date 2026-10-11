@@ -1,0 +1,27 @@
+{%
+  set classes = [
+    'full-image-title-section',
+    'paragraph',
+    'paragraph--type--full-image-with-title'
+  ]
+%}
+
+<section{{ attributes.addClass(classes) }}>
+    <div class="container">
+        {# Centered title outside container #}
+        {% if content.field_sec_top_title %}
+            <div class="full-image-title-heading">
+            <h2 class="full-image-title">
+                {{ content.field_sec_top_title }}
+            </h2>
+            </div>
+        {% endif %}
+
+        {# Full-width image outside container #}
+        {% if content.field_sec_image %}
+            <div class="full-image-wrapper">
+            {{ content.field_sec_image }}
+            </div>
+        {% endif %}
+    </div>
+</section>

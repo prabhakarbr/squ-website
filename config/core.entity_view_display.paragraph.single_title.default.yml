@@ -1,0 +1,23 @@
+uuid: f5d00e93-40bc-448e-a6c7-cdcc766fed13
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_title.field_top_title
+    - paragraphs.paragraphs_type.single_title
+id: paragraph.single_title.default
+targetEntityType: paragraph
+bundle: single_title
+mode: default
+content:
+  field_top_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

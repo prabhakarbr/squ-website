@@ -1,0 +1,39 @@
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--single-director-card'
+  ]
+%}
+
+<section{{ attributes.addClass(classes) }}>
+  <div class="container">
+    <div class="director-letter-card">
+        <div class="director-profile-wrapper">
+        {{ content.field_director_image }}
+        </div>
+
+        <div class="director-content">
+        {% if content.field_director_title %}
+            <div class="signature-block">
+            <p class="director-title">
+                {{ content.field_director_title }}
+            </p>
+            </div>
+        {% endif %}
+        <div class="gold-divider"></div>
+        <div class="letter-body-container">
+            <div class="letter-body">
+            {{ content.field_description }}
+            </div>
+        </div>
+        <div class="director-intro-container">
+            <h2 class="letter-title">
+            {{ content.field_director_intro }}
+            </h2>
+        </div>
+    </div>
+
+    </div>
+
+  </div>
+</section>

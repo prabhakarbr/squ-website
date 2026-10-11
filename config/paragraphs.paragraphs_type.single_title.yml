@@ -1,0 +1,10 @@
+uuid: 69f651f0-2101-419e-a8e5-c9e862110fa2
+langcode: en
+status: true
+dependencies: {  }
+id: single_title
+label: 'Single Title'
+icon_uuid: null
+icon_default: null
+description: 'Single title on top of page'
+behavior_plugins: {  }

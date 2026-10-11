@@ -1,0 +1,58 @@
+uuid: 301decae-a93e-484a-a0e8-60fde4e50aa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_director_card.field_description
+    - field.field.paragraph.single_director_card.field_director_image
+    - field.field.paragraph.single_director_card.field_director_intro
+    - field.field.paragraph.single_director_card.field_director_title
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.single_director_card
+  module:
+    - image
+    - text
+id: paragraph.single_director_card.default
+targetEntityType: paragraph
+bundle: single_director_card
+mode: default
+content:
+  field_description:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_director_image:
+    type: image_image
+    weight: 0
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_director_intro:
+    type: text_textarea_with_summary
+    weight: 3
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_director_title:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
