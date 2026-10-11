@@ -1,0 +1,53 @@
+{% set drive_url = '' %}
+{% set about_url = '' %}
+
+{% if not paragraph.field_link.isEmpty() %}
+  {% set drive_url = paragraph.field_link.0.url.toString() %}
+{% endif %}
+{% if not paragraph.field_video_link.isEmpty() %}
+  {% set about_url = paragraph.field_video_link.0.url.toString() %}
+{% endif %}
+
+{# Is this the first paragraph in the parent's field? #}
+{% set parent = paragraph.getParentEntity() %}
+{% set is_first = parent and parent.field_all_section.0.target_id == paragraph.id.value %}
+
+{% if is_first %}
+  <div class="discover-section-heading">
+    <h2 class="discover-section-heading__title">{{ paragraph.type.entity.label }}</h2>
+    <div class="discover-section-heading__divider"></div>
+  </div>
+{% endif %}
+
+<div{{ attributes.addClass('discover-card') }}>
+  <div class="discover-card__media">
+
+    {% if not paragraph.field_image.isEmpty() %}
+      {{ content.field_image }}
+    {% endif %}
+
+    <div class="discover-card__overlay"></div>
+
+    {% if drive_url or about_url %}
+      <div class="discover-card__actions">
+        {% if drive_url %}
+          <a href="{{ drive_url }}" class="discover-card__action" target="_blank"
+             rel="noopener noreferrer" aria-label="{{ 'Open document'|t }}" title="{{ 'Open document'|t }}">
+            <i class="fa fa-link" aria-hidden="true"></i>
+          </a>
+        {% endif %}
+        {% if about_url %}
+          <a href="{{ about_url }}" class="discover-card__action" target="_blank"
+             rel="noopener noreferrer" aria-label="{{ 'View details'|t }}" title="{{ 'View details'|t }}">
+            <i class="fa fa-search" aria-hidden="true"></i>
+          </a>
+        {% endif %}
+      </div>
+    {% endif %}
+
+    {% if not paragraph.field_title.isEmpty() %}
+      <h3 class="discover-card__title">{{ paragraph.field_title.value }}</h3>
+    {% endif %}
+
+  </div>
+</div>

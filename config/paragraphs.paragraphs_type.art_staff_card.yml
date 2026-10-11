@@ -1,0 +1,10 @@
+uuid: a4e2431f-c29a-44ae-a503-55aa7d53eadb
+langcode: en
+status: true
+dependencies: {  }
+id: art_staff_card
+label: 'Art Staff Card'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
