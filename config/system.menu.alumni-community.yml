@@ -1,0 +1,8 @@
+uuid: 1d892770-b2b0-4e92-bce6-529f04cc4187
+langcode: en
+status: true
+dependencies: {  }
+id: alumni-community
+label: 'Alumni & Community'
+description: 'The Alumni Affairs Section Menu.'
+locked: false
