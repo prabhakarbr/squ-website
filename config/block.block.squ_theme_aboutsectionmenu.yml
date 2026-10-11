@@ -1,0 +1,29 @@
+uuid: dc649ea4-baa4-4f8c-b595-a248843444e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.about-section-menu
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_aboutsectionmenu
+theme: squ_theme
+region: header_section
+weight: 0
+provider: null
+plugin: 'system_menu_block:about-section-menu'
+settings:
+  id: 'system_menu_block:about-section-menu'
+  label: 'About Section Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/About\r\n/About/*"

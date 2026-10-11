@@ -1,0 +1,29 @@
+uuid: 108cb430-878e-46db-841b-46a2dcf2ff8c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.alumni-community
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_alumnicommunity
+theme: squ_theme
+region: header_section
+weight: 0
+provider: null
+plugin: 'system_menu_block:alumni-community'
+settings:
+  id: 'system_menu_block:alumni-community'
+  label: 'Alumni & Community'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/alumni-homepage\r\n/alumni-homepage/*"
