@@ -1,0 +1,10 @@
+uuid: 3e89b7d1-fae3-4a43-aaf7-48caebce0798
+langcode: en
+status: true
+dependencies: {  }
+id: full_image_with_title
+label: 'Full image with title'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

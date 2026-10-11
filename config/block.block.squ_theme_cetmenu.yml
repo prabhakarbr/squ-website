@@ -1,0 +1,29 @@
+uuid: d0229ea7-8667-4afe-a1ec-21811a12ab7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.cet-menu
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_cetmenu
+theme: squ_theme
+region: header_section
+weight: 0
+provider: null
+plugin: 'system_menu_block:cet-menu'
+settings:
+  id: 'system_menu_block:cet-menu'
+  label: 'CET Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/cet\r\n/cet/*"

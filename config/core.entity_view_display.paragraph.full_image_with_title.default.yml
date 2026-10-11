@@ -1,0 +1,37 @@
+uuid: baedebdb-0454-4457-b655-6d1f22d2ee4e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.full_image_with_title.field_sec_image
+    - field.field.paragraph.full_image_with_title.field_sec_top_title
+    - paragraphs.paragraphs_type.full_image_with_title
+  module:
+    - image
+id: paragraph.full_image_with_title.default
+targetEntityType: paragraph
+bundle: full_image_with_title
+mode: default
+content:
+  field_sec_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_sec_top_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

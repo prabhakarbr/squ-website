@@ -181,9 +181,8 @@
   Undergraduate page internal page
 ========================================= */
 
-.field.field--name-field-intro-heading.field--type-string.field--label-above {
+.paragraph--type--single-title .field__item {
     text-align: center;
-    margin: 30px 0 20px;
     text-transform: uppercase;
     color: #2e8edb;
     font-family: 'Tajawal', Arial, Helvetica, sans-serif;
@@ -191,6 +190,9 @@
     line-height: 28px;
     font-weight: 500;
     letter-spacing: normal;
+    background-color: #fff;
+    padding: 40px 0px;
+    margin: 0px 0px;
 }
 h2.squ-accordion__main-title {
     text-align: center;
@@ -230,4 +232,76 @@ button.squ-accordion__button {
     font-weight: 600;
     list-style: none;
     text-decoration: none;
+}
+/* =========================================
+ Cet page internal page
+========================================= */
+
+section.paragraph.paragraph--type--single-director-card {
+    padding: 60px 0px;
+}
+.squ-landing-page__block {
+    background: #fff;
+}
+.director-letter-card {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid #eaeaea;
+    border-left: 4px solid #c5a059;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+.director-profile-wrapper {
+    flex-shrink: 0;
+    text-align: center;
+    width: 160px;
+}
+.director-profile-wrapper .field__item img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #c5a059;
+    padding: 3px;
+    background-color: #ffffff;
+}
+.signature-block .field--name-field-director-title .field__item {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    color: #111111;
+}
+.gold-divider {
+    width: 45px;
+    height: 2px;
+    background-color: #c5a059;
+    margin-bottom: 1.5rem;
+}
+
+.field--name-field-director-intro .field__item p {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #111111;
+    margin: 0;
+}
+.field--name-field-director-intro .field__item {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f0f0f0;
+}
+.field--name-field-sec-top-title .field__item {
+    color: #002147;
+    font-size: 36px;
+    font-weight: 100;
+    text-align: center;
+}
+section.full-image-title-section.paragraph.paragraph--type--full-image-with-title {
+    padding: 40px 0px;
 }

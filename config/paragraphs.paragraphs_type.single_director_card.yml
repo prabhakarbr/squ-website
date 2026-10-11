@@ -1,0 +1,10 @@
+uuid: 971be3b7-5e08-4b94-856f-90884b322891
+langcode: en
+status: true
+dependencies: {  }
+id: single_director_card
+label: 'Single Director Card'
+icon_uuid: null
+icon_default: null
+description: 'Single director card on page where small image and title description and at the end information.'
+behavior_plugins: {  }

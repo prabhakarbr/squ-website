@@ -1,0 +1,8 @@
+uuid: 625fffec-f808-4312-b696-59700c305b09
+langcode: en
+status: true
+dependencies: {  }
+id: cet-menu
+label: 'CET Menu'
+description: ''
+locked: false
