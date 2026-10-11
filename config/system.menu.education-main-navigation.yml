@@ -1,8 +1,0 @@
-uuid: e33c6474-8a0f-4abc-bfc1-b15ca765c268
-langcode: en
-status: true
-dependencies: {  }
-id: education-main-navigation
-label: 'Education Main navigation'
-description: ''
-locked: false

@@ -28,18 +28,12 @@ settings:
       about_squ:
         weight: 30
         enabled: false
-      accordion_items:
-        weight: 32
-        enabled: false
       art_latest_news:
         weight: 31
         enabled: false
       art_quick_links:
         weight: 29
         enabled: true
-      art_staff_card:
-        weight: 35
-        enabled: false
       card_grid:
         weight: 32
         enabled: false
@@ -114,8 +108,5 @@ settings:
         enabled: false
       student_life_section:
         weight: 56
-        enabled: false
-      vertical_tab:
-        weight: 32
         enabled: false
 field_type: entity_reference_revisions
