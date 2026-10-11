@@ -1,9 +1,0 @@
-uuid: 23c8ef39-c475-43e2-95dd-92e6cf5728f6
-langcode: en
-status: true
-dependencies: {  }
-name: 'Education Quick Link'
-vid: education_quick_link
-description: null
-weight: 0
-new_revision: false
