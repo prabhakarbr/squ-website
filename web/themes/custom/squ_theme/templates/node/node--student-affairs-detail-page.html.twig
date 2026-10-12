@@ -1,0 +1,38 @@
+
+<article{{ attributes.addClass('student-affairs-detail-page') }}>
+
+  {# Top Banner Slider #}
+  {% if content.field_student_home_banner %}
+    <section class="student-home-banner">
+      {{ content.field_student_home_banner }}
+    </section>
+  {% endif %}
+
+  {# Student Details Body #}
+  {% if content.field_student_details_body %}
+    <section class="student-details-body py-4">
+      <div class="container-fluid px-3 px-lg-4">
+        {{ content.field_student_details_body }}
+      </div>
+    </section>
+  {% endif %}
+
+  {# Student Societies Card Slider #}
+  {% if content.field_student_societies %}
+    <section class="student-societies py-4">
+      <div class="container-fluid px-3 px-lg-4">
+        {{ content.field_student_societies }}
+      </div>
+    </section>
+  {% endif %}
+
+  {# WhatsApp Cards - Fixed Responsive Grid #}
+  {% if content.field_connect_with_us_via_whatsa %}
+    <section class="connect-with-us-whatsapp py-4">
+      <div class="container-fluid px-3 px-lg-4">
+        {{ content.field_connect_with_us_via_whatsa }}
+      </div>
+    </section>
+  {% endif %}
+
+</article>

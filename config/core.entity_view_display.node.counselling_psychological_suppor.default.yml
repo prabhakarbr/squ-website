@@ -1,0 +1,30 @@
+uuid: 61dbc556-f381-4f86-ae54-011821b96e90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.counselling_psychological_suppor.field_counselling_psychological
+    - node.type.counselling_psychological_suppor
+  module:
+    - text
+    - user
+id: node.counselling_psychological_suppor.default
+targetEntityType: node
+bundle: counselling_psychological_suppor
+mode: default
+content:
+  field_counselling_psychological:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

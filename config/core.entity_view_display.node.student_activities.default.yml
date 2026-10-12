@@ -1,0 +1,30 @@
+uuid: 5f730c40-2c7b-401e-a3af-40dc5edf40a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.student_activities.field_student_activities_body
+    - node.type.student_activities
+  module:
+    - text
+    - user
+id: node.student_activities.default
+targetEntityType: node
+bundle: student_activities
+mode: default
+content:
+  field_student_activities_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

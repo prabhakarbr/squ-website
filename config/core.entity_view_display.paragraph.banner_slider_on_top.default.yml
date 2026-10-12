@@ -1,0 +1,44 @@
+uuid: eba5fd7c-3a64-4dd1-85f3-4bd2a164cf7d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner_slider_on_top.field_banner_items
+    - field.field.paragraph.banner_slider_on_top.field_banner_title
+    - field.field.paragraph.banner_slider_on_top.field_ept_settings_field
+    - paragraphs.paragraphs_type.banner_slider_on_top
+  module:
+    - entity_reference_revisions
+    - ept_core
+id: paragraph.banner_slider_on_top.default
+targetEntityType: paragraph
+bundle: banner_slider_on_top
+mode: default
+content:
+  field_banner_items:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_banner_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_ept_settings_field:
+    type: ept_settings_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

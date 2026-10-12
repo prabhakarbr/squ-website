@@ -1,0 +1,20 @@
+<article class="student-affairs-page">
+  {{ title_prefix }}
+  {{ title_suffix }}
+  <h1>{{ label }}</h1>
+  {# Banner Image #}
+  {% if content.field_student_home_slider is defined %}
+    <div class="student-affairs-banner">
+      {{ content.field_student_home_slider }}
+    </div>
+  {% endif %}
+
+  {# Paragraphs field #}
+  {% if content.field_online_services_card is defined %}
+    <div class="student-affairs-card-services-sections py-4">
+        <h3>Online Services</h3>
+      {{ content.field_online_services_card }}
+    </div>
+  {% endif %}
+
+</article>

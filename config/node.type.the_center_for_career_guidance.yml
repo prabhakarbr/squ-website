@@ -1,0 +1,18 @@
+uuid: a640acbf-8ccc-44ca-a654-b44adb348bf7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'The Center for Career Guidance'
+type: the_center_for_career_guidance
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

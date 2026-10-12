@@ -1,0 +1,24 @@
+uuid: 4b1e0dfa-cbdf-458b-83a0-01ba74be216b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_banner_title
+    - paragraphs.paragraphs_type.banner_slider_on_top
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.banner_slider_on_top.field_banner_title
+field_name: field_banner_title
+entity_type: paragraph
+bundle: banner_slider_on_top
+label: 'Banner Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
