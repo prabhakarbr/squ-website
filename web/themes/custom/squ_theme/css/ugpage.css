@@ -191,7 +191,7 @@
     font-weight: 500;
     letter-spacing: normal;
     background-color: #fff;
-    padding: 40px 0px;
+    padding: 32px 0px;
     margin: 0px 0px;
 }
 h2.squ-accordion__main-title {
@@ -304,4 +304,251 @@ section.paragraph.paragraph--type--single-director-card {
 }
 section.full-image-title-section.paragraph.paragraph--type--full-image-with-title {
     padding: 40px 0px;
+}
+
+
+/* =========================================
+ Cps page Home page
+ Banner slide component
+========================================= */
+
+.banner-slider__title {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 28px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.banner-slider__divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding-top: 12px;
+}
+
+.banner-slider__line {
+  display: inline-block;
+  width: 38px;
+  height: 1px;
+  background-color: #aaa;
+}
+
+.banner-slider__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00345b;
+}
+
+.banner-slider__icon svg {
+  display: block;
+}
+
+.banner-slider-on-top {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.banner-slider-on-top .field--name-field-banner-items {
+  width: 100%;
+  min-width: 0;
+}
+
+.banner-slider-on-top .slick-list {
+  overflow: hidden;
+}
+
+.banner-slider-on-top .slick-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/* =========================================
+Description component
+========================================= */
+.description-section__content .field__item {
+    padding: 22px 0px;
+}
+
+.description-section {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0px 15px;
+  box-sizing: border-box;
+}
+
+.description-section__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 18px;
+  color: #00345b;
+}
+
+.description-section__icon svg {
+  display: block;
+}
+
+.description-section__content {
+  text-align: center;
+}
+
+.description-section__content .field__label {
+  display: none;
+}
+
+.description-section__content p {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* =========================================
+Two column component
+========================================= */
+.two-column-services {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 40px 15px;
+  box-sizing: border-box;
+}
+
+/* Section title */
+.two-column-services__heading {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.two-column-services__heading .field__label {
+  display: none;
+}
+
+.two-column-services__heading .field__item {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* Two-column grid */
+.two-column-services__grid
+.field--name-field-section-title > .field__items {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.two-column-services__grid
+.field--name-field-section-title > .field__label {
+  display: none;
+}
+
+/* Individual card */
+.service-card {
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* Card image */
+.service-card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Card title */
+.service-card__title {
+  padding: 14px 16px;
+  background: #00345b;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.service-card__title .field__label,
+.service-card__image .field__label,
+.service-card__link .field__label {
+  display: none;
+}
+
+/* Link */
+.service-card {
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.service-card__image {
+  overflow: hidden;
+}
+
+.service-card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-card__image img {
+  transform: scale(1.05);
+}
+
+.service-card__title {
+  padding: 14px 16px;
+  background: #00345b;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.service-card__title a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.service-card__title a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.service-card__title a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.service-card__image {
+  overflow: hidden;
+}
+
+.service-card__image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.service-card:hover .service-card__image img {
+  transform: scale(1.05);
+}
+
+/* Mobile responsive */
+@media (max-width: 767px) {
+  .two-column-services__heading .field__item {
+    font-size: 24px;
+  }
+
+  .two-column-services__grid
+  .field--name-field-section-title > .field__items {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }

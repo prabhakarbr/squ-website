@@ -1,0 +1,51 @@
+uuid: 88457819-9ed1-48c2-a5aa-4ce24d231fb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.service_card.field_service_card_image
+    - field.field.paragraph.service_card.field_service_card_title
+    - field.field.paragraph.service_card.field_service_link
+    - paragraphs.paragraphs_type.service_card
+  module:
+    - image
+    - link
+id: paragraph.service_card.default
+targetEntityType: paragraph
+bundle: service_card
+mode: default
+content:
+  field_service_card_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_service_card_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_service_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden:
+  search_api_excerpt: true

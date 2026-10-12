@@ -1,0 +1,27 @@
+{% block paragraph %}
+  <div{{ attributes.addClass('service-card') }}>
+    {% block content %}
+
+      {% set service_url = content.field_service_link.0['#url'] ?? null %}
+
+      {% if content.field_service_card_image %}
+        <div class="service-card__image">
+          {{ content.field_service_card_image }}
+        </div>
+      {% endif %}
+
+      {% if content.field_service_card_title|render|striptags|trim is not empty %}
+        <div class="service-card__title">
+          {% if service_url %}
+            <a href="{{ service_url }}">
+              {{ content.field_service_card_title.0['#context'].value ?? content.field_service_card_title }}
+            </a>
+          {% else %}
+            {{ content.field_service_card_title }}
+          {% endif %}
+        </div>
+      {% endif %}
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}

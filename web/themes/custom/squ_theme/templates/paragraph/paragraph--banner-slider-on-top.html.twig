@@ -1,0 +1,40 @@
+{% block paragraph %}
+  <div{{ attributes.addClass('banner-slider-on-top') }}>
+    {% block content %}
+
+      {% if content.field_banner_title|render|striptags|trim is not empty %}
+        <div class="banner-slider__title">
+          {{ content.field_banner_title }}
+
+          <div class="banner-slider__divider" aria-hidden="true">
+            <span class="banner-slider__line"></span>
+
+            <span class="banner-slider__icon">
+              <svg viewBox="0 0 24 24"
+                   width="22"
+                   height="22"
+                   fill="none"
+                   xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 3L20 12L12 21L4 12L12 3Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"/>
+                <path d="M8 12L12 8L16 12L12 16L8 12Z"
+                      stroke="currentColor"
+                      stroke-width="1.5"/>
+              </svg>
+            </span>
+
+            <span class="banner-slider__line"></span>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if content.field_banner_items %}
+        <div class="banner-slider">
+          {{ content.field_banner_items }}
+        </div>
+      {% endif %}
+
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
