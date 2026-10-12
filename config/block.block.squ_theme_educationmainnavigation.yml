@@ -1,0 +1,29 @@
+uuid: eb487690-8e6f-4961-82bb-c75038332017
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.education-main-navigation
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_educationmainnavigation
+theme: squ_theme
+region: header_section
+weight: 0
+provider: null
+plugin: 'system_menu_block:education-main-navigation'
+settings:
+  id: 'system_menu_block:education-main-navigation'
+  label: 'Education Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/education\r\n/education/*"

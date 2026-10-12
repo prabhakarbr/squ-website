@@ -1,0 +1,17 @@
+uuid: 6707a9be-e92d-4487-a33c-7f4da81a34e6
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Education Quick Link'
+type: education_quick_link
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

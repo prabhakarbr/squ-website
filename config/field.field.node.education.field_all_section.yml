@@ -1,0 +1,181 @@
+uuid: 02c409e6-f4fe-4fa3-8974-7af41f9fb1f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_all_section
+    - node.type.education
+    - paragraphs.paragraphs_type.discover
+    - paragraphs.paragraphs_type.latest_news
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.education.field_all_section
+field_name: field_all_section
+entity_type: node
+bundle: education
+label: 'All Section'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      discover: discover
+      latest_news: latest_news
+    negate: 0
+    target_bundles_drag_drop:
+      about_squ:
+        weight: 50
+        enabled: false
+      accordion:
+        weight: 51
+        enabled: false
+      accordion_item:
+        weight: 52
+        enabled: false
+      accordion_items:
+        weight: 53
+        enabled: false
+      art_latest_news:
+        weight: 54
+        enabled: false
+      art_quick_links:
+        weight: 55
+        enabled: false
+      banner_slider_image:
+        weight: 56
+        enabled: false
+      banner_slider_on_top:
+        weight: 57
+        enabled: false
+      card_grid:
+        weight: 58
+        enabled: false
+      card_item:
+        weight: 59
+        enabled: false
+      college:
+        weight: 60
+        enabled: false
+      college_tab_item:
+        weight: 61
+        enabled: false
+      description_section:
+        weight: 62
+        enabled: false
+      discover:
+        weight: 63
+        enabled: true
+      document_item:
+        weight: 64
+        enabled: false
+      document_list:
+        weight: 65
+        enabled: false
+      engineering_program_tab:
+        weight: 66
+        enabled: false
+      ept_slick_slider:
+        weight: 67
+        enabled: false
+      ept_slick_slider_item:
+        weight: 68
+        enabled: false
+      feature_card:
+        weight: 69
+        enabled: false
+      footer_icons:
+        weight: 70
+        enabled: false
+      full_image_with_title:
+        weight: 71
+        enabled: false
+      full_with_margin_slider:
+        weight: 72
+        enabled: false
+      hero_banner:
+        weight: 73
+        enabled: false
+      hero_carousel:
+        weight: 74
+        enabled: false
+      hero_slide:
+        weight: 75
+        enabled: false
+      ilc_publication_item:
+        weight: 76
+        enabled: false
+      images_slider_items:
+        weight: 77
+        enabled: false
+      images_slider_with_full_width:
+        weight: 78
+        enabled: false
+      latest_news:
+        weight: 79
+        enabled: true
+      list_item_slider:
+        weight: 80
+        enabled: false
+      map_contact:
+        weight: 81
+        enabled: false
+      news_item:
+        weight: 82
+        enabled: false
+      news_section:
+        weight: 83
+        enabled: false
+      page_intro:
+        weight: 84
+        enabled: false
+      program_tabs:
+        weight: 85
+        enabled: false
+      publication_grid:
+        weight: 86
+        enabled: false
+      publication_item:
+        weight: 87
+        enabled: false
+      research_card:
+        weight: 88
+        enabled: false
+      research_section:
+        weight: 89
+        enabled: false
+      search_widget:
+        weight: 90
+        enabled: false
+      service_card:
+        weight: 91
+        enabled: false
+      single_director_card:
+        weight: 92
+        enabled: false
+      single_image_section:
+        weight: 93
+        enabled: false
+      single_title:
+        weight: 94
+        enabled: false
+      statistics_counter:
+        weight: 95
+        enabled: false
+      student_life_gallery_item:
+        weight: 96
+        enabled: false
+      student_life_section:
+        weight: 97
+        enabled: false
+      two_column_services:
+        weight: 98
+        enabled: false
+field_type: entity_reference_revisions

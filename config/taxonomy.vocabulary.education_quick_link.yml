@@ -1,0 +1,9 @@
+uuid: dc6a04ce-3928-4f9c-9cc1-52ad87ef7e59
+langcode: en
+status: true
+dependencies: {  }
+name: 'Education Quick Link'
+vid: education_quick_link
+description: null
+weight: 0
+new_revision: false

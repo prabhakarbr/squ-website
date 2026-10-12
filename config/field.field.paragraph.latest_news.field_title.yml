@@ -1,0 +1,24 @@
+uuid: 4c29e6ff-f9d9-46c4-8cbd-471239d19673
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.latest_news
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.latest_news.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: latest_news
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
