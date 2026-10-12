@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * Fallback wrapper for Views exposed filter blocks (site search uses
+ * block--views-exposed-filter-block--squ-search-block-1.html.twig).
+ */
+#}
+<div{{ attributes }}>
+  {{ title_prefix }}
+  {% if label %}
+    <h2{{ title_attributes }}>{{ label }}</h2>
+  {% endif %}
+  {{ content }}
+  {{ title_suffix }}
+</div>

@@ -1,11 +1,6 @@
-/** SQU Theme — header, page shell, left sidebar, drawer (merged) */
 /**
- * Shared header, menu drawer and footer
- * (templates/layout/page.html.twig).
- *
- * Everything is scoped to .squ-site-header / .squ-drawer /
- * .squ-site-footer: Olivero and squ-libraries.css both ship unscoped
- * .site-header / .site-footer / .footer-main rules that would otherwise leak in.
+ * SQU Theme — site header, drawer, page shell, breadcrumb, left sidebar.
+ * Scoped to .squ-site-header / .squ-drawer (see templates/layout/page.html.twig).
  */
 :root {
   --squ-header: #585e5f;
@@ -141,7 +136,7 @@
   opacity: 0.98;
 }
 
-/* Advance nav pill: search + quick links + language + menu */
+/* Advance nav pill: search + quick links + language + menu — single row */
 .squ-site-header .header-tools {
   display: flex;
   align-items: center;
@@ -153,10 +148,68 @@
   background: var(--squ-header-pill);
   border: 1px solid rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(6px);
+  overflow-x: auto;
+  scrollbar-width: none;
+  position: relative;
+  min-height: 40px;
+  max-width: 100%;
+}
+
+.squ-site-header .header-tools.header-tools--search-open {
+  overflow-x: auto;
+  overflow-y: visible;
+  max-width: min(960px, calc(100vw - 2rem));
+}
+
+/* Keep sibling blocks stable (no shrink / no layout animation). */
+.squ-site-header .header-tools .block:not(.squ-header-search-block--squ-search),
+.squ-site-header .header-tools .squ-region--header-lang,
+.squ-site-header .header-tools #squ-menu-toggle {
+  flex: 0 0 auto;
+  flex-shrink: 0;
+  contain: layout style;
+}
+
+.squ-site-header .header-tools::-webkit-scrollbar {
+  display: none;
+}
+
+/* Flatten region wrapper so every block is one flex row with lang + menu. */
+.squ-site-header .header-tools > .region,
+.squ-site-header .header-tools > .region-header-tools-inner,
+.squ-site-header .header-tools > .squ-region--header-tools-inner {
+  display: contents;
 }
 
 .squ-site-header .header-tools .block {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
   margin: 0;
+  min-width: 0;
+}
+
+.squ-site-header .header-tools .squ-region--header-lang {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+.squ-site-header .header-tools .squ-menu-panel,
+.squ-site-header .header-tools .squ-menu-panel .block-inner {
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+  min-width: 0;
+}
+
+.squ-site-header .header-tools .primary-nav {
+  flex-wrap: nowrap;
+}
+
+.squ-site-header .header-tools .primary-nav > a,
+.squ-site-header .header-tools .primary-nav__item {
+  white-space: nowrap;
 }
 
 .squ-site-header .header-tools .squ-header-quicklinks {
@@ -164,32 +217,192 @@
   align-items: center;
 }
 
-.squ-site-header .header-tools .search-wrap {
-  display: flex;
-  align-items: center;
-  flex: none;
+/*
+ * Search: fixed slot width when open (no flex animation) so other blocks do not jitter.
+ */
+.squ-site-header .header-tools .squ-header-search-block--squ-search {
+  flex: 0 0 32px;
+  width: 32px;
+  overflow: hidden;
+  contain: layout style;
 }
 
-/* Secondary menu — account / utility links inside header tools (Block layout region). */
-.squ-site-header .squ-secondary-menu .menu {
+.squ-site-header .header-tools.header-tools--search-open .squ-header-search-block--squ-search {
+  flex: 0 0 min(280px, 32vw);
+  width: min(280px, 32vw);
+  overflow: visible;
+}
+
+.squ-site-header .header-tools .search-wrap {
+  position: relative;
+  width: 32px;
+  height: 40px;
+}
+
+.squ-site-header .header-tools.header-tools--search-open .search-wrap {
+  width: 100%;
+  background: #fff;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.14);
+}
+
+/* .squ-site-header .header-tools.header-tools--search-open .search-wrap:focus-within {
+  box-shadow:
+    0 0 0 2px rgba(212, 175, 55, 0.55),
+    0 2px 12px rgba(0, 0, 0, 0.16);
+} */
+
+.squ-site-header .header-tools .search-wrap .icon-btn {
+  position: absolute;
+  inset-inline-end: 0;
+  top: 50%;
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  transform: translateY(-50%);
+}
+
+.squ-site-header .header-tools.header-tools--search-open .search-wrap .icon-btn {
+  inset-inline-end: 4px;
+  color: #3d4348;
+}
+
+.squ-site-header .header-tools.header-tools--search-open .search-wrap .icon-btn:hover,
+.squ-site-header .header-tools.header-tools--search-open .search-wrap .icon-btn:focus-visible {
+  color: var(--squ-gold-deep, #b8891f);
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.squ-site-header .search-panel .views-exposed-form {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  list-style: none;
+  gap: 8px;
+  margin: 0;
+  width: 100%;
+}
+
+.squ-site-header .search-panel .views-exposed-form .form-item,
+.squ-site-header .search-panel .views-exposed-form .js-form-item {
+  flex: 1 1 auto;
+  min-width: 0;
+  margin: 0;
+}
+
+.squ-site-header .search-panel .views-exposed-form label {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+
+.squ-site-header .search-panel .views-exposed-form .form-actions {
+  display: none;
+}
+
+.squ-site-header .search-wrap .search-panel {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-inline-end: 36px;
+  top: 50%;
+  transform: translateY(-50%);
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease;
+  will-change: opacity;
 }
-.squ-site-header .squ-secondary-menu a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 0.85rem;
+
+.squ-site-header .search-wrap .search-panel[hidden] {
+  display: flex !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.squ-site-header .search-wrap.is-search-open .search-panel:not([hidden]) {
+  opacity: 1;
+  pointer-events: auto;
+  display: flex !important;
+  align-items: center;
+}
+
+.squ-site-header .search-panel form {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  width: 100%;
+}
+
+.squ-site-header .search-panel .views-exposed-form .form-item,
+.squ-site-header .search-panel .views-exposed-form .js-form-item {
+  width: 100%;
+}
+
+.squ-site-header .search-panel input[type="search"],
+.squ-site-header .search-panel input[type="text"],
+.squ-site-header .search-panel .form-text {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  height: 38px;
+  margin: 0;
+  padding: 0 0.35rem 0 1rem;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: #1a1f23;
+  font-family: inherit;
+  font-size: 0.9375rem;
   font-weight: 500;
-  white-space: nowrap;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  appearance: none;
 }
-.squ-site-header .squ-secondary-menu a:hover,
-.squ-site-header .squ-secondary-menu a:focus {
-  color: var(--squ-gold, #d0a02a);
-  text-decoration: underline;
+
+.squ-site-header .search-panel input[type="search"]::-webkit-search-cancel-button,
+.squ-site-header .search-panel input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+.squ-site-header .search-panel input::placeholder {
+  color: #6b7280;
+  font-weight: 400;
+  opacity: 1;
+}
+
+.squ-site-header .search-panel input:focus,
+.squ-site-header .search-panel input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+@media (max-width: 991.98px) {
+  .squ-site-header .header-tools.header-tools--search-open {
+    max-width: calc(100vw - 1.5rem);
+  }
+
+  .squ-site-header .header-tools.header-tools--search-open .squ-header-search-block--squ-search {
+    flex: 0 0 min(220px, 40vw);
+    width: min(220px, 40vw);
+  }
+}
+
+@media (max-width: 600px) {
+  .squ-site-header .header-tools.header-tools--search-open {
+    max-width: calc(100vw - 1rem);
+  }
+
+  .squ-site-header .header-tools.header-tools--search-open .squ-header-search-block--squ-search {
+    flex: 0 0 min(180px, 46vw);
+    width: min(180px, 46vw);
+  }
 }
 
 .squ-site-header .icon-btn {
@@ -724,42 +937,14 @@ html[dir="rtl"] .squ-drawer:not(.open) {
   margin-bottom: 1rem;
 }
 
-/* --- legacy header utilities --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-:root {
-  --squ-dark: #2b3138;
-  --squ-gold: #c9922a;
-  --squ-white: #ffffff;
-}
-
-.ri-grid {
-    display: flex;
-    align-items: flex-start;
-}
-
-.ri-left {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 20px;
-    align-self: flex-start;
-}
-
-.ri-cards {
-    flex: 1;
-}
-
-/* Olivero base: hide default header chrome if global-styling is ever re-enabled. */
+/* Olivero: hide duplicate header chrome if base global-styling is enabled. */
 .site-header__fixed,
 .site-header__initial,
 .site-header__inner .mobile-buttons,
 .site-header__inner .sticky-header-toggle {
   display: none !important;
 }
+
 #header.site-header:not(.squ-site-header) {
   position: absolute;
   width: 1px;
@@ -772,336 +957,6 @@ html[dir="rtl"] .squ-drawer:not(.open) {
   border: 0;
 }
 
-/* Olivero's Site branding block brings its own blue background/padding,
-   AND a negative margin-inline-start meant to offset it within Olivero's
-   own grid layout - that negative margin causes clipping/overlap once
-   the block is moved into our own flex header, so it's reset here. */
-.squ-header .squ-site-branding-block {
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  margin-inline-start: 0 !important;
-  min-width: 0 !important;
-  min-height: auto !important;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-.squ-header .squ-site-branding-block a,
-.squ-header .squ-site-branding-block * {
-  color: var(--squ-white) !important;
-}
-.squ-header .squ-site-branding-block img {
-  height: 40px;
-  width: auto;
-  margin-inline-end: 0.5rem;
-}
-
-.squ-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--squ-dark, #2b3138) !important;
-  padding: 0.75rem 2rem;
-  position: sticky;
-  top: 0;
-  z-index: 200;
-}
-
-/* Site name next to the logo: small, like the template. (Olivero's branding
-   block sets a large title; !important because Olivero's rules are loaded
-   with the same specificity.) */
-.squ-header .squ-site-branding-block .site-branding__inner {
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-}
-.squ-header .squ-site-branding-block .site-branding__text {
-  margin: 0 !important;
-}
-.squ-header .squ-site-branding-block .site-branding__name,
-.squ-header .squ-site-branding-block .site-branding__name a {
-  font-size: 0.8rem !important;
-  font-weight: 600 !important;
-  line-height: 1.25 !important;
-  letter-spacing: 0 !important;
-  text-decoration: none !important;
-}
-.squ-header .squ-site-branding-block .site-branding__slogan {
-  display: none;
-}
-
-/* Site branding block (logo + title) */
-.squ-header .block-site-branding {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-}
-.squ-header .site-logo img {
-  height: 48px;
-  width: auto;
-}
-.squ-header .site-name {
-  color: var(--squ-white);
-  font-weight: 700;
-  font-size: 0.95rem;
-  line-height: 1.2;
-}
-
-/* Right-hand cluster: search + quick links + hamburger */
-.squ-header__right {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 999px;
-  padding: 0.5rem 1rem;
-}
-
-/* The core Search form block. Collapsed by default (icon only, no
-   background of its own - just matches the surrounding dark capsule);
-   clicking it expands into a light pill with the input inside. Clicking
-   anywhere outside collapses it back (see menu-overlay.js). */
-.squ-header__search-form {
-  display: flex;
-  align-items: center;
-  background: transparent;
-  border-radius: 999px;
-  padding: 0;
-  cursor: pointer;
-  overflow: hidden;
-  box-sizing: border-box;
-  height: 36px;
-  width: 36px;
-  transition: width 0.25s ease, padding 0.25s ease, background-color 0.25s ease;
-}
-.squ-header__search-form.is-open {
-  width: 210px;
-  padding: 0 1rem 0 0.75rem;
-  cursor: default;
-  background: #f1eef7;
-}
-.squ-header__search-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--squ-white);
-  flex-shrink: 0;
-  width: 36px;
-  height: 36px;
-}
-.squ-header__search-form.is-open .squ-header__search-icon {
-  color: #555;
-  width: auto;
-  height: auto;
-  margin-inline-end: 0.5rem;
-}
-.squ-header__search-icon svg {
-  width: 18px;
-  height: 18px;
-}
-.squ-header__search-form input[type="search"],
-.squ-header__search-form input[type="text"] {
-  border: none;
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  font-size: 0.9rem;
-  line-height: 36px;
-  height: 36px;
-  color: #333;
-  width: 160px;
-  outline: none;
-  opacity: 0;
-  box-sizing: border-box;
-  transition: opacity 0.15s ease;
-}
-.squ-header__search-form.is-open input[type="search"],
-.squ-header__search-form.is-open input[type="text"] {
-  opacity: 1;
-}
-.squ-header__search-form input[type="submit"] {
-  display: none;
-}
-/* Drupal's search block may wrap the input/button in its own container
-   div(s) - flatten those so they don't add their own height/margin. */
-.squ-header__search-form form,
-.squ-header__search-form .form-item,
-.squ-header__search-form .js-form-item {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  align-items: center;
-}
-
-.squ-header__quicklinks ul {
-  display: flex;
-  gap: 1.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.squ-header__quicklinks a {
-  color: var(--squ-white);
-  text-decoration: none;
-  font-weight: 500;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
-.squ-header__quicklinks a:hover,
-.squ-header__quicklinks a.is-active {
-  border-color: var(--squ-gold);
-  color: var(--squ-gold);
-}
-
-.squ-hamburger {
-  background: none;
-  border: none;
-  color: var(--squ-white);
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 0.25rem;
-}
-.squ-hamburger svg {
-  width: 22px;
-  height: 22px;
-}
-
-.squ-hamburger__bars {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  width: 26px;
-}
-.squ-hamburger__bars span {
-  display: block;
-  height: 2px;
-  background: var(--squ-white);
-  border-radius: 1px;
-}
-
-@media (max-width: 768px) {
-  .squ-header {
-    padding: 0.6rem 1rem;
-  }
-  .squ-header__quicklinks {
-    display: none;
-  }
-}
-
-/* Account / login menu — vertical stack, ready for more than one item
-   once the account has Profile/Settings/Log out etc. */
-.squ-header__account .menu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.6rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.squ-header__account .menu__item {
-  width: 100%;
-}
-.squ-header__account a {
-  color: var(--squ-white);
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 500;
-  display: block;
-}
-.squ-header__account a:hover {
-  color: var(--squ-gold);
-}
-
-/* Hide the admin "top bar" (Home / Published / Edit) on the public site.
-   Admin pages use the admin theme and are not affected. */
 .top-bar {
   display: none !important;
-}
-/* ===== Search: icon ke left me inline input ===== */
-.squ-site-header .header-tools {
-  position: relative;
-}
-
-.squ-site-header .search-wrap {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-
-.squ-site-header .search-wrap .search-panel {
-  position: absolute;
-  top: 50%;
-  right: 100%;
-  left: auto;
-  bottom: auto;
-  transform: translateY(-50%);
-  width: 420px;
-  margin: 0 12px 0 0;
-  padding: 0;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  z-index: 20;
-}
-.squ-site-header .search-wrap .search-panel[hidden] {
-  display: none !important;
-}
-
-.squ-site-header .search-panel form {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin: 0;
-}
-.squ-site-header .search-panel input[type="search"] {
-  flex: 1;
-  min-width: 0;
-  height: 44px;
-  padding: 0 1rem;
-  border: 0;
-  border-radius: 8px;
-  background: #fff;
-  color: #222;
-  font-size: 1rem;
-  outline: none;
-}
-.squ-site-header .search-panel button[type="submit"] {
-  height: 44px;
-  padding: 0 1.3rem;
-  border: 0;
-  border-radius: 8px;
-  background: #d4a22a;
-  color: #2b2b2b;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-/* Arabic (RTL): input icon ke right me khule */
-[dir="rtl"] .squ-site-header .search-wrap .search-panel {
-  right: auto;
-  left: 100%;
-  margin: 0 0 0 12px;
-}
-
-/* Tablet */
-@media (max-width: 991.98px) {
-  .squ-site-header .search-wrap .search-panel { width: 300px; }
-}
-
-/* Mobile: header ke neeche full width (left me jagah nahi hoti) */
-@media (max-width: 600px) {
-  .squ-site-header .search-wrap .search-panel {
-    position: fixed;
-    top: var(--squ-header-h);
-    left: 1rem;
-    right: 1rem;
-    width: auto;
-    margin: 0;
-    transform: none;
-  }
 }

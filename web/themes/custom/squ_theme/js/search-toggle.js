@@ -39,8 +39,18 @@
         function (header) {
           var searchToggle = header.querySelector("#squ-search-toggle");
           var searchPanel = header.querySelector("#squ-search-panel");
-          var searchForm = header.querySelector("#squ-search-form");
-          var searchInput = header.querySelector("#squ-search-input");
+          var searchForm =
+            header.querySelector("#squ-search-form") ||
+            (searchPanel && searchPanel.querySelector("form"));
+          var searchInput =
+            header.querySelector("#squ-search-input") ||
+            (searchForm &&
+              searchForm.querySelector(
+                'input[type="search"], input[type="text"]',
+              ));
+          if (searchInput && !searchInput.dataset.i18nPlaceholder) {
+            searchInput.setAttribute("data-i18n-placeholder", "searchPlaceholder");
+          }
           var menuToggle = header.querySelector("#squ-menu-toggle");
           var realLangSwitcher = header.querySelector(".squ-lang-switcher");
           var langToggle = realLangSwitcher
@@ -151,16 +161,29 @@
             }
           }
 
+          var searchWrap =
+            searchToggle && searchToggle.closest(".search-wrap");
+          var headerTools =
+            searchToggle && searchToggle.closest(".header-tools");
+
           function setSearch(open) {
             if (!searchPanel) {
               return;
             }
             searchPanel.hidden = !open;
+            if (searchWrap) {
+              searchWrap.classList.toggle("is-search-open", open);
+            }
+            if (headerTools) {
+              headerTools.classList.toggle("header-tools--search-open", open);
+            }
             if (searchToggle) {
               searchToggle.setAttribute("aria-expanded", String(open));
             }
             if (open && searchInput) {
               searchInput.focus();
+            } else if (!open && searchInput) {
+              searchInput.blur();
             }
           }
 
@@ -185,30 +208,41 @@
           }
 
           // ---- Search: icon click opens / submits / closes ----
-          if (searchToggle && searchPanel) {
-            searchToggle.addEventListener("click", function (event) {
-              event.stopPropagation();
-              var hasText = searchInput && searchInput.value.trim();
-              var hasAction = searchForm && searchForm.getAttribute("action");
+          if (searchToggle && searchPanel && searchWrap) {
+            once("squ-search-toggle", searchToggle).forEach(function (btn) {
+              btn.addEventListener("click", function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                var hasText = searchInput && searchInput.value.trim();
+                var hasAction = searchForm && searchForm.getAttribute("action");
 
-              // Panel open + text typed: icon click = submit.
-              if (!searchPanel.hidden && hasText && hasAction) {
-                searchForm.submit();
-                return;
-              }
-              setSearch(searchPanel.hidden);
+                // Panel open + text typed: icon click = submit.
+                if (!searchPanel.hidden && hasText && hasAction) {
+                  searchForm.submit();
+                  return;
+                }
+                setSearch(searchPanel.hidden);
+              });
             });
 
-            // Click outside closes the search panel.
-            document.addEventListener("click", function (event) {
-              if (
-                !searchPanel.hidden &&
-                !searchPanel.contains(event.target) &&
-                !searchToggle.contains(event.target)
-              ) {
-                setSearch(false);
-              }
-            });
+            // Click anywhere on the page (outside search) closes the panel.
+            once("squ-search-outside", document.documentElement, context).forEach(
+              function () {
+                document.addEventListener(
+                  "click",
+                  function (event) {
+                    if (searchPanel.hidden) {
+                      return;
+                    }
+                    if (searchWrap.contains(event.target)) {
+                      return;
+                    }
+                    setSearch(false);
+                  },
+                  true,
+                );
+              },
+            );
           }
 
           // Enter key: only submit when there is an action and some text.
