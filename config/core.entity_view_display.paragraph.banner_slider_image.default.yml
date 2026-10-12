@@ -1,0 +1,27 @@
+uuid: 7d04609d-8cde-4fa5-9616-ce5c16e11ca6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner_slider_image.field_banner_image
+    - paragraphs.paragraphs_type.banner_slider_image
+  module:
+    - image
+id: paragraph.banner_slider_image.default
+targetEntityType: paragraph
+bundle: banner_slider_image
+mode: default
+content:
+  field_banner_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,23 @@
+uuid: efedc93f-2972-4fb9-ba68-4e3bb30480ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.description_section.field_description_content
+    - paragraphs.paragraphs_type.description_section
+  module:
+    - text
+id: paragraph.description_section.default
+targetEntityType: paragraph
+bundle: description_section
+mode: default
+content:
+  field_description_content:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

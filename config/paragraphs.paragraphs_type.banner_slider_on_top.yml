@@ -1,0 +1,10 @@
+uuid: 5efa779a-2f1a-4abb-b308-7e1de740ffd1
+langcode: en
+status: true
+dependencies: {  }
+id: banner_slider_on_top
+label: 'Banner Slider on Top'
+icon_uuid: null
+icon_default: null
+description: 'Multiple images on top banner of all home pages.'
+behavior_plugins: {  }

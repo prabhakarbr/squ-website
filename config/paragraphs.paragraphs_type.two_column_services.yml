@@ -1,0 +1,10 @@
+uuid: 6283f208-4c61-4fd0-a5f1-1e55f93c67c6
+langcode: en
+status: true
+dependencies: {  }
+id: two_column_services
+label: 'Two Column Services'
+icon_uuid: null
+icon_default: null
+description: 'Two column services'
+behavior_plugins: {  }

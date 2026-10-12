@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies: {  }
 id: images_slider_with_full_width
-label: 'Images slider with full width '
+label: 'Images slider in container '
 icon_uuid: null
 icon_default: null
 description: ''

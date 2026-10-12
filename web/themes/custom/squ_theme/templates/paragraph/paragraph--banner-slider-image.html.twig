@@ -1,0 +1,9 @@
+{% block paragraph %}
+  <div{{ attributes.addClass('banner-slider-item') }}>
+    {% block content %}
+      {% if content.field_banner_image %}
+        {{ content.field_banner_image }}
+      {% endif %}
+    {% endblock %}
+  </div>
+{% endblock paragraph %}
