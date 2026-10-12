@@ -11,7 +11,7 @@ dependencies:
 id: squ_theme_hamburger_menu
 theme: squ_theme
 region: header_drawer
-weight: 0
+weight: -28
 provider: null
 plugin: 'system_menu_block:hamburger-menu'
 settings:

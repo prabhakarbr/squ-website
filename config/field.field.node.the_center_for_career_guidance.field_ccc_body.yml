@@ -1,0 +1,28 @@
+uuid: fbbe4b15-be09-4231-b318-869719bbb877
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ccc_body
+    - node.type.the_center_for_career_guidance
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.the_center_for_career_guidance.field_ccc_body
+field_name: field_ccc_body
+entity_type: node
+bundle: the_center_for_career_guidance
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

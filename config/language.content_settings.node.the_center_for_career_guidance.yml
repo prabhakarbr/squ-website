@@ -1,0 +1,11 @@
+uuid: ea2516b4-a579-4f16-bba8-58255c308d82
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.the_center_for_career_guidance
+id: node.the_center_for_career_guidance
+target_entity_type_id: node
+target_bundle: the_center_for_career_guidance
+default_langcode: site_default
+language_alterable: false

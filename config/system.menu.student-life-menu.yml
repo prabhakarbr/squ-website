@@ -1,0 +1,8 @@
+uuid: 309ae4e3-6a83-4adc-8c46-3ef07eaefdd3
+langcode: en
+status: true
+dependencies: {  }
+id: student-life-menu
+label: 'Student LIfe Menu'
+description: ''
+locked: false
