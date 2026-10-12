@@ -29,6 +29,7 @@ global:
       css/sidebar.css: {}
       css/anwaar-art.css: {}
       css/custom-tabs.css: {}
+      css/student-pages.css: {}
   js:
     js/search-toggle.js: {}
     js/open-data.js: {}

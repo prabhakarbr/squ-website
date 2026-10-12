@@ -1,0 +1,11 @@
+uuid: 30a43158-5ac6-478b-927b-30f9a118f9b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.student_activities
+id: node.student_activities
+target_entity_type_id: node
+target_bundle: student_activities
+default_langcode: site_default
+language_alterable: false

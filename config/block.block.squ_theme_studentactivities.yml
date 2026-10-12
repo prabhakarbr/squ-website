@@ -1,0 +1,29 @@
+uuid: e8ba7276-e131-4328-86c3-4db6b190c44c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.student-activities
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_studentactivities
+theme: squ_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:student-activities'
+settings:
+  id: 'system_menu_block:student-activities'
+  label: 'Student Activities'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/student/student-groups/group-handicrafts\r\n/student/Student-Groups/English-Club\r\n/student/student-activities"

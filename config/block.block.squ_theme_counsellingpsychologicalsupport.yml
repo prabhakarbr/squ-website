@@ -1,0 +1,29 @@
+uuid: ddcce6b2-a7f6-493e-b978-f7c61fcb7b8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.counselling-psychological-suppor
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_counsellingpsychologicalsupport
+theme: squ_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:counselling-psychological-suppor'
+settings:
+  id: 'system_menu_block:counselling-psychological-suppor'
+  label: 'Counselling & Psychological Support'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/student/CV-Clinic\r\n/student/Majors-Fair\r\n/student/Career-Training-Fair\r\n/student/Career-Awareness-Program-CAP"

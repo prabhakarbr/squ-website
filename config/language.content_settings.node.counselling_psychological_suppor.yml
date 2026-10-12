@@ -1,0 +1,11 @@
+uuid: 77cb76a7-0f97-4dd4-a2ab-69e403abc52e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.counselling_psychological_suppor
+id: node.counselling_psychological_suppor
+target_entity_type_id: node
+target_bundle: counselling_psychological_suppor
+default_langcode: site_default
+language_alterable: false
