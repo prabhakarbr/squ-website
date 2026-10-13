@@ -53,3 +53,10 @@ squ_libraries:
   dependencies:
     - core/drupal
 
+search:
+  css:
+    theme:
+      css/search.css: {}
+  dependencies:
+    - core/drupal
+
