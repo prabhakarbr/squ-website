@@ -1,0 +1,29 @@
+uuid: 73f25553-1adb-474f-92aa-11bc1431e013
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.open-data-header-menu
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_opendataheadermenu
+theme: squ_theme
+region: header_section
+weight: 0
+provider: null
+plugin: 'system_menu_block:open-data-header-menu'
+settings:
+  id: 'system_menu_block:open-data-header-menu'
+  label: 'Open Data Header Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/open-data\r\n/open-data/*"
