@@ -1,0 +1,24 @@
+uuid: 26d5fbe5-980f-4dc3-84a2-daa803bd656e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.discover
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.discover.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: discover
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

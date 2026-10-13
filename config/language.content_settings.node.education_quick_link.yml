@@ -1,0 +1,11 @@
+uuid: 0b1a7d10-781e-4ac4-b853-53fd0d2ca88f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.education_quick_link
+id: node.education_quick_link
+target_entity_type_id: node
+target_bundle: education_quick_link
+default_langcode: site_default
+language_alterable: false

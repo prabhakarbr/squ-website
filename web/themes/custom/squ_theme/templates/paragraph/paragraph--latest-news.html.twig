@@ -1,0 +1,61 @@
+
+{#
+/**
+ * @file
+ * Latest News paragraph template.
+ */
+#}
+
+{# Get parent entity. #}
+{% set parent = paragraph.getParentEntity() %}
+{% set show_heading = false %}
+
+{#
+  Check whether this Latest News paragraph exists
+  inside the parent's field_all_section field.
+#}
+{% if parent and parent.hasField('field_all_section') %}
+  {% set sections = parent.get('field_all_section') %}
+
+  {% for item in sections %}
+    {% if item.entity
+      and item.entity.id() == paragraph.id()
+      and item.entity.bundle() == 'latest_news' %}
+      {% set show_heading = true %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{# Show heading at the paragraph level. #}
+{% if show_heading %}
+  <div class="discover-section-heading">
+    <h2 class="discover-section-heading__title">Latest News</h2>
+    <div class="discover-section-heading__divider"></div>
+  </div>
+{% endif %}
+
+{# Latest News card. #}
+<div{{ attributes.addClass('latest-news-card') }}>
+
+  {% if not paragraph.field_image.isEmpty() %}
+    <div class="latest-news-card__image">
+      {{ content.field_image }}
+    </div>
+  {% endif %}
+
+  <div class="latest-news-card__content">
+
+    {% if not paragraph.field_title.isEmpty() %}
+      <h3 class="latest-news-card__title">
+        {{ paragraph.field_title.value }}
+      </h3>
+    {% endif %}
+
+    {% if not paragraph.field_latest_news_details.isEmpty() %}
+      <div class="latest-news-card__details">
+        {{ content.field_latest_news_details }}
+      </div>
+    {% endif %}
+
+  </div>
+</div>
