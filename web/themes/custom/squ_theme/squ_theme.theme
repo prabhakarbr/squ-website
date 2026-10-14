@@ -5,7 +5,16 @@
  * SQU Theme hooks.
  */
 
+use Drupal\block\Entity\Block;
 use Drupal\Component\Utility\NestedArray;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+use Symfony\Component\HttpFoundation\Request;
+
+/**
+ * Menu shown on /search when the search started from the homepage.
+ */
+const SQU_THEME_SEARCH_HOME_MENU = 'about-squ';
 
 /**
  * Implements hook_preprocess_links__language_block().
@@ -52,4 +61,172 @@ function squ_theme_preprocess_block(array &$variables) {
         $variables['attributes']['class'][] = 'hide-main-about-deanship-node';
     }
   }
+}
+ * Implements hook_form_views_exposed_form_alter().
+ */
+function squ_theme_form_views_exposed_form_alter(array &$form, FormStateInterface $form_state, $form_id): void {
+  $view = $form_state->get('view');
+  if (!$view || $view->id() !== 'squ_search') {
+    return;
+  }
+
+  $form['squ_context'] = [
+    '#type' => 'hidden',
+    '#name' => 'squ_context',
+    '#value' => squ_theme_search_context_from_request(\Drupal::request()),
+  ];
+
+  $form['#action'] = Url::fromRoute('view.squ_search.page_1', [], [
+    'language' => \Drupal::languageManager()->getCurrentLanguage(),
+  ])->toString();
+}
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function squ_theme_preprocess_page(array &$variables): void {
+  if (\Drupal::routeMatch()->getRouteName() !== 'view.squ_search.page_1') {
+    return;
+  }
+
+  $variables['#attached']['library'][] = 'squ_theme/search';
+
+  $request = \Drupal::request();
+  $keywords = $request->query->get('search_api_fulltext');
+  if (!is_string($keywords) || trim($keywords) === '') {
+    return;
+  }
+
+  if (!isset($variables['page']['header_section'])) {
+    $variables['page']['header_section'] = [];
+  }
+  if (!is_array($variables['page']['header_section'])) {
+    return;
+  }
+
+  $build = squ_theme_build_search_header_section_menu($request);
+  if ($build !== NULL) {
+    $variables['page']['header_section'][] = $build;
+  }
+}
+
+/**
+ * Builds the section menu render array for the search results page, if any.
+ */
+function squ_theme_build_search_header_section_menu(Request $request): ?array {
+  $block = squ_theme_search_header_block_for_context(
+    squ_theme_search_context_from_request($request, normalize: TRUE)
+  );
+  if (!$block instanceof Block) {
+    return NULL;
+  }
+
+  $build = $block->getPlugin()->build();
+  if ($build === []) {
+    return NULL;
+  }
+
+  $build['#cache']['contexts'] = array_values(array_unique(array_merge(
+    $build['#cache']['contexts'] ?? [],
+    ['url.query_args:squ_context', 'url.query_args:search_api_fulltext'],
+  )));
+  $build['#prefix'] = '<div class="block block-' . str_replace('_', '-', $block->id()) . '">';
+  $build['#suffix'] = '</div>';
+
+  return $build;
+}
+
+/**
+ * Resolves squ_context for the current or submitting request.
+ *
+ * @param bool $normalize
+ *   TRUE when matching block visibility (search results page).
+ */
+function squ_theme_search_context_from_request(Request $request, bool $normalize = FALSE): string {
+  $context = $request->query->get('squ_context');
+  if (!is_string($context) || $context === '') {
+    $path = $request->getPathInfo();
+    $context = preg_match('#/search/?$#', $path) ? '' : $path;
+  }
+  return $normalize ? squ_theme_normalize_path_for_section_match($context) : $context;
+}
+
+/**
+ * Picks the header_section block for a normalized search context path.
+ */
+function squ_theme_search_header_block_for_context(string $path): ?Block {
+  if ($path === '' || $path === '/') {
+    return squ_theme_header_section_block_by_menu(SQU_THEME_SEARCH_HOME_MENU);
+  }
+
+  $matcher = \Drupal::service('path.matcher');
+  $best = NULL;
+  foreach (squ_theme_header_section_blocks() as $block) {
+    $pages = squ_theme_block_request_path_pages($block);
+    if ($pages !== '' && $matcher->matchPath($path, $pages)) {
+      if ($best === NULL || $block->getWeight() < $best->getWeight()) {
+        $best = $block;
+      }
+    }
+  }
+
+  return $best;
+}
+
+/**
+ * Active squ_theme blocks placed in header_section (request-static cache).
+ *
+ * @return \Drupal\block\Entity\Block[]
+ */
+function squ_theme_header_section_blocks(): array {
+  static $blocks;
+  if ($blocks !== NULL) {
+    return $blocks;
+  }
+
+  $blocks = \Drupal::entityTypeManager()->getStorage('block')->loadByProperties([
+    'theme' => 'squ_theme',
+    'region' => 'header_section',
+    'status' => TRUE,
+  ]);
+
+  return $blocks;
+}
+
+/**
+ * Finds a header_section block by menu machine name.
+ */
+function squ_theme_header_section_block_by_menu(string $menu_id): ?Block {
+  $plugin_id = 'system_menu_block:' . $menu_id;
+  foreach (squ_theme_header_section_blocks() as $block) {
+    if ($block->getPluginId() === $plugin_id) {
+      return $block;
+    }
+  }
+  return NULL;
+}
+
+/**
+ * Request-path visibility patterns for a block, if configured.
+ */
+function squ_theme_block_request_path_pages(Block $block): string {
+  $conditions = $block->getVisibilityConditions();
+  if (!$conditions->has('request_path')) {
+    return '';
+  }
+  return $conditions->get('request_path')->getConfiguration()['pages'] ?? '';
+}
+
+/**
+ * Strips language prefix so block visibility paths can match.
+ */
+function squ_theme_normalize_path_for_section_match(string $path): string {
+  $path = '/' . trim($path, '/');
+  if ($path === '/' || $path === '/ar') {
+    return '/';
+  }
+  if (str_starts_with($path, '/ar/')) {
+    $path = substr($path, 3);
+  }
+  return $path === '' ? '/' : $path;
 }
