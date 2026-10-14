@@ -1,0 +1,30 @@
+uuid: 654de625-be02-4fb3-a5be-3d61c91cce23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.about_deanship_sports_recreation.field_about_deanhip_sports_recre
+    - node.type.about_deanship_sports_recreation
+  module:
+    - text
+    - user
+id: node.about_deanship_sports_recreation.default
+targetEntityType: node
+bundle: about_deanship_sports_recreation
+mode: default
+content:
+  field_about_deanhip_sports_recre:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

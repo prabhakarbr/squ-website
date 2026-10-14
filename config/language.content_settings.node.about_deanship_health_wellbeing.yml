@@ -1,0 +1,11 @@
+uuid: 3e76c546-b189-4399-885b-c39b223758a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.about_deanship_health_wellbeing
+id: node.about_deanship_health_wellbeing
+target_entity_type_id: node
+target_bundle: about_deanship_health_wellbeing
+default_langcode: site_default
+language_alterable: false

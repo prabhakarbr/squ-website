@@ -1,0 +1,18 @@
+uuid: d1c7e986-9e70-4f04-804c-1164af2cfa2f
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'About Deanship Sports & Recreation'
+type: about_deanship_sports_recreation
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: true

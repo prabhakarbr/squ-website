@@ -1,0 +1,11 @@
+uuid: 107bac1a-9c0f-4377-8a03-58ffc42a4fed
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.about_deanship_sports_recreation
+id: node.about_deanship_sports_recreation
+target_entity_type_id: node
+target_bundle: about_deanship_sports_recreation
+default_langcode: site_default
+language_alterable: false
