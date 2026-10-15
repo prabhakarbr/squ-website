@@ -1,0 +1,28 @@
+uuid: 488a44ba-0ad3-4e90-ad8b-049d2a5f7ba2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_about_deanhip_sports_recre
+    - node.type.about_deanship_sports_recreation
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.about_deanship_sports_recreation.field_about_deanhip_sports_recre
+field_name: field_about_deanhip_sports_recre
+entity_type: node
+bundle: about_deanship_sports_recreation
+label: 'About Deanhip Sports & Recreation'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

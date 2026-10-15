@@ -1,0 +1,30 @@
+uuid: a53e8dd2-e607-412d-a447-b5d20bbb84d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.about_the_deanship.field_about_deanship_body
+    - node.type.about_the_deanship
+  module:
+    - text
+    - user
+id: node.about_the_deanship.default
+targetEntityType: node
+bundle: about_the_deanship
+mode: default
+content:
+  field_about_deanship_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

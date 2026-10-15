@@ -1,3 +1,4 @@
+/* Engineering page css */
 .engineering-program-title {
   display: block;
   margin-bottom: 24px;
@@ -29,7 +30,7 @@
   display: block;
 }
 
-
+/* Engineering page left sidebar css */
 #block-squ-theme-engineeringprogrammes .primary-nav {
   display: flex;
   flex-direction: column;
@@ -46,6 +47,80 @@
 }
 
 #block-squ-theme-engineeringprogrammes .primary-nav > a.is-active {
+  background: inherit;
+  color: inherit;
+}
+
+
+/* About Deanship page left sidebar css */
+
+#block-squ-theme-aboutdeanshipmenu .primary-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  gap: 0;
+}
+
+#block-squ-theme-aboutdeanshipmenu .primary-nav > a {
+  display: block;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+}
+
+#block-squ-theme-aboutdeanshipmenu .primary-nav > a.is-active {
+  background: inherit;
+  color: inherit;
+}
+
+
+/* This for hide duplicate section with quick tab for About Deanship pages */
+.hide-main-about-deanship-node {
+  display: none !important;
+}
+
+/* student activities page left sidebar css */
+
+#block-squ-theme-studentactivities .primary-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  gap: 0;
+}
+
+#block-squ-theme-studentactivities .primary-nav > a {
+  display: block;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+}
+
+#block-squ-theme-studentactivities .primary-nav > a.is-active {
+  background: inherit;
+  color: inherit;
+}
+
+
+/* counselling psychological support page left sidebar css */
+
+#block-squ-theme-counsellingpsychologicalsupport .primary-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  gap: 0;
+}
+
+#block-squ-theme-counsellingpsychologicalsupport .primary-nav > a {
+  display: block;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ddd;
+  text-decoration: none;
+}
+
+#block-squ-theme-counsellingpsychologicalsupport .primary-nav > a.is-active {
   background: inherit;
   color: inherit;
 }

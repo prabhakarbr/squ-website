@@ -1,0 +1,11 @@
+uuid: 6fd3b8ef-7f81-498d-b81d-3cb09d1740f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.about_the_deanship_department
+id: node.about_the_deanship_department
+target_entity_type_id: node
+target_bundle: about_the_deanship_department
+default_langcode: site_default
+language_alterable: false

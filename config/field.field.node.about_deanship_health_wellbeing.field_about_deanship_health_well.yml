@@ -1,0 +1,28 @@
+uuid: 614b574b-a2ac-4e9f-a514-a78a00f5fccf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_about_deanship_health_well
+    - node.type.about_deanship_health_wellbeing
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.about_deanship_health_wellbeing.field_about_deanship_health_well
+field_name: field_about_deanship_health_well
+entity_type: node
+bundle: about_deanship_health_wellbeing
+label: 'About Deanship Health & Wellbeing'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

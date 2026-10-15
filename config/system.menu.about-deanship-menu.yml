@@ -1,0 +1,8 @@
+uuid: abf147c9-2810-421d-8bb5-97b10d1a9b71
+langcode: en
+status: true
+dependencies: {  }
+id: about-deanship-menu
+label: 'About Deanship Left Sidebar Menu'
+description: ''
+locked: false

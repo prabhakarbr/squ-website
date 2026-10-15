@@ -1,0 +1,33 @@
+uuid: 35e2e1a7-7019-4c0c-ab85-2eaac6063d34
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - quicktabs
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_quicktabsaboutdeanshiphealthwellbeingquicktab
+theme: squ_theme
+region: content
+weight: 0
+provider: null
+plugin: 'quicktabs_block:about_deanship_health_wellbeing'
+settings:
+  id: 'quicktabs_block:about_deanship_health_wellbeing'
+  label: 'QuickTabs - About Deanship Health & Wellbeing Quick Tab'
+  label_display: '0'
+  provider: quicktabs
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/student-affairs/About-Deanship/health-wellbeing\r\n/student-affairs/About-Deanship/health-wellbeing/*"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      about_deanship_health_wellbeing: about_deanship_health_wellbeing

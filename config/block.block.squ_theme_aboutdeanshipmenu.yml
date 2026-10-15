@@ -1,0 +1,37 @@
+uuid: 8f852814-e66b-4599-9ccf-b9c712b3cc5f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.about-deanship-menu
+  module:
+    - node
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_aboutdeanshipmenu
+theme: squ_theme
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'system_menu_block:about-deanship-menu'
+settings:
+  id: 'system_menu_block:about-deanship-menu'
+  label: 'About Deanship Menu'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/student-affairs/About-Deanship/org-stracture\r\n/student-affairs/About-Deanship\r\n/student-affairs/About-Deanship/our-goals"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      about_the_deanship: about_the_deanship

@@ -1,0 +1,90 @@
+uuid: d0e01b40-586c-4a30-9e5e-38c4ff4947c0
+langcode: en
+status: true
+dependencies: {  }
+id: about_deanship_sports_recreation
+label: 'About Deanship Sports & Recreation Quick Tab'
+renderer: ui_tabs
+hide_empty_tabs: false
+remember_last_clicked_tab: false
+default_tab: 0
+options:
+  quick_tabs:
+    ajax: false
+    class: ''
+    style: ''
+    direct_linking: true
+  accordion_tabs:
+    jquery_ui:
+      collapsible: false
+      heightStyle: auto
+configuration_data:
+  -
+    title: About
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '85'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: about_deanship_department_quick
+  -
+    title: Objectivies
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '86'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: about_deanship_department_quick
+  -
+    title: 'Member of the Secretiat of the student counsil section'
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '87'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: about_deanship_department_quick

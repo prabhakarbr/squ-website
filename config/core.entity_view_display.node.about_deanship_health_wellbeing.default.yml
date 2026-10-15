@@ -1,0 +1,30 @@
+uuid: 4bb489e7-b109-4640-a360-b0260bb89388
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.about_deanship_health_wellbeing.field_about_deanship_health_well
+    - node.type.about_deanship_health_wellbeing
+  module:
+    - text
+    - user
+id: node.about_deanship_health_wellbeing.default
+targetEntityType: node
+bundle: about_deanship_health_wellbeing
+mode: default
+content:
+  field_about_deanship_health_well:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
