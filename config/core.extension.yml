@@ -18,6 +18,8 @@ module:
   easy_breadcrumb: 0
   editor: 0
   entity_reference_revisions: 0
+  ept_core: 0
+  ept_slick_slider: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -35,6 +37,8 @@ module:
   lite_youtube_embed: 0
   locale: 0
   media: 0
+  media_library: 0
+  media_library_form_element: 0
   menu_link_content: 0
   menu_ui: 0
   navigation: 0
@@ -50,6 +54,7 @@ module:
   quicktabs_jqueryui: 0
   search: 0
   search_api: 0
+  search_api_opensearch: 0
   search_api_db: 0
   search_node: 0
   single_content_sync: 0
