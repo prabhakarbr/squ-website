@@ -1,0 +1,188 @@
+uuid: bb750ee5-038a-4193-a131-b12f0e3de629
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_slide_items
+    - paragraphs.paragraphs_type.single_news_silde
+    - paragraphs.paragraphs_type.single_news_slide_item
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.single_news_silde.field_slide_items
+field_name: field_slide_items
+entity_type: paragraph
+bundle: single_news_silde
+label: 'Slide Items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      single_news_slide_item: single_news_slide_item
+    negate: 0
+    target_bundles_drag_drop:
+      about_squ:
+        weight: 54
+        enabled: false
+      accordion:
+        weight: 55
+        enabled: false
+      accordion_item:
+        weight: 56
+        enabled: false
+      accordion_items:
+        weight: 57
+        enabled: false
+      art_latest_news:
+        weight: 58
+        enabled: false
+      art_quick_links:
+        weight: 59
+        enabled: false
+      banner_slider_image:
+        weight: 60
+        enabled: false
+      banner_slider_on_top:
+        weight: 61
+        enabled: false
+      basic_block:
+        weight: 62
+        enabled: false
+      card_grid:
+        weight: 63
+        enabled: false
+      card_item:
+        weight: 64
+        enabled: false
+      college:
+        weight: 65
+        enabled: false
+      college_tab_item:
+        weight: 66
+        enabled: false
+      description_section:
+        weight: 67
+        enabled: false
+      discover:
+        weight: 68
+        enabled: false
+      document_item:
+        weight: 69
+        enabled: false
+      document_list:
+        weight: 70
+        enabled: false
+      engineering_program_tab:
+        weight: 71
+        enabled: false
+      ept_slick_slider:
+        weight: 72
+        enabled: false
+      ept_slick_slider_item:
+        weight: 73
+        enabled: false
+      feature_card:
+        weight: 74
+        enabled: false
+      footer_icons:
+        weight: 75
+        enabled: false
+      full_image_with_title:
+        weight: 76
+        enabled: false
+      full_with_margin_slider:
+        weight: 77
+        enabled: false
+      hero_banner:
+        weight: 78
+        enabled: false
+      hero_carousel:
+        weight: 79
+        enabled: false
+      hero_slide:
+        weight: 80
+        enabled: false
+      ilc_publication_item:
+        weight: 81
+        enabled: false
+      images_slider_items:
+        weight: 82
+        enabled: false
+      images_slider_with_full_width:
+        weight: 83
+        enabled: false
+      latest_news:
+        weight: 84
+        enabled: false
+      list_item_slider:
+        weight: 85
+        enabled: false
+      map_contact:
+        weight: 86
+        enabled: false
+      news_item:
+        weight: 87
+        enabled: false
+      news_section:
+        weight: 88
+        enabled: false
+      page_intro:
+        weight: 89
+        enabled: false
+      program_tabs:
+        weight: 90
+        enabled: false
+      publication_grid:
+        weight: 91
+        enabled: false
+      publication_item:
+        weight: 92
+        enabled: false
+      research_card:
+        weight: 93
+        enabled: false
+      research_section:
+        weight: 94
+        enabled: false
+      search_widget:
+        weight: 95
+        enabled: false
+      service_card:
+        weight: 96
+        enabled: false
+      single_director_card:
+        weight: 97
+        enabled: false
+      single_image_section:
+        weight: 98
+        enabled: false
+      single_news_silde:
+        weight: 99
+        enabled: false
+      single_news_slide_item:
+        weight: 53
+        enabled: true
+      single_title:
+        weight: 100
+        enabled: false
+      statistics_counter:
+        weight: 101
+        enabled: false
+      student_life_gallery_item:
+        weight: 102
+        enabled: false
+      student_life_section:
+        weight: 103
+        enabled: false
+      two_column_services:
+        weight: 104
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,32 @@
+uuid: 8e80b1b5-21fb-4b36-a1c5-ef3ca632e46f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.law.field_page_sections
+    - node.type.law
+  module:
+    - entity_reference_revisions
+    - user
+id: node.law.default
+targetEntityType: node
+bundle: law
+mode: default
+content:
+  field_page_sections:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

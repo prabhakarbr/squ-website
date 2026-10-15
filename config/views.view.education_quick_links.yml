@@ -762,7 +762,7 @@ display:
         filter_groups: false
       display_description: ''
       display_extenders: {  }
-      block_description: 'ALL Quick LInk'
+      block_description: Research
     cache_metadata:
       max-age: -1
       contexts:

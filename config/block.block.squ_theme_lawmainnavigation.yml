@@ -1,0 +1,29 @@
+uuid: 008d60bb-ce30-4b2a-b8f1-6d0986f96aa9
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.law-main-navigation
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_lawmainnavigation
+theme: squ_theme
+region: header_section
+weight: 0
+provider: null
+plugin: 'system_menu_block:law-main-navigation'
+settings:
+  id: 'system_menu_block:law-main-navigation'
+  label: 'Law Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/law\r\n/law/*"
