@@ -29,6 +29,7 @@ global:
       css/sidebar.css: {}
       css/anwaar-art.css: {}
       css/custom-tabs.css: {}
+      css/student-pages.css: {}
   js:
     js/search-toggle.js: {}
     js/open-data.js: {}
@@ -49,6 +50,13 @@ squ_libraries:
         type: external
         minified: true
       css/squ-libraries.css: {}
+  dependencies:
+    - core/drupal
+
+search:
+  css:
+    theme:
+      css/search.css: {}
   dependencies:
     - core/drupal
 

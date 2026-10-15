@@ -1,0 +1,11 @@
+uuid: adf580ef-aadb-41d4-a38a-71c92fc0d243
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.education
+id: node.education
+target_entity_type_id: node
+target_bundle: education
+default_langcode: site_default
+language_alterable: false

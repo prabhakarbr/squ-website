@@ -1,0 +1,10 @@
+uuid: f1322b6d-323f-46df-9322-e570f033fa77
+langcode: en
+status: true
+dependencies: {  }
+id: service_card
+label: 'Service Card'
+icon_uuid: null
+icon_default: null
+description: 'Two column card'
+behavior_plugins: {  }

@@ -1,0 +1,34 @@
+{#
+/**
+ * @file
+ * Single search result row.
+ */
+#}
+{% if fields.title_2.content %}
+  <h2 class="squ-search-result__title">{{ fields.title_2.content }}</h2>
+{% endif %}
+
+{% set excerpt_markup = fields.search_api_excerpt.content|default('') %}
+{% if excerpt_markup|render|striptags|trim is empty %}
+  {% set excerpt_markup = fields.body.content|default(fields.field_data_description.content|default('')) %}
+{% endif %}
+{% if excerpt_markup|render|striptags|trim is not empty %}
+  <div class="squ-search-result__field squ-search-result__field--excerpt">
+    <span class="squ-search-result__label">{{ 'Search: Excerpt'|t }}</span>
+    <div class="squ-search-result__value squ-search-result__snippet">{{ excerpt_markup }}</div>
+  </div>
+{% endif %}
+
+{% if fields.uid.content|render|striptags|trim is not empty %}
+  <div class="squ-search-result__field squ-search-result__field--author">
+    <span class="squ-search-result__label">{{ 'Authored by'|t }}</span>
+    <span class="squ-search-result__value">{{ fields.uid.content }}</span>
+  </div>
+{% endif %}
+
+{% if fields.node_created.content|render|striptags|trim is not empty %}
+  <div class="squ-search-result__field squ-search-result__field--date">
+    <span class="squ-search-result__label">{{ 'Authored on'|t }}</span>
+    <span class="squ-search-result__value">{{ fields.node_created.content }}</span>
+  </div>
+{% endif %}

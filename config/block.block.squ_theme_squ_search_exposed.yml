@@ -1,0 +1,23 @@
+uuid: 5b67f8bf-a780-4fe6-b61c-bbec4a8065c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.squ_search
+  module:
+    - views
+  theme:
+    - squ_theme
+id: squ_theme_squ_search_exposed
+theme: squ_theme
+region: header_tools
+weight: -27
+provider: null
+plugin: 'views_exposed_filter_block:squ_search-block_1'
+settings:
+  id: 'views_exposed_filter_block:squ_search-block_1'
+  label: 'SQU Search'
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility: {  }

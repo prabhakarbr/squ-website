@@ -1,0 +1,10 @@
+uuid: 17aaf221-e424-4ff7-9542-1da86aea073d
+langcode: en
+status: true
+dependencies: {  }
+id: discover
+label: Discover
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

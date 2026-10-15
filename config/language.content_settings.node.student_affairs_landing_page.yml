@@ -1,0 +1,11 @@
+uuid: d84dd7c2-11e6-4958-b189-fef2e1976bf7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.student_affairs_landing_page
+id: node.student_affairs_landing_page
+target_entity_type_id: node
+target_bundle: student_affairs_landing_page
+default_langcode: site_default
+language_alterable: false

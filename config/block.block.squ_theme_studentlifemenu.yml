@@ -1,0 +1,29 @@
+uuid: 0dded5ca-dae7-4c4e-afe9-ffae2ec1796e
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.student-life-menu
+  module:
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_studentlifemenu
+theme: squ_theme
+region: header_section
+weight: -27
+provider: null
+plugin: 'system_menu_block:student-life-menu'
+settings:
+  id: 'system_menu_block:student-life-menu'
+  label: 'Student LIfe Menu'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/student\r\n/student/*"

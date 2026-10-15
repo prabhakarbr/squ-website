@@ -1,0 +1,41 @@
+uuid: 1835859b-8a5a-4f11-b5eb-1f158d7237c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.the_center_for_career_guidance.field_banner_slider
+    - field.field.node.the_center_for_career_guidance.field_ccc_body
+    - node.type.the_center_for_career_guidance
+  module:
+    - entity_reference_revisions
+    - text
+    - user
+id: node.the_center_for_career_guidance.default
+targetEntityType: node
+bundle: the_center_for_career_guidance
+mode: default
+content:
+  field_banner_slider:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_ccc_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

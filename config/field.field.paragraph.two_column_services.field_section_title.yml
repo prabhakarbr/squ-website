@@ -1,0 +1,173 @@
+uuid: 37b8d545-9ac2-413a-aa9f-aec01526f12d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_section_title
+    - paragraphs.paragraphs_type.service_card
+    - paragraphs.paragraphs_type.two_column_services
+  module:
+    - entity_reference_revisions
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.two_column_services.field_section_title
+field_name: field_section_title
+entity_type: paragraph
+bundle: two_column_services
+label: 'Service Cards'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      service_card: service_card
+    negate: 0
+    target_bundles_drag_drop:
+      about_squ:
+        weight: 48
+        enabled: false
+      accordion:
+        weight: 49
+        enabled: false
+      accordion_item:
+        weight: 50
+        enabled: false
+      accordion_items:
+        weight: 51
+        enabled: false
+      art_latest_news:
+        weight: 52
+        enabled: false
+      art_quick_links:
+        weight: 53
+        enabled: false
+      banner_slider_image:
+        weight: 54
+        enabled: false
+      banner_slider_on_top:
+        weight: 55
+        enabled: false
+      card_grid:
+        weight: 56
+        enabled: false
+      card_item:
+        weight: 57
+        enabled: false
+      college:
+        weight: 58
+        enabled: false
+      college_tab_item:
+        weight: 59
+        enabled: false
+      description_section:
+        weight: 60
+        enabled: false
+      document_item:
+        weight: 61
+        enabled: false
+      document_list:
+        weight: 62
+        enabled: false
+      ept_slick_slider:
+        weight: 63
+        enabled: false
+      ept_slick_slider_item:
+        weight: 64
+        enabled: false
+      feature_card:
+        weight: 65
+        enabled: false
+      footer_icons:
+        weight: 66
+        enabled: false
+      full_image_with_title:
+        weight: 67
+        enabled: false
+      full_with_margin_slider:
+        weight: 68
+        enabled: false
+      hero_banner:
+        weight: 69
+        enabled: false
+      hero_carousel:
+        weight: 70
+        enabled: false
+      hero_slide:
+        weight: 71
+        enabled: false
+      ilc_publication_item:
+        weight: 72
+        enabled: false
+      images_slider_items:
+        weight: 73
+        enabled: false
+      images_slider_with_full_width:
+        weight: 74
+        enabled: false
+      list_item_slider:
+        weight: 75
+        enabled: false
+      map_contact:
+        weight: 76
+        enabled: false
+      multiple_card:
+        weight: 77
+        enabled: false
+      news_item:
+        weight: 78
+        enabled: false
+      news_section:
+        weight: 79
+        enabled: false
+      page_intro:
+        weight: 80
+        enabled: false
+      program_tabs:
+        weight: 81
+        enabled: false
+      publication_grid:
+        weight: 82
+        enabled: false
+      publication_item:
+        weight: 83
+        enabled: false
+      research_card:
+        weight: 84
+        enabled: false
+      research_section:
+        weight: 85
+        enabled: false
+      search_widget:
+        weight: 86
+        enabled: false
+      service_card:
+        weight: 48
+        enabled: true
+      single_director_card:
+        weight: 87
+        enabled: false
+      single_image_section:
+        weight: 88
+        enabled: false
+      single_title:
+        weight: 89
+        enabled: false
+      statistics_counter:
+        weight: 90
+        enabled: false
+      student_life_gallery_item:
+        weight: 91
+        enabled: false
+      student_life_section:
+        weight: 92
+        enabled: false
+      two_column_services:
+        weight: 47
+        enabled: false
+field_type: entity_reference_revisions

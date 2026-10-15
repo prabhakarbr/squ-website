@@ -1,0 +1,25 @@
+uuid: dd4d00b0-1232-4ccc-9380-a567d320acaf
+langcode: en
+status: true
+dependencies:
+  module:
+    - quicktabs
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_quicktabseducationquicklinks
+theme: squ_theme
+region: content
+weight: 0
+provider: null
+plugin: 'quicktabs_block:education_quick_links'
+settings:
+  id: 'quicktabs_block:education_quick_links'
+  label: 'Quick Links'
+  label_display: visible
+  provider: quicktabs
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /education

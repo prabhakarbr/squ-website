@@ -1,0 +1,20 @@
+
+<article{{ attributes.addClass('center-career-guidance-page') }}>
+
+  {# Top Banner Slider #}
+  {% if content.field_banner_slider %}
+    <section class="center-career-guidance-banner">
+      {{ content.field_banner_slider }}
+    </section>
+  {% endif %}
+
+  {# Student Details Body #}
+  {% if content.field_ccc_body %}
+    <section class="center-career-guidance-body">
+      <div class="container-fluid">
+        {{ content.field_ccc_body }}
+      </div>
+    </section>
+  {% endif %}
+
+</article>

@@ -1,0 +1,11 @@
+{#
+/**
+ * @file
+ * Header Tools region: blocks render as flex siblings inside .header-tools.
+ */
+#}
+{% if content %}
+  <div{{ attributes.addClass('squ-region', 'squ-region--header-tools-inner', 'region-header-tools-inner') }}>
+    {{ content }}
+  </div>
+{% endif %}

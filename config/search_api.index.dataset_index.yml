@@ -1115,6 +1115,14 @@ field_settings:
     dependencies:
       module:
         - taxonomy
+  node_created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
   parent_field_name:
     label: 'Parent field name'
     datasource_id: 'entity:paragraph'
@@ -1288,6 +1296,14 @@ field_settings:
     dependencies:
       module:
         - paragraphs
+  uid:
+    label: 'Authored by'
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    dependencies:
+      module:
+        - node
   url:
     label: URI
     property_path: search_api_url
@@ -1431,6 +1447,17 @@ processor_settings:
   aggregated_field: {  }
   custom_value: {  }
   entity_type: {  }
+  highlight:
+    weights:
+      postprocess_query: 0
+    prefix: '<strong>'
+    suffix: '</strong>'
+    excerpt: true
+    excerpt_always: false
+    excerpt_length: 300
+    exclude_fields: {  }
+    highlight: always
+    highlight_partial: true
   language_with_fallback: {  }
   rendered_item: {  }
   search_api_opensearch_date_range: {  }

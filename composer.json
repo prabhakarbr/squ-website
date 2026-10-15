@@ -33,6 +33,7 @@
         "drupal/media_library_form_element": "^2.1",
         "drupal/paragraphs": "^1.23",
         "drupal/paragraphs_jquery_ui_accordion": "^1.7",
+        "drupal/quicktabs": "^4.3",
         "drupal/search_api": "^1.41",
         "drupal/search_api_opensearch": "^2.5",
         "drupal/single_content_sync": "^1.4",

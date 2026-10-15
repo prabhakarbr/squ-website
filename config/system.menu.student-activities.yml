@@ -1,0 +1,8 @@
+uuid: 53bab8db-9dd3-4597-a166-b8fac591e417
+langcode: en
+status: true
+dependencies: {  }
+id: student-activities
+label: 'Student Activities'
+description: ''
+locked: false

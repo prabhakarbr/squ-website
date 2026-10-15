@@ -1,0 +1,28 @@
+uuid: dd6cb7c2-3de2-438b-a129-6ba3c3c837ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - filter.format.full_html
+    - node.type.education
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.education.field_body
+field_name: field_body
+entity_type: node
+bundle: education
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

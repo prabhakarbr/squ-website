@@ -11,7 +11,7 @@ backend: opensearch
 backend_config:
   connector: standard
   connector_config:
-    url: 'http://127.0.0.1:9200'
+    url: 'http://host.docker.internal:9200'
     ssl_verification: false
   advanced:
     fuzziness: auto

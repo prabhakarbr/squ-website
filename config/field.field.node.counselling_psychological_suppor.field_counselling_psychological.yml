@@ -1,0 +1,28 @@
+uuid: 1e7706c4-742f-4f61-b29f-189102e9dcce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_counselling_psychological
+    - node.type.counselling_psychological_suppor
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.counselling_psychological_suppor.field_counselling_psychological
+field_name: field_counselling_psychological
+entity_type: node
+bundle: counselling_psychological_suppor
+label: 'Counselling & Psychological Support Body'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

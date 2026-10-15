@@ -1,0 +1,54 @@
+uuid: a4c31b0b-36d6-4bfd-b2d4-82b5c47198fb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.discover.field_image
+    - field.field.paragraph.discover.field_link
+    - field.field.paragraph.discover.field_title
+    - field.field.paragraph.discover.field_video_link
+    - image.style.thumbnail
+    - paragraphs.paragraphs_type.discover
+  module:
+    - image
+    - link
+    - youtube
+id: paragraph.discover.default
+targetEntityType: paragraph
+bundle: discover
+mode: default
+content:
+  field_image:
+    type: image_image
+    weight: 1
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_video_link:
+    type: youtube
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
