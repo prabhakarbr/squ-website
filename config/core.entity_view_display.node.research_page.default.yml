@@ -1,0 +1,174 @@
+uuid: ec114bb3-18f3-4573-a118-c8c6a9db78e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.research_page.field_accordion_items
+    - field.field.node.research_page.field_body
+    - field.field.node.research_page.field_person_email
+    - field.field.node.research_page.field_person_name
+    - field.field.node.research_page.field_person_title
+    - field.field.node.research_page.field_research_image
+    - node.type.research_page
+    - system.menu.research-main
+  module:
+    - layout_builder
+    - system
+    - user
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: layout_twocol_section
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          column_widths: 25-75
+        components:
+          cc6b077a-303d-4894-9199-cbe7894d8608:
+            uuid: cc6b077a-303d-4894-9199-cbe7894d8608
+            region: first
+            configuration:
+              id: 'field_block:node:research_page:field_research_image'
+              label: 'Research Image'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: image
+                label: above
+                settings:
+                  image_link: ''
+                  image_style: ''
+                  image_loading:
+                    attribute: lazy
+                third_party_settings: {  }
+            weight: -2
+            additional: {  }
+          f20d755d-0947-4e0f-bd92-0c830f113139:
+            uuid: f20d755d-0947-4e0f-bd92-0c830f113139
+            region: first
+            configuration:
+              id: 'field_block:node:research_page:field_person_name'
+              label: 'Person Name'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: -1
+            additional: {  }
+          f858f1db-5e46-4afd-a093-4b15111e4fe9:
+            uuid: f858f1db-5e46-4afd-a093-4b15111e4fe9
+            region: first
+            configuration:
+              id: 'field_block:node:research_page:field_person_title'
+              label: 'Person Title'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: above
+                settings:
+                  link_to_entity: false
+                  link_rel: canonical
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          58c9d062-1707-4df0-909c-6a5af465e8b1:
+            uuid: 58c9d062-1707-4df0-909c-6a5af465e8b1
+            region: first
+            configuration:
+              id: 'field_block:node:research_page:field_person_email'
+              label: 'Person Email'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: basic_string
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          46abe1e8-f618-43bb-a8b4-b12156b9acb5:
+            uuid: 46abe1e8-f618-43bb-a8b4-b12156b9acb5
+            region: second
+            configuration:
+              id: 'field_block:node:research_page:field_body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 1
+            additional: {  }
+          f286914f-009a-42fd-9909-e556c38218f3:
+            uuid: f286914f-009a-42fd-9909-e556c38218f3
+            region: second
+            configuration:
+              id: 'field_block:node:research_page:field_accordion_items'
+              label: 'Accordion items'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_revisions_entity_view
+                label: above
+                settings:
+                  view_mode: research_accordion
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          199549a6-6fb6-4644-a822-5add596d5499:
+            uuid: 199549a6-6fb6-4644-a822-5add596d5499
+            region: first
+            configuration:
+              id: 'system_menu_block:research-main'
+              label: 'Research Main'
+              label_display: '0'
+              provider: system
+              context_mapping: {  }
+              level: 2
+              depth: null
+              expand_all_items: false
+            weight: -3
+            additional: {  }
+        third_party_settings: {  }
+id: node.research_page.default
+targetEntityType: node
+bundle: research_page
+mode: default
+content: {  }
+hidden:
+  field_accordion_items: true
+  field_body: true
+  field_person_email: true
+  field_person_name: true
+  field_person_title: true
+  field_research_image: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

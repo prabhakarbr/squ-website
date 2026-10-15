@@ -1,0 +1,37 @@
+uuid: 84d970da-ad6d-4712-9233-92420a772f3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.research-main
+  module:
+    - node
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_researchmain
+theme: squ_theme
+region: header_section
+weight: 0
+provider: null
+plugin: 'system_menu_block:research-main'
+settings:
+  id: 'system_menu_block:research-main'
+  label: 'Research Main'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/research/Deanship-of-Research/About-the-Deanship\r\n/research/Deanship-of-Research/Research-Administration-Department\r\n/research/Deanship-of-Research/Publication-and-Outreach-Department\r\n/research/Deanship-of-Research/Administration-and-Financial-Affairs-Department"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      research_page: research_page
