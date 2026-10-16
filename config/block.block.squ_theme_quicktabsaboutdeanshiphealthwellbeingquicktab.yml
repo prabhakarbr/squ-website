@@ -11,7 +11,7 @@ dependencies:
 id: squ_theme_quicktabsaboutdeanshiphealthwellbeingquicktab
 theme: squ_theme
 region: content
-weight: 0
+weight: -33
 provider: null
 plugin: 'quicktabs_block:about_deanship_health_wellbeing'
 settings:

@@ -1,0 +1,8 @@
+uuid: 6989584c-f39a-47c3-8198-5783102b5106
+langcode: en
+status: true
+dependencies: {  }
+id: deanship-of-student-affairs-left
+label: 'Deanship of Student Affairs Left Menu'
+description: ''
+locked: false

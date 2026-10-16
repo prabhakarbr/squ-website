@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.student_affairs_landing_page.field_online_services_card
+    - field.field.node.student_affairs_landing_page.field_online_services_grid_card
     - field.field.node.student_affairs_landing_page.field_student_home_slider
     - node.type.student_affairs_landing_page
   module:
@@ -20,9 +20,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_online_services_card:
+  field_online_services_grid_card:
     type: paragraphs
-    weight: 27
+    weight: 28
     region: content
     settings:
       title: Paragraph

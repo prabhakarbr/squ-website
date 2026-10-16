@@ -1,0 +1,28 @@
+uuid: ae667c1b-0a88-4ea2-be06-601b3dd53683
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_dean_s_office_body
+    - node.type.about_the_deanship_dean_s_office
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.about_the_deanship_dean_s_office.field_dean_s_office_body
+field_name: field_dean_s_office_body
+entity_type: node
+bundle: about_the_deanship_dean_s_office
+label: "Dean's Office Body"
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

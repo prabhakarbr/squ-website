@@ -3,13 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.student_affairs_detail_page.field_connect_with_us_via_whatsa
     - field.field.node.student_affairs_detail_page.field_student_details_body
-    - field.field.node.student_affairs_detail_page.field_student_home_banner
-    - field.field.node.student_affairs_detail_page.field_student_societies
     - node.type.student_affairs_detail_page
   module:
-    - paragraphs
     - path
     - text
 id: node.student_affairs_detail_page.default
@@ -23,24 +19,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_connect_with_us_via_whatsa:
-    type: paragraphs
-    weight: 124
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
   field_student_details_body:
     type: text_textarea_with_summary
     weight: 121
@@ -50,42 +28,6 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings: {  }
-  field_student_home_banner:
-    type: paragraphs
-    weight: 122
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
-    third_party_settings: {  }
-  field_student_societies:
-    type: paragraphs
-    weight: 123
-    region: content
-    settings:
-      title: Paragraph
-      title_plural: Paragraphs
-      edit_mode: open
-      closed_mode: summary
-      autocollapse: none
-      closed_mode_threshold: 0
-      add_mode: dropdown
-      form_display_mode: default
-      default_paragraph_type: ''
-      features:
-        collapse_edit_all: collapse_edit_all
-        duplicate: duplicate
     third_party_settings: {  }
   langcode:
     type: language_select

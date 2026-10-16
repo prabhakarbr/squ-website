@@ -56,6 +56,8 @@ function squ_theme_preprocess_block(array &$variables) {
           'about_the_deanship_department',
           'about_deanship_sports_recreation',
           'about_deanship_health_wellbeing',
+          'student_affairs_detail_page',
+          'about_the_deanship_dean_s_office',
         ], TRUE)
       ) {
         $variables['attributes']['class'][] = 'hide-main-about-deanship-node';

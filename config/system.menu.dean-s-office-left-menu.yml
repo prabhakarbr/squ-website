@@ -1,0 +1,8 @@
+uuid: 53f75927-7f40-450d-ad48-69004ef3f4bf
+langcode: en
+status: true
+dependencies: {  }
+id: dean-s-office-left-menu
+label: "Dean's Office Left Menu"
+description: ''
+locked: false

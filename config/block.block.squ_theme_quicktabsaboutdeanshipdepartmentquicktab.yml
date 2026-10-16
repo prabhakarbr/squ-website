@@ -10,7 +10,7 @@ dependencies:
 id: squ_theme_quicktabsaboutdeanshipdepartmentquicktab
 theme: squ_theme
 region: content
-weight: 0
+weight: -34
 provider: null
 plugin: 'quicktabs_block:about_deanship_department_quick'
 settings:

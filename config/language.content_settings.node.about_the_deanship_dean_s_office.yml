@@ -1,0 +1,11 @@
+uuid: 6d7744a4-a897-493b-8774-bd46873e220e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.about_the_deanship_dean_s_office
+id: node.about_the_deanship_dean_s_office
+target_entity_type_id: node
+target_bundle: about_the_deanship_dean_s_office
+default_langcode: site_default
+language_alterable: false

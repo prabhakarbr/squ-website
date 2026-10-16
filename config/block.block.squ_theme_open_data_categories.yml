@@ -12,7 +12,7 @@ dependencies:
 id: squ_theme_open_data_categories
 theme: squ_theme
 region: sidebar_first
-weight: -10
+weight: -37
 provider: null
 plugin: 'views_block:open_data_categories-block_1'
 settings:
