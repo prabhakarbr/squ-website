@@ -11,7 +11,7 @@ dependencies:
 id: squ_theme_counsellingpsychologicalsupport
 theme: squ_theme
 region: sidebar_first
-weight: 0
+weight: -32
 provider: null
 plugin: 'system_menu_block:counselling-psychological-suppor'
 settings:

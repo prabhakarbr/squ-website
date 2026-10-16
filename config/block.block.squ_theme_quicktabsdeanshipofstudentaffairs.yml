@@ -1,0 +1,28 @@
+uuid: 85df442b-735b-4291-9f94-2371668a61f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - quicktabs
+  theme:
+    - squ_theme
+id: squ_theme_quicktabsdeanshipofstudentaffairs
+theme: squ_theme
+region: content
+weight: -30
+provider: null
+plugin: 'quicktabs_block:deanship_of_student_affairs'
+settings:
+  id: 'quicktabs_block:deanship_of_student_affairs'
+  label: 'QuickTabs - Deanship of Student Affairs'
+  label_display: visible
+  provider: quicktabs
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      student_affairs_detail_page: student_affairs_detail_page

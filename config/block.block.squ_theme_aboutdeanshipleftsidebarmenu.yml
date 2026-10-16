@@ -1,0 +1,33 @@
+uuid: 295341ba-3c4b-4ab1-9165-667fc557bd67
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.about-deanship-menu
+  module:
+    - node
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_aboutdeanshipleftsidebarmenu
+theme: squ_theme
+region: sidebar_first
+weight: -33
+provider: null
+plugin: 'system_menu_block:about-deanship-menu'
+settings:
+  id: 'system_menu_block:about-deanship-menu'
+  label: 'About Deanship Left Sidebar Menu'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      about_the_deanship: about_the_deanship

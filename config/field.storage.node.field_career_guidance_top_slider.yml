@@ -1,4 +1,4 @@
-uuid: aed63776-47ea-4767-9347-c9f75c2a81cb
+uuid: 8fb737fe-3eb3-4de0-b51d-bd05ab4838cc
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
-id: node.field_connect_with_us_via_whatsa
-field_name: field_connect_with_us_via_whatsa
+id: node.field_career_guidance_top_slider
+field_name: field_career_guidance_top_slider
 entity_type: node
 type: entity_reference_revisions
 settings:

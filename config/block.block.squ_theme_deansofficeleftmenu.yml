@@ -1,0 +1,33 @@
+uuid: 66404046-e044-499d-a637-3a2f73ed646f
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.dean-s-office-left-menu
+  module:
+    - node
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_deansofficeleftmenu
+theme: squ_theme
+region: sidebar_first
+weight: -31
+provider: null
+plugin: 'system_menu_block:dean-s-office-left-menu'
+settings:
+  id: 'system_menu_block:dean-s-office-left-menu'
+  label: "Dean's Office Left Menu"
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      about_the_deanship_dean_s_office: about_the_deanship_dean_s_office

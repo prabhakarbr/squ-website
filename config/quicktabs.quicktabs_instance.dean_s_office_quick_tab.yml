@@ -1,0 +1,113 @@
+uuid: ae832f93-9182-44c6-a567-be0c00b71fa1
+langcode: en
+status: true
+dependencies: {  }
+id: dean_s_office_quick_tab
+label: "Dean's Office Quick Tab"
+renderer: ui_tabs
+hide_empty_tabs: false
+remember_last_clicked_tab: false
+default_tab: 9999
+options:
+  quick_tabs:
+    ajax: false
+    class: ''
+    style: ''
+    direct_linking: true
+  accordion_tabs:
+    jquery_ui:
+      collapsible: false
+      heightStyle: auto
+configuration_data:
+  -
+    title: About
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '97'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: about_deanship_department_quick
+  -
+    title: Objectivies
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '98'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: about_deanship_department_quick
+  -
+    title: 'Member of the Secretiat of the student counsil section'
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '99'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: about_deanship_department_quick
+  -
+    title: 'Activities & Contacts'
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '100'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: about_deanship_department_quick

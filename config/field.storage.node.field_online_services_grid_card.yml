@@ -1,4 +1,4 @@
-uuid: f0e03cdb-a490-45d9-a582-f4a84bc711f1
+uuid: 746c8027-89ad-4269-a37d-c2f9b8223111
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
-id: node.field_online_services_card
-field_name: field_online_services_card
+id: node.field_online_services_grid_card
+field_name: field_online_services_grid_card
 entity_type: node
 type: entity_reference_revisions
 settings:
