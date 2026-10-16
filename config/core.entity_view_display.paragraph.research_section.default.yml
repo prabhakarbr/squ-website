@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.paragraph.research_section.field_discover_more
+    - field.field.paragraph.research_section.field_flagclass
     - field.field.paragraph.research_section.field_research_card
     - field.field.paragraph.research_section.field_research_description
     - field.field.paragraph.research_section.field_research_heading
@@ -11,6 +12,7 @@ dependencies:
   module:
     - entity_reference_revisions
     - link
+    - options
 id: paragraph.research_section.default
 targetEntityType: paragraph
 bundle: research_section
@@ -27,6 +29,13 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 2
+    region: content
+  field_flagclass:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
     region: content
   field_research_card:
     type: entity_reference_revisions_entity_view
@@ -53,4 +62,5 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
-hidden: {  }
+hidden:
+  search_api_excerpt: true
