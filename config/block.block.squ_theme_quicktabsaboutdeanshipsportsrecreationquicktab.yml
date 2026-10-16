@@ -1,0 +1,33 @@
+uuid: a1e7a261-51d4-46d0-8289-0f7dd2497907
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - quicktabs
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_quicktabsaboutdeanshipsportsrecreationquicktab
+theme: squ_theme
+region: content
+weight: 0
+provider: null
+plugin: 'quicktabs_block:about_deanship_sports_recreation'
+settings:
+  id: 'quicktabs_block:about_deanship_sports_recreation'
+  label: 'QuickTabs - About Deanship Sports & Recreation Quick Tab'
+  label_display: '0'
+  provider: quicktabs
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/student-affairs/About-Deanship/Sports-Recreation/\r\n/student-affairs/About-Deanship/Sports-Recreation/*"
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      about_deanship_sports_recreation: about_deanship_sports_recreation

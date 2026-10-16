@@ -1,0 +1,28 @@
+uuid: 213fc78b-8c20-4cf3-84b5-618c6b21dfe7
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - quicktabs
+  theme:
+    - squ_theme
+id: squ_theme_quicktabsaboutdeanshipdepartmentquicktab
+theme: squ_theme
+region: content
+weight: 0
+provider: null
+plugin: 'quicktabs_block:about_deanship_department_quick'
+settings:
+  id: 'quicktabs_block:about_deanship_department_quick'
+  label: 'QuickTabs - About Deanship Department Quick Tab'
+  label_display: '0'
+  provider: quicktabs
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      about_the_deanship_department: about_the_deanship_department

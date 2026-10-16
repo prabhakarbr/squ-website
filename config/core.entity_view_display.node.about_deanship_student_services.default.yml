@@ -1,0 +1,30 @@
+uuid: 5b4b5382-65d3-4441-ac18-2d487d949898
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.about_deanship_student_services.field_about_deanship_services
+    - node.type.about_deanship_student_services
+  module:
+    - text
+    - user
+id: node.about_deanship_student_services.default
+targetEntityType: node
+bundle: about_deanship_student_services
+mode: default
+content:
+  field_about_deanship_services:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

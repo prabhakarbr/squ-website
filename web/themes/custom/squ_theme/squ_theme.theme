@@ -42,6 +42,27 @@ function squ_theme_preprocess_links__language_block(array &$variables): void {
 }
 
 /**
+ * Implements hook_preprocess_block().
+ */
+function squ_theme_preprocess_block(array &$variables) {
+  $plugin_id = $variables['elements']['#plugin_id'] ?? '';
+
+  if ($plugin_id === 'system_main_block') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+
+      if (
+        $node instanceof \Drupal\node\NodeInterface &&
+        in_array($node->bundle(), [
+          'about_the_deanship_department',
+          'about_deanship_sports_recreation',
+          'about_deanship_health_wellbeing',
+        ], TRUE)
+      ) {
+        $variables['attributes']['class'][] = 'hide-main-about-deanship-node';
+    }
+  }
+}
+/*
  * Implements hook_form_views_exposed_form_alter().
  */
 function squ_theme_form_views_exposed_form_alter(array &$form, FormStateInterface $form_state, $form_id): void {

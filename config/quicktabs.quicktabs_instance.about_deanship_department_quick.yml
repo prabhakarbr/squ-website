@@ -1,0 +1,113 @@
+uuid: b7071a97-a6da-45ef-a969-481107073c1e
+langcode: en
+status: true
+dependencies: {  }
+id: about_deanship_department_quick
+label: 'About Deanship Department Quick Tab'
+renderer: ui_tabs
+hide_empty_tabs: false
+remember_last_clicked_tab: false
+default_tab: 0
+options:
+  quick_tabs:
+    ajax: false
+    class: ''
+    style: ''
+    direct_linking: true
+  accordion_tabs:
+    jquery_ui:
+      collapsible: false
+      heightStyle: auto
+configuration_data:
+  -
+    title: About
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '79'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: education_quick_links
+  -
+    title: Objectivies
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '80'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: education_quick_links
+  -
+    title: 'Member of the Secretiat of the student counsil section'
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '81'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: education_quick_links
+  -
+    title: 'Activities & Contacts'
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '82'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: education_quick_links

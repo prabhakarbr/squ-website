@@ -1,0 +1,113 @@
+uuid: 0e396870-927e-4544-877e-ed7219f0a978
+langcode: en
+status: true
+dependencies: {  }
+id: about_deanship_health_wellbeing
+label: 'About Deanship Health & Wellbeing Quick Tab'
+renderer: ui_tabs
+hide_empty_tabs: false
+remember_last_clicked_tab: false
+default_tab: 0
+options:
+  quick_tabs:
+    ajax: false
+    class: ''
+    style: on-the-gray
+    direct_linking: true
+  accordion_tabs:
+    jquery_ui:
+      collapsible: false
+      heightStyle: auto
+configuration_data:
+  -
+    title: About
+    weight: -10
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '88'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: about_deanship_department_quick
+  -
+    title: 'Department & Section'
+    weight: -9
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '89'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: about_deanship_department_quick
+  -
+    title: 'Meals Time'
+    weight: -8
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '90'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: about_deanship_department_quick
+  -
+    title: 'Suggestion & Feadback'
+    weight: -7
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '91'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: about_deanship_department_quick

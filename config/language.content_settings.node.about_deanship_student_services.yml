@@ -1,0 +1,11 @@
+uuid: fb446b6f-3f29-4c77-934c-b252b1d24505
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.about_deanship_student_services
+id: node.about_deanship_student_services
+target_entity_type_id: node
+target_bundle: about_deanship_student_services
+default_langcode: site_default
+language_alterable: false

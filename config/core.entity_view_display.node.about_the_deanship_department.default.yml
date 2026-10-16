@@ -1,0 +1,30 @@
+uuid: ae9068f8-3c3c-4add-93d8-7f7c671ffbef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.about_the_deanship_department.field_about_deanhip_department_b
+    - node.type.about_the_deanship_department
+  module:
+    - text
+    - user
+id: node.about_the_deanship_department.default
+targetEntityType: node
+bundle: about_the_deanship_department
+mode: default
+content:
+  field_about_deanhip_department_b:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
