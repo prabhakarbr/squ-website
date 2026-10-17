@@ -11,6 +11,7 @@ display:
           label: 'تم الإنشاء'
         view_webform_submission:
           label: العمليات
+          text: عرض
   embed_administer:
     display_options:
       fields:
@@ -33,6 +34,7 @@ display:
           label: 'تم الإنهاء'
         view_webform_submission:
           label: العمليات
+          text: عرض
         edit_webform_submission:
           label: العمليات
   embed_review:
@@ -44,3 +46,4 @@ display:
           label: 'تم الإنهاء'
         view_webform_submission:
           label: العمليات
+          text: عرض
