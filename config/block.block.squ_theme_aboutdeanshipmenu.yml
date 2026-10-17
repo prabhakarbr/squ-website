@@ -1,6 +1,6 @@
 uuid: 8f852814-e66b-4599-9ccf-b9c712b3cc5f
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.about-deanship-menu
@@ -12,7 +12,7 @@ dependencies:
 id: squ_theme_aboutdeanshipmenu
 theme: squ_theme
 region: sidebar_first
-weight: 0
+weight: -25
 provider: null
 plugin: 'system_menu_block:about-deanship-menu'
 settings:

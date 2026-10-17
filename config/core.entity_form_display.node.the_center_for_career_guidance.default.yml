@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.the_center_for_career_guidance.field_banner_slider
+    - field.field.node.the_center_for_career_guidance.field_career_guidance_top_slider
     - field.field.node.the_center_for_career_guidance.field_ccc_body
     - node.type.the_center_for_career_guidance
   module:
@@ -21,9 +21,9 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_banner_slider:
+  field_career_guidance_top_slider:
     type: paragraphs
-    weight: 121
+    weight: 123
     region: content
     settings:
       title: Paragraph

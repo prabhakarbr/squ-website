@@ -1,0 +1,67 @@
+uuid: de5036d2-8faa-46f4-918b-fcb894759251
+langcode: en
+status: true
+dependencies: {  }
+id: quicktabs_about_deanship_sports
+label: 'QuickTabs - About Deanship Sports & Recreation 2 Quick Tab'
+renderer: ui_tabs
+hide_empty_tabs: false
+remember_last_clicked_tab: false
+default_tab: 9999
+options:
+  quick_tabs:
+    ajax: false
+    class: ''
+    style: ''
+    direct_linking: true
+  accordion_tabs:
+    jquery_ui:
+      collapsible: false
+      heightStyle: auto
+configuration_data:
+  -
+    title: 'Department of Cultural & Sport Activity'
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '101'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: about_deanship_department_quick
+  -
+    title: 'Department Objectives'
+    weight: 0
+    type: node_content
+    content:
+      node_content:
+        options:
+          nid: '102'
+          view_mode: full
+          hide_title: true
+      block_content:
+        options:
+          bid: announce_block
+          block_title: ''
+          display_title: false
+      view_content:
+        options:
+          vid: block_content
+          display: default
+          args: ''
+      qtabs_content:
+        options:
+          machine_name: about_deanship_department_quick

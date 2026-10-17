@@ -11,7 +11,7 @@ dependencies:
 id: squ_theme_psaboutmenu
 theme: squ_theme
 region: sidebar_first
-weight: 0
+weight: -21
 provider: null
 plugin: 'system_menu_block:ps-about-menu'
 settings:

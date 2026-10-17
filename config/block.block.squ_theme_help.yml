@@ -11,7 +11,7 @@ _core:
 id: squ_theme_help
 theme: squ_theme
 region: sidebar_first
-weight: -5
+weight: -35
 provider: null
 plugin: help_block
 settings:

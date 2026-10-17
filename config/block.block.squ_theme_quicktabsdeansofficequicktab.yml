@@ -1,0 +1,28 @@
+uuid: c4660fed-f61b-4d41-adc8-0c779d8ceaf5
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - quicktabs
+  theme:
+    - squ_theme
+id: squ_theme_quicktabsdeansofficequicktab
+theme: squ_theme
+region: content
+weight: -31
+provider: null
+plugin: 'quicktabs_block:dean_s_office_quick_tab'
+settings:
+  id: 'quicktabs_block:dean_s_office_quick_tab'
+  label: "QuickTabs - Dean's Office Quick Tab"
+  label_display: visible
+  provider: quicktabs
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      about_the_deanship_dean_s_office: about_the_deanship_dean_s_office

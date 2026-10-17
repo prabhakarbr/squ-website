@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.student_affairs_landing_page.field_online_services_card
+    - field.field.node.student_affairs_landing_page.field_online_services_grid_card
     - field.field.node.student_affairs_landing_page.field_student_home_slider
     - node.type.student_affairs_landing_page
   module:
@@ -19,14 +19,14 @@ targetEntityType: node
 bundle: student_affairs_landing_page
 mode: default
 content:
-  field_online_services_card:
+  field_online_services_grid_card:
     type: entity_reference_revisions_entity_view
     label: above
     settings:
       view_mode: default
       link: ''
     third_party_settings: {  }
-    weight: 2
+    weight: 3
     region: content
   field_student_home_slider:
     type: entity_reference_revisions_entity_view

@@ -11,7 +11,7 @@ dependencies:
 id: squ_theme_studentdepartmentmenu
 theme: squ_theme
 region: sidebar_first
-weight: 0
+weight: -18
 provider: null
 plugin: 'system_menu_block:student-department-menu'
 settings:

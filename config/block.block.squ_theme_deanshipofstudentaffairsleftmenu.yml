@@ -1,0 +1,33 @@
+uuid: c8fe039c-2bfa-4aed-8d13-35f4f6a22bb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.deanship-of-student-affairs-left
+  module:
+    - node
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_deanshipofstudentaffairsleftmenu
+theme: squ_theme
+region: sidebar_first
+weight: -30
+provider: null
+plugin: 'system_menu_block:deanship-of-student-affairs-left'
+settings:
+  id: 'system_menu_block:deanship-of-student-affairs-left'
+  label: 'Deanship of Student Affairs Left Menu'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      student_affairs_detail_page: student_affairs_detail_page

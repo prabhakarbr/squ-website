@@ -10,7 +10,7 @@ dependencies:
 id: squ_theme_quicktabseducationquicklinks
 theme: squ_theme
 region: content
-weight: 0
+weight: -35
 provider: null
 plugin: 'quicktabs_block:education_quick_links'
 settings:

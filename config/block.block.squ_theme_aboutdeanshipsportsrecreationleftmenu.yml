@@ -1,0 +1,33 @@
+uuid: a45ddb87-e340-46f7-8663-a41b817882af
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.sports-recreation-left-menu
+  module:
+    - node
+    - system
+  theme:
+    - squ_theme
+id: squ_theme_aboutdeanshipsportsrecreationleftmenu
+theme: squ_theme
+region: sidebar_first
+weight: -34
+provider: null
+plugin: 'system_menu_block:sports-recreation-left-menu'
+settings:
+  id: 'system_menu_block:sports-recreation-left-menu'
+  label: 'About Deanship Sports & Recreation Left Menu'
+  label_display: visible
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      about_deanship_sports_recreation: about_deanship_sports_recreation

@@ -1,0 +1,19 @@
+uuid: d4155742-1bdc-4d8b-a6e7-a993bfb91690
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_dean_s_office_body
+field_name: field_dean_s_office_body
+entity_type: node
+type: text_with_summary
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

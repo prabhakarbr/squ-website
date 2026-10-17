@@ -11,7 +11,7 @@ _core:
 id: squ_theme_page_title
 theme: squ_theme
 region: sidebar_first
-weight: -7
+weight: -36
 provider: null
 plugin: page_title_block
 settings:

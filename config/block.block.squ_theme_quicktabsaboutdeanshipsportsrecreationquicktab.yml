@@ -11,7 +11,7 @@ dependencies:
 id: squ_theme_quicktabsaboutdeanshipsportsrecreationquicktab
 theme: squ_theme
 region: content
-weight: 0
+weight: -32
 provider: null
 plugin: 'quicktabs_block:about_deanship_sports_recreation'
 settings:
@@ -23,7 +23,7 @@ visibility:
   request_path:
     id: request_path
     negate: false
-    pages: "/student-affairs/About-Deanship/Sports-Recreation/\r\n/student-affairs/About-Deanship/Sports-Recreation/*"
+    pages: /student-affairs/About-Deanship/Sports-Recreation/about
   'entity_bundle:node':
     id: 'entity_bundle:node'
     negate: false

@@ -1,0 +1,8 @@
+uuid: ccdef3d6-d726-4abb-a3c3-39b41b61fc65
+langcode: en
+status: true
+dependencies: {  }
+id: sports-recreation-left-menu
+label: 'About Deanship Sports & Recreation Left Menu'
+description: ''
+locked: false

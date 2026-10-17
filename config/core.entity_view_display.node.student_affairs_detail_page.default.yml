@@ -3,13 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.student_affairs_detail_page.field_connect_with_us_via_whatsa
     - field.field.node.student_affairs_detail_page.field_student_details_body
-    - field.field.node.student_affairs_detail_page.field_student_home_banner
-    - field.field.node.student_affairs_detail_page.field_student_societies
     - node.type.student_affairs_detail_page
   module:
-    - entity_reference_revisions
     - layout_builder
     - text
     - user
@@ -22,39 +18,12 @@ targetEntityType: node
 bundle: student_affairs_detail_page
 mode: default
 content:
-  field_connect_with_us_via_whatsa:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 3
-    region: content
   field_student_details_body:
     type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
     weight: 0
-    region: content
-  field_student_home_banner:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 1
-    region: content
-  field_student_societies:
-    type: entity_reference_revisions_entity_view
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
-    weight: 2
     region: content
 hidden:
   langcode: true
