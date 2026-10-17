@@ -1,0 +1,10 @@
+uuid: 0595cfe3-a6c9-4fca-889d-b379e73e5263
+langcode: en
+status: true
+dependencies: {  }
+id: single_news_silde
+label: 'Single News Silde'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

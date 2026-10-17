@@ -1,0 +1,10 @@
+uuid: ab1435b5-1e3b-4992-94e4-536d4b34d846
+langcode: en
+status: true
+dependencies: {  }
+id: basic_block
+label: 'Basic block'
+icon_uuid: null
+icon_default: null
+description: 'Use the same component as the existing Basic block'
+behavior_plugins: {  }
