@@ -1,0 +1,41 @@
+uuid: 72484bc8-81e4-463a-9389-1e10fd9c2d23
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_news_slide_item.field_link
+    - field.field.paragraph.single_news_slide_item.field_single_slide_imgae
+    - paragraphs.paragraphs_type.single_news_slide_item
+  module:
+    - image
+    - link
+id: paragraph.single_news_slide_item.default
+targetEntityType: paragraph
+bundle: single_news_slide_item
+mode: default
+content:
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_single_slide_imgae:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

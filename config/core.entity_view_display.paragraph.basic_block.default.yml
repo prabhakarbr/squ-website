@@ -1,0 +1,33 @@
+uuid: 4ccc52f6-b799-45f7-bc74-2cf78e85c61d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.basic_block.field_body
+    - field.field.paragraph.basic_block.field_top_title
+    - paragraphs.paragraphs_type.basic_block
+  module:
+    - text
+id: paragraph.basic_block.default
+targetEntityType: paragraph
+bundle: basic_block
+mode: default
+content:
+  field_body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_top_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true

@@ -1,0 +1,17 @@
+uuid: fb320a72-7c56-4f07-8d4b-c9adce321427
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Law
+type: law
+description: null
+help: null
+new_revision: true
+preview_mode: 1
+display_submitted: false

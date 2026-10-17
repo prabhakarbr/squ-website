@@ -1,0 +1,10 @@
+uuid: 10f6f6a8-255a-4021-84db-24a5f22712b5
+langcode: en
+status: true
+dependencies: {  }
+id: single_news_slide_item
+label: 'Single News Slide Item'
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }
