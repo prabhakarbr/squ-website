@@ -1,0 +1,35 @@
+uuid: 8d0a680f-5c62-4a9c-b8c7-8b8a7b9075f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.single_news_silde.field_slide_items
+    - field.field.paragraph.single_news_silde.field_slide_title
+    - paragraphs.paragraphs_type.single_news_silde
+  module:
+    - entity_reference_revisions
+id: paragraph.single_news_silde.default
+targetEntityType: paragraph
+bundle: single_news_silde
+mode: default
+content:
+  field_slide_items:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_slide_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  search_api_excerpt: true
