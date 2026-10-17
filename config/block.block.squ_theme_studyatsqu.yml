@@ -1,6 +1,6 @@
 uuid: eca2c355-47f8-423e-a9dc-0860874e4bb2
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.study-at-squ

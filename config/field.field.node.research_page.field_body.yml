@@ -1,0 +1,28 @@
+uuid: 1450ccf5-7f3f-4851-a839-729ce93ffcf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_body
+    - filter.format.full_html
+    - node.type.research_page
+  module:
+    - text
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.research_page.field_body
+field_name: field_body
+entity_type: node
+bundle: research_page
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats:
+    - full_html
+field_type: text_long

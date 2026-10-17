@@ -1,0 +1,11 @@
+uuid: 74ef116e-c23a-42f6-ab5a-46f206289f41
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+id: paragraph.research_accordion
+label: 'Research Accordion'
+description: null
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,41 @@
+uuid: e5799cab-d92b-4a4c-8674-cf14f364bb16
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.research_accordion
+    - field.field.paragraph.accordion_items.field_content
+    - field.field.paragraph.accordion_items.field_open_by_default
+    - field.field.paragraph.accordion_items.field_title
+    - paragraphs.paragraphs_type.accordion_items
+  module:
+    - layout_builder
+    - text
+third_party_settings:
+  layout_builder:
+    enabled: false
+    allow_custom: false
+id: paragraph.accordion_items.research_accordion
+targetEntityType: paragraph
+bundle: accordion_items
+mode: research_accordion
+content:
+  field_content:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+      link_rel: canonical
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_open_by_default: true
+  search_api_excerpt: true

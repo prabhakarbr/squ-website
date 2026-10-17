@@ -52,8 +52,11 @@ module:
   quicktabs: 0
   quicktabs_accordion: 0
   quicktabs_jqueryui: 0
+  search: 0
   search_api: 0
   search_api_opensearch: 0
+  search_api_db: 0
+  search_node: 0
   single_content_sync: 0
   system: 0
   taxonomy: 0

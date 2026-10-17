@@ -1,0 +1,45 @@
+uuid: 74d5894b-daae-4481-b9fb-ac401441b278
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+id: research_pages
+label: 'Research pages'
+code: |-
+  /* two-column layout */
+  .layout--twocol-section--25-75 { display:grid !important; grid-template-columns:25% minmax(0,1fr) !important; gap:2rem; max-width:1200px; margin:2rem auto; padding:0 1rem; }
+  .layout--twocol-section--25-75 > .layout__region--first { grid-column:1; }
+  .layout--twocol-section--25-75 > .layout__region--second { grid-column:2; width:auto !important; }
+  @media (max-width:768px){ .layout--twocol-section--25-75 { grid-template-columns:1fr !important; } }
+
+  /* person card */
+  .layout__region--first img { display:block; margin:1.5rem auto; max-width:200px; height:auto; }
+  .layout__region--first [class*="field--name-field-person"] { text-align:center; font-size:.9rem; margin:.3rem 0; }
+
+  /* page title with divider */
+  .field--name-title { text-align:center; font-size:2rem; font-weight:400; color:#333; margin:0 0 1.5rem; }
+  .field--name-title::after { content:"\25C7"; display:block; width:150px; margin:.7rem auto 0; line-height:1; color:#00264d;
+    background:linear-gradient(#999,#999) left center/46px 1px no-repeat, linear-gradient(#999,#999) right center/46px 1px no-repeat; }
+
+  /* accordion */
+  .research-accordion { margin-bottom:.6rem; border-radius:6px; overflow:hidden; border:1px solid #e1e5ea; background:#fff; }
+  .research-accordion > summary { display:flex; justify-content:space-between; align-items:center; background:#00264d; color:#fff; padding:.9rem 1.1rem; cursor:pointer; list-style:none; font-size:1rem; }
+  .research-accordion > summary::-webkit-details-marker { display:none; }
+  .research-accordion > summary::after { content:"\25BE"; transition:transform .2s; }
+  .research-accordion[open] > summary::after { transform:rotate(180deg); }
+  .research-accordion__body { padding:1rem 1.25rem; }
+  .research-accordion__body * { background:none !important; }
+  .research-accordion__body p,
+  .research-accordion__body li { text-align:justify !important; }
+  .research-accordion__body ul { list-style:disc; padding-left:1.5rem; }
+  .research-accordion__body img { max-width:100%; height:auto; display:block; margin:0 auto; }
+media: all
+preprocess: true
+conditions:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/research/*'
+contexts: {  }
+conditions_require_all: true

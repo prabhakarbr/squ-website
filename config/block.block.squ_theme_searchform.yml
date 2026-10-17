@@ -1,0 +1,21 @@
+uuid: 37e6b42b-e08c-44fc-a39e-eb0fc1beb94a
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - squ_theme
+id: squ_theme_searchform
+theme: squ_theme
+region: header_tools
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }
