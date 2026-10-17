@@ -1,0 +1,26 @@
+uuid: 31b6ea58-fe25-458d-84fa-16b6dcdf1099
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_open_by_default
+    - paragraphs.paragraphs_type.accordion_items
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: paragraph.accordion_items.field_open_by_default
+field_name: field_open_by_default
+entity_type: paragraph
+bundle: accordion_items
+label: 'Open by default'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

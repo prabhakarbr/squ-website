@@ -1,0 +1,11 @@
+uuid: 254bdcc6-70a5-4e73-8af3-794eb3059ddb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.research_page
+id: node.research_page
+target_entity_type_id: node
+target_bundle: research_page
+default_langcode: site_default
+language_alterable: false

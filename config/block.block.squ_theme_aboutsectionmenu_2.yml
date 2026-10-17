@@ -1,6 +1,6 @@
 uuid: f2bbd4b0-8a05-4bb8-a0d9-8fcd98eb807b
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.about-section-menu

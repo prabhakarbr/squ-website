@@ -1,0 +1,24 @@
+uuid: 2efe9bc5-c2f0-471a-b696-4a3762edab64
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_person_email
+    - node.type.research_page
+  module:
+    - tmgmt_content
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: node.research_page.field_person_email
+field_name: field_person_email
+entity_type: node
+bundle: research_page
+label: 'Person Email'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email
